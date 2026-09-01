@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-anton), "Arial Narrow", sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0b0316;
+  --color-void: #17062b;
+  --color-grape: #2a0b4a;
+  --color-orchid: #4b1180;
+  --color-glow: #a855f7;
+  --color-gold: #ffc42e;
+  --color-ember: #f59e0b;
+  --color-magenta: #ff3daf;
+  --color-paper: #f6f1ff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+}
+
+/* Big display words get a fine horizontal grit, like screen-printed poster type. */
+@utility text-grit {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(11, 3, 22, 0) 0px,
+    rgba(11, 3, 22, 0) 3px,
+    rgba(11, 3, 22, 0.16) 4px,
+    rgba(11, 3, 22, 0.16) 5px
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Gold ticket banner with notched ends, used for every section eyebrow. */
+@utility ticket {
+  clip-path: polygon(
+    0 0, 100% 0, 100% 100%, 0 100%,
+    0 72%, 14px 50%, 0 28%
+  );
+}
+
+@utility notch-both {
+  clip-path: polygon(
+    16px 0, calc(100% - 16px) 0, 100% 50%,
+    calc(100% - 16px) 100%, 16px 100%, 0 50%
+  );
+}
+
+/* Theatre curtain drapes down the outer edges of the stage. */
+@utility curtain {
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(75, 17, 128, 0.85) 0px,
+    rgba(122, 33, 190, 0.5) 18px,
+    rgba(23, 6, 43, 0.95) 42px,
+    rgba(75, 17, 128, 0.85) 64px
+  );
+}
+
+@utility stripe-gold {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(11, 3, 22, 0.22) 0px,
+    rgba(11, 3, 22, 0.22) 3px,
+    transparent 3px,
+    transparent 9px
+  );
+}
+
+@utility grain {
+  background-image: radial-gradient(
+    rgba(246, 241, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 3px 3px;
+}
