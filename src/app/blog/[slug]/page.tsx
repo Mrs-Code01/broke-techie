@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import BlogHeader from "@/components/BlogHeader";
+import CommentSection from "@/components/CommentSection";
 import Footer from "@/components/Footer";
+import NewsletterSubscribe from "@/components/NewsletterSubscribe";
 import ScrollToBottomButton from "@/components/ScrollToBottomButton";
 import ShareButton from "@/components/ShareButton";
 import { CompareColumns, MaturityLadder, NodesGraphic } from "@/components/ArticleArt";
@@ -167,6 +169,8 @@ export default async function BlogPost({
             </p>
             <ShareButton path={`/blog/${post.slug}`} />
           </div>
+
+          <NewsletterSubscribe />
         </div>
 
         <div className="mx-auto max-w-[700px]">
@@ -210,6 +214,8 @@ export default async function BlogPost({
               Talk to a Consultant
             </a>
           </div>
+
+          <CommentSection slug={post.slug} />
         </div>
       </article>
 

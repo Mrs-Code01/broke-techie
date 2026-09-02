@@ -5,7 +5,7 @@ import path from "node:path";
 export const runtime = "nodejs";
 
 const STORE = path.join(process.cwd(), "data", "leads.json");
-const INTENTS = ["contact", "roundtable"] as const;
+const INTENTS = ["contact", "roundtable", "subscribe"] as const;
 type Intent = (typeof INTENTS)[number];
 
 export type Lead = {
@@ -39,7 +39,7 @@ export async function POST(request: Request) {
 
   const errors: Record<string, string> = {};
   if (!INTENTS.includes(intent as Intent)) errors.intent = "Unknown form.";
-  if (name.length < 2) errors.name = "Tell us your name.";
+  if (intent !== "subscribe" && name.length < 2) errors.name = "Tell us your name.";
   if (!EMAIL.test(email)) errors.email = "That email does not look right.";
 
   if (Object.keys(errors).length > 0) {
