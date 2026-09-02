@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import BlogHeader from "@/components/BlogHeader";
 import Footer from "@/components/Footer";
 import ShareButton from "@/components/ShareButton";
+import { CompareColumns, MaturityLadder, NodesGraphic } from "@/components/ArticleArt";
 import { POSTS, formatDate, getPost, type ContentBlock } from "@/data/posts";
 
 export function generateStaticParams() {
@@ -93,6 +94,15 @@ function Block({ block }: { block: ContentBlock }) {
           ))}
         </p>
       );
+    case "art": {
+      const Graphic =
+        block.variant === "nodes" ? NodesGraphic : block.variant === "ladder" ? MaturityLadder : CompareColumns;
+      return (
+        <div className="border border-ink/10 bg-ink/[0.02] px-6 py-8">
+          <Graphic className="mx-auto h-auto w-full max-w-md" />
+        </div>
+      );
+    }
     case "callout":
       return (
         <div className="border-l-4 border-gold bg-gold/[0.08] px-6 py-6">
@@ -152,7 +162,18 @@ export default async function BlogPost({
             <p className="font-sans text-sm text-ink/50">
               {formatDate(post.date)} &middot; {post.readTime}
             </p>
-            <ShareButton path={`/blog/${post.slug}`} variant="light" />
+            <ShareButton path={`/blog/${post.slug}`} />
+          </div>
+
+          <div className="mt-10 overflow-hidden border border-ink/10">
+            {post.image ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={post.image.src} alt={post.image.alt} className="h-auto w-full object-cover" />
+            ) : (
+              <div className="bg-ink/[0.03] px-6 py-10">
+                <NodesGraphic className="mx-auto h-auto w-full max-w-lg" />
+              </div>
+            )}
           </div>
 
           <div className="mt-10 space-y-6">
