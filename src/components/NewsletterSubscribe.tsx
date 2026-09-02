@@ -66,7 +66,7 @@ export default function NewsletterSubscribe() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="bg-gold px-5 py-2.5 text-sm font-bold tracking-[0.1em] text-ink uppercase transition hover:bg-ink hover:text-paper disabled:opacity-60"
+            className="bg-gold px-5 py-2.5 text-xs font-bold tracking-[0.1em] text-ink uppercase transition hover:bg-ink hover:text-paper disabled:opacity-60"
           >
             {status === "sending" ? "..." : "Subscribe"}
           </button>
