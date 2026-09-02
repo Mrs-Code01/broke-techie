@@ -8,7 +8,13 @@ function resolveUrl(path: string) {
   return `${window.location.origin}${path}`;
 }
 
-export default function ShareButton({ path }: { path: string }) {
+export default function ShareButton({
+  path,
+  variant = "dark",
+}: {
+  path: string;
+  variant?: "dark" | "light";
+}) {
   const [open, setOpen] = useState(false);
   const [status, setStatus] = useState<string | null>(null);
   const [shortUrl, setShortUrl] = useState<string | null>(null);
@@ -75,7 +81,11 @@ export default function ShareButton({ path }: { path: string }) {
         }}
         aria-label="Share this article"
         aria-expanded={open}
-        className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-glow/30 bg-void/70 text-paper/70 transition hover:border-gold/60 hover:text-gold"
+        className={
+          variant === "light"
+            ? "grid h-10 w-10 shrink-0 place-items-center rounded-full border border-ink/15 bg-white text-ink/60 transition hover:border-ink/30 hover:text-ink"
+            : "grid h-10 w-10 shrink-0 place-items-center rounded-full border border-glow/30 bg-void/70 text-paper/70 transition hover:border-gold/60 hover:text-gold"
+        }
       >
         <svg
           viewBox="0 0 24 24"
@@ -97,12 +107,20 @@ export default function ShareButton({ path }: { path: string }) {
       {open && (
         <div
           onClick={(event) => event.stopPropagation()}
-          className="absolute right-0 top-full z-20 mt-3 w-56 border border-glow/25 bg-void shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
+          className={
+            variant === "light"
+              ? "absolute right-0 top-full z-20 mt-3 w-56 border border-ink/10 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
+              : "absolute right-0 top-full z-20 mt-3 w-56 border border-glow/25 bg-void shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
+          }
         >
           <button
             type="button"
             onClick={handleCopyLink}
-            className="block w-full px-4 py-3 text-left text-sm text-paper/85 transition hover:bg-glow/10 hover:text-gold"
+            className={
+              variant === "light"
+                ? "block w-full px-4 py-3 text-left text-sm text-ink/80 transition hover:bg-ink/5 hover:text-ink"
+                : "block w-full px-4 py-3 text-left text-sm text-paper/85 transition hover:bg-glow/10 hover:text-gold"
+            }
           >
             Copy link
           </button>
@@ -110,12 +128,22 @@ export default function ShareButton({ path }: { path: string }) {
             type="button"
             onClick={handleShorten}
             disabled={shortening}
-            className="block w-full border-t border-glow/15 px-4 py-3 text-left text-sm text-paper/85 transition hover:bg-glow/10 hover:text-gold disabled:opacity-50"
+            className={
+              variant === "light"
+                ? "block w-full border-t border-ink/10 px-4 py-3 text-left text-sm text-ink/80 transition hover:bg-ink/5 hover:text-ink disabled:opacity-50"
+                : "block w-full border-t border-glow/15 px-4 py-3 text-left text-sm text-paper/85 transition hover:bg-glow/10 hover:text-gold disabled:opacity-50"
+            }
           >
             {shortening ? "Shortening..." : shortUrl ? "Copy short link" : "Shorten & copy link"}
           </button>
           {status && (
-            <p className="border-t border-glow/15 px-4 py-2.5 text-xs font-bold tracking-wide text-gold">
+            <p
+              className={
+                variant === "light"
+                  ? "border-t border-ink/10 px-4 py-2.5 text-xs font-bold tracking-wide text-magenta"
+                  : "border-t border-glow/15 px-4 py-2.5 text-xs font-bold tracking-wide text-gold"
+              }
+            >
               {status}
             </p>
           )}

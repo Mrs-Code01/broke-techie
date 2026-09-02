@@ -2,31 +2,16 @@ import Link from "next/link";
 import ShareButton from "./ShareButton";
 import { formatDate, type Post } from "@/data/posts";
 
-export default function PostCard({
-  post,
-  featured = false,
-}: {
-  post: Post;
-  featured?: boolean;
-}) {
+export default function PostCard({ post }: { post: Post }) {
   return (
-    <article
-      className={`group relative flex flex-col overflow-hidden border border-glow/20 bg-void/60 transition hover:border-gold/50 ${
-        featured ? "sm:col-span-2" : ""
-      }`}
-    >
+    <article className="group relative flex flex-col overflow-hidden border border-glow/20 bg-void/60 transition hover:border-gold/50">
       <Link href={`/blog/${post.slug}`} className="absolute inset-0 z-0" aria-label={post.title} />
 
-      <div className="relative flex h-32 items-start justify-between overflow-hidden bg-[radial-gradient(120%_120%_at_20%_0%,var(--color-orchid)_0%,var(--color-grape)_55%,var(--color-ink)_100%)] p-5">
+      <div className="relative flex h-32 items-start overflow-hidden bg-[radial-gradient(120%_120%_at_20%_0%,var(--color-orchid)_0%,var(--color-grape)_55%,var(--color-ink)_100%)] p-5">
         <div className="grain pointer-events-none absolute inset-0 opacity-30" aria-hidden />
         <span className="notch-both relative bg-gold px-3 py-1 text-[0.65rem] font-bold tracking-[0.16em] text-ink uppercase">
           {post.category}
         </span>
-        {post.trending && (
-          <span className="relative text-[0.65rem] font-bold tracking-[0.16em] text-magenta uppercase">
-            &#9650; Trending
-          </span>
-        )}
       </div>
 
       <div className="flex flex-1 flex-col p-6">

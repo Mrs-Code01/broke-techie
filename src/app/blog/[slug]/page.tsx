@@ -3,9 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import BlogHeader from "@/components/BlogHeader";
 import Footer from "@/components/Footer";
-import PostCard from "@/components/PostCard";
 import ShareButton from "@/components/ShareButton";
-import { POSTS, formatDate, getPost } from "@/data/posts";
+import { POSTS, formatDate, getPost, type ContentBlock } from "@/data/posts";
 
 export function generateStaticParams() {
   return POSTS.map((post) => ({ slug: post.slug }));
@@ -25,6 +24,98 @@ export async function generateMetadata({
   };
 }
 
+function Block({ block }: { block: ContentBlock }) {
+  switch (block.type) {
+    case "p":
+      return (
+        <p className="font-serif text-[1.2rem] leading-[1.75] text-ink/85">
+          {block.text.split("\n").map((line, i, arr) => (
+            <span key={i}>
+              {line}
+              {i < arr.length - 1 && <br />}
+            </span>
+          ))}
+        </p>
+      );
+    case "h2":
+      return (
+        <h2 className="font-serif mt-4 text-[1.75rem] font-bold leading-tight tracking-tight text-ink">
+          {block.text}
+        </h2>
+      );
+    case "h3":
+      return (
+        <h3 className="font-serif mt-2 text-xl font-bold leading-tight text-ink">{block.text}</h3>
+      );
+    case "ul":
+      return (
+        <ul className="space-y-2 border-l-2 border-ink/10 pl-6">
+          {block.items.map((item, i) => (
+            <li key={i} className="font-serif text-[1.15rem] leading-relaxed text-ink/80">
+              {item}
+            </li>
+          ))}
+        </ul>
+      );
+    case "ol":
+      return (
+        <ol className="space-y-3 border-l-2 border-ink/10 pl-6">
+          {block.items.map((item, i) => (
+            <li key={i} className="font-serif text-[1.15rem] leading-relaxed text-ink/80">
+              <span className="font-sans font-bold text-magenta">{i + 1}.</span> {item}
+            </li>
+          ))}
+        </ol>
+      );
+    case "flow":
+      return (
+        <ol className="space-y-0 border border-ink/10 bg-ink/[0.03] px-6 py-5">
+          {block.steps.map((step, i) => (
+            <li key={i}>
+              <p className="font-sans text-[0.95rem] font-semibold text-ink/80">{step}</p>
+              {i < block.steps.length - 1 && (
+                <p className="my-1 font-sans text-magenta" aria-hidden>
+                  &darr;
+                </p>
+              )}
+            </li>
+          ))}
+        </ol>
+      );
+    case "quote":
+      return (
+        <p className="font-serif border-l-2 border-gold py-1 pl-6 text-[1.4rem] italic leading-snug text-ink">
+          {block.text.split("\n").map((line, i, arr) => (
+            <span key={i}>
+              {line}
+              {i < arr.length - 1 && <br />}
+            </span>
+          ))}
+        </p>
+      );
+    case "callout":
+      return (
+        <div className="border-l-4 border-gold bg-gold/[0.08] px-6 py-6">
+          <p className="font-sans text-xs font-bold tracking-[0.22em] text-ink/60 uppercase">
+            {block.heading}
+          </p>
+          <div className="mt-3 space-y-3">
+            {block.text.map((line, i) => (
+              <p key={i} className="font-serif text-[1.1rem] leading-relaxed text-ink/85">
+                {line.split("\n").map((l, j, arr) => (
+                  <span key={j}>
+                    {l}
+                    {j < arr.length - 1 && <br />}
+                  </span>
+                ))}
+              </p>
+            ))}
+          </div>
+        </div>
+      );
+  }
+}
+
 export default async function BlogPost({
   params,
 }: {
@@ -34,64 +125,43 @@ export default async function BlogPost({
   const post = getPost(slug);
   if (!post) notFound();
 
-  const more = POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
-
   return (
-    <main className="relative isolate overflow-hidden bg-ink">
+    <main className="bg-ink">
       <BlogHeader />
 
-      <article className="px-5 py-16 sm:py-24">
-        <div className="mx-auto max-w-3xl">
+      <article className="bg-paper px-5 py-16 sm:py-20">
+        <div className="mx-auto max-w-[700px]">
           <Link
             href="/blog"
-            className="text-xs font-bold tracking-[0.2em] text-gold uppercase transition hover:text-paper"
+            className="font-sans text-xs font-bold tracking-[0.2em] text-ink/50 uppercase transition hover:text-ink"
           >
             &larr; All articles
           </Link>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <span className="notch-both bg-gold px-3 py-1 text-[0.65rem] font-bold tracking-[0.16em] text-ink uppercase">
-              {post.category}
-            </span>
-            <span className="text-xs text-paper/50">
-              {formatDate(post.date)} &middot; {post.readTime}
-            </span>
-          </div>
+          <p className="font-sans mt-6 text-xs font-bold tracking-[0.2em] text-magenta uppercase">
+            {post.category}
+          </p>
 
-          <h1 className="font-display mt-5 text-4xl leading-[0.98] tracking-tight text-paper uppercase sm:text-6xl">
+          <h1 className="font-serif mt-3 text-[2.1rem] font-bold leading-[1.1] tracking-tight text-ink sm:text-[2.85rem]">
             {post.title}
           </h1>
 
-          <div className="mt-8 flex items-center justify-between border-y border-glow/15 py-4">
-            <p className="text-sm text-paper/60">Share this with someone who needs it.</p>
-            <ShareButton path={`/blog/${post.slug}`} />
+          <p className="font-serif mt-4 text-xl leading-snug text-ink/60 italic">{post.deck}</p>
+
+          <div className="mt-6 flex items-center justify-between border-y border-ink/10 py-4">
+            <p className="font-sans text-sm text-ink/50">
+              {formatDate(post.date)} &middot; {post.readTime}
+            </p>
+            <ShareButton path={`/blog/${post.slug}`} variant="light" />
           </div>
 
-          <div className="relative mt-10 space-y-5 overflow-hidden border border-glow/20 bg-grape/30 p-7 sm:p-10">
-            <div className="grain pointer-events-none absolute inset-0 opacity-30" aria-hidden />
-            {post.content.map((paragraph, i) => (
-              <p key={i} className="relative leading-relaxed text-paper/85">
-                {paragraph}
-              </p>
+          <div className="mt-10 space-y-6">
+            {post.content.map((block, i) => (
+              <Block key={i} block={block} />
             ))}
           </div>
         </div>
       </article>
-
-      {more.length > 0 && (
-        <section className="border-t border-glow/15 px-5 py-16 sm:py-20">
-          <div className="mx-auto max-w-6xl">
-            <h2 className="text-xs font-bold tracking-[0.28em] text-gold uppercase">
-              More from the blog
-            </h2>
-            <div className="mt-6 grid gap-6 sm:grid-cols-3">
-              {more.map((p) => (
-                <PostCard key={p.slug} post={p} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       <Footer />
     </main>
