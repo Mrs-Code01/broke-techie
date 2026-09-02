@@ -45,11 +45,11 @@ export default function NewsletterSubscribe() {
 
       <form
         onSubmit={onSubmit}
-        className="flex flex-col gap-3 border border-ink/10 bg-ink/[0.03] p-5 sm:flex-row sm:items-center"
+        className="flex flex-col gap-3 border border-glow/20 bg-grape p-5 sm:flex-row sm:items-center"
       >
         <div className="flex-1">
-          <p className="font-serif text-base font-bold text-ink">Want more reads like this?</p>
-          <p className="mt-0.5 text-sm text-ink/60">
+          <p className="font-serif text-base font-bold text-paper">Want more reads like this?</p>
+          <p className="mt-0.5 text-sm text-paper/70">
             Get the next research-backed article the moment it&apos;s up.
           </p>
         </div>
