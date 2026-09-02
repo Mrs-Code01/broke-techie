@@ -181,6 +181,27 @@ export default async function BlogPost({
               <Block key={i} block={block} />
             ))}
           </div>
+
+          <div className="mt-14 border border-gold/40 bg-ink px-6 py-10 text-center sm:px-10">
+            <p className="font-sans text-xs font-bold tracking-[0.22em] text-gold uppercase">
+              Take It Further
+            </p>
+            <h2 className="font-serif mt-3 text-2xl font-bold text-paper sm:text-3xl">
+              Want this actually built, or talked through live?
+            </h2>
+            <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-paper/70">
+              Talk to a professional AI consultant on Fiverr — get it built for you, or
+              book a one-on-one coaching session and work through it together.
+            </p>
+            <a
+              href="https://www.fiverr.com/s/9d2rV8E"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="notch-both mt-6 inline-block bg-gold px-8 py-3 text-sm font-bold tracking-[0.12em] text-ink uppercase transition hover:bg-paper"
+            >
+              Talk to a Consultant
+            </a>
+          </div>
         </div>
       </article>
 

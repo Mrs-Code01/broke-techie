@@ -1,5 +1,12 @@
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 import { Logo } from "./Stage";
+
+const NAV_LINKS = [
+  { label: "Latest Articles", href: "/blog" },
+  { label: "Round Table", href: "/#roundtable" },
+  { label: "Answers", href: "/#answers" },
+];
 
 export default function BlogHeader() {
   return (
@@ -20,12 +27,15 @@ export default function BlogHeader() {
             Answers
           </Link>
         </div>
-        <Link
-          href="/#contact"
-          className="bg-gold px-5 py-2 text-sm font-bold tracking-[0.12em] text-ink uppercase transition hover:bg-paper"
-        >
-          Join
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link
+            href="/#contact"
+            className="bg-gold px-5 py-2 text-sm font-bold tracking-[0.12em] text-ink uppercase transition hover:bg-paper"
+          >
+            Join
+          </Link>
+          <MobileMenu links={NAV_LINKS} />
+        </div>
       </nav>
     </header>
   );

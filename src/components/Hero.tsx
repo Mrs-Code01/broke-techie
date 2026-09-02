@@ -1,9 +1,19 @@
+import MobileMenu from "./MobileMenu";
 import { StageBackdrop } from "./Stage";
 
 const STATS = [
   { value: "08", label: "Skill tracks" },
   { value: "Free", label: "Round table seat" },
   { value: "In person", label: "Every seminar" },
+];
+
+const NAV_LINKS = [
+  { label: "About", href: "#about" },
+  { label: "Latest Articles", href: "#articles" },
+  { label: "Line Up", href: "#lineup" },
+  { label: "Journey", href: "#journey" },
+  { label: "Answers", href: "#answers" },
+  { label: "Round Table", href: "#roundtable" },
 ];
 
 export default function Hero() {
@@ -36,12 +46,15 @@ export default function Hero() {
           <a href="#answers" className="transition hover:text-gold">Answers</a>
           <a href="#roundtable" className="transition hover:text-gold">Round Table</a>
         </div>
-        <a
-          href="#contact"
-          className="bg-gold px-5 py-2 text-sm font-bold tracking-[0.12em] text-ink uppercase transition hover:bg-paper"
-        >
-          Join
-        </a>
+        <div className="flex items-center gap-2">
+          <a
+            href="#contact"
+            className="bg-gold px-5 py-2 text-sm font-bold tracking-[0.12em] text-ink uppercase transition hover:bg-paper"
+          >
+            Join
+          </a>
+          <MobileMenu links={NAV_LINKS} />
+        </div>
       </nav>
 
       <div className="relative mx-auto max-w-6xl px-5 pb-28 pt-10 text-center sm:pt-16">
