@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import BlogHeader from "@/components/BlogHeader";
 import Footer from "@/components/Footer";
-import Reveal from "@/components/Reveal";
+import ScrollToBottomButton from "@/components/ScrollToBottomButton";
 import ShareButton from "@/components/ShareButton";
 import { CompareColumns, MaturityLadder, NodesGraphic } from "@/components/ArticleArt";
 import { POSTS, formatDate, getPost, type ContentBlock } from "@/data/posts";
@@ -140,8 +140,10 @@ export default async function BlogPost({
     <main className="bg-ink">
       <BlogHeader />
 
+      <ScrollToBottomButton />
+
       <article className="bg-paper px-5 py-16 sm:py-20">
-        <div className="mx-auto max-w-[700px] animate-fade-up motion-reduce:animate-none">
+        <div className="mx-auto max-w-[700px]">
           <Link
             href="/blog"
             className="font-sans text-xs font-bold tracking-[0.2em] text-ink/50 uppercase transition hover:text-ink"
@@ -168,7 +170,7 @@ export default async function BlogPost({
         </div>
 
         <div className="mx-auto max-w-[700px]">
-          <Reveal className="mt-10 overflow-hidden border border-ink/10">
+          <div className="mt-10 overflow-hidden border border-ink/10">
             {post.image ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img src={post.image.src} alt={post.image.alt} className="h-auto w-full object-cover" />
@@ -177,17 +179,17 @@ export default async function BlogPost({
                 <NodesGraphic className="mx-auto h-auto w-full max-w-lg" />
               </div>
             )}
-          </Reveal>
+          </div>
 
           <div className="mt-10 space-y-6">
             {post.content.map((block, i) => (
-              <Reveal key={i}>
+              <div key={i} id={block.type === "callout" ? "article-summary" : undefined}>
                 <Block block={block} />
-              </Reveal>
+              </div>
             ))}
           </div>
 
-          <Reveal className="mt-14 border border-gold/40 bg-ink px-6 py-10 text-center sm:px-10">
+          <div className="mt-14 border border-gold/40 bg-ink px-6 py-10 text-center sm:px-10">
             <p className="font-sans text-xs font-bold tracking-[0.22em] text-gold uppercase">
               Take It Further
             </p>
@@ -207,7 +209,7 @@ export default async function BlogPost({
             >
               Talk to a Consultant
             </a>
-          </Reveal>
+          </div>
         </div>
       </article>
 
