@@ -6,7 +6,8 @@ export type ContentBlock =
   | { type: "ol"; items: string[] }
   | { type: "flow"; steps: string[] }
   | { type: "quote"; text: string }
-  | { type: "callout"; heading: string; text: string[] };
+  | { type: "callout"; heading: string; text: string[] }
+  | { type: "art"; variant: "nodes" | "ladder" | "compare" };
 
 export type Post = {
   slug: string;
@@ -16,6 +17,9 @@ export type Post = {
   category: string;
   date: string;
   readTime: string;
+  // A real photo for the article hero and its card. Until one is supplied,
+  // the hero/card fall back to a built-in illustration — see ArticleArt.tsx.
+  image?: { src: string; alt: string };
   content: ContentBlock[];
 };
 
@@ -157,6 +161,8 @@ export const POSTS: Post[] = [
         text: "OpenAI reports that its frontier enterprise users are moving from assistance toward execution, with agents increasingly connected to company context and tools.",
       },
 
+      { type: "art", variant: "ladder" },
+
       { type: "h2", text: "The real divide may be depth, not adoption" },
       {
         type: "p",
@@ -195,6 +201,8 @@ export const POSTS: Post[] = [
       { type: "p", text: "Humans review high-risk decisions.\nThe company monitors outcomes." },
       { type: "p", text: "Both companies use AI.\nBut their operating models are completely different." },
       { type: "p", text: "That's the distinction that matters." },
+
+      { type: "art", variant: "compare" },
 
       { type: "h2", text: "And this is where AI agents become interesting" },
       { type: "p", text: "The conversation around AI agents can easily become too technical.\nPeople start talking about:" },
