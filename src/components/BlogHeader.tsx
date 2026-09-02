@@ -10,7 +10,7 @@ const NAV_LINKS = [
 
 export default function BlogHeader() {
   return (
-    <header className="relative overflow-hidden border-b border-glow/15 bg-void/60">
+    <header className="relative border-b border-glow/15 bg-void/60">
       <div className="grain pointer-events-none absolute inset-0 opacity-30" aria-hidden />
       <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-5 py-6">
         <Link href="/">
