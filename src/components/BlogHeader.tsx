@@ -16,7 +16,7 @@ export default function BlogHeader() {
         <Link href="/">
           <Logo />
         </Link>
-        <div className="hidden items-center gap-8 text-sm font-medium text-paper/60 md:flex">
+        <div className="hidden items-center gap-8 text-sm font-medium text-paper/60 min-[960px]:flex">
           <Link href="/blog" className="transition hover:text-gold">
             Latest Articles
           </Link>

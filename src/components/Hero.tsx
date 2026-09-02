@@ -38,7 +38,7 @@ export default function Hero() {
             Broke<span className="text-gold">Techies</span>
           </span>
         </a>
-        <div className="hidden items-center gap-8 text-sm font-medium text-paper/60 md:flex">
+        <div className="hidden items-center gap-8 text-sm font-medium text-paper/60 min-[960px]:flex">
           <a href="#about" className="transition hover:text-gold">About</a>
           <a href="#articles" className="transition hover:text-gold">Latest Articles</a>
           <a href="#lineup" className="transition hover:text-gold">Line Up</a>

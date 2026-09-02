@@ -19,7 +19,7 @@ export default function MobileMenu({ links }: { links: NavLink[] }) {
   }, []);
 
   return (
-    <div ref={rootRef} className="relative md:hidden">
+    <div ref={rootRef} className="relative min-[960px]:hidden">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -27,41 +27,41 @@ export default function MobileMenu({ links }: { links: NavLink[] }) {
         aria-expanded={open}
         className="grid h-10 w-10 place-items-center text-paper transition hover:text-gold"
       >
-        <svg
-          viewBox="0 0 24 24"
-          className="h-6 w-6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          aria-hidden
-        >
-          {open ? (
-            <path d="M6 6l12 12M18 6 6 18" />
-          ) : (
-            <>
-              <path d="M4 7h16" />
-              <path d="M4 12h16" />
-              <path d="M4 17h16" />
-            </>
-          )}
-        </svg>
+        <span className="relative block h-4 w-[22px]" aria-hidden>
+          <span
+            className={`absolute left-0 top-0 h-0.5 w-[22px] bg-current transition-transform duration-300 ease-out ${
+              open ? "translate-y-[7px] rotate-45" : ""
+            }`}
+          />
+          <span
+            className={`absolute left-0 top-[7px] h-0.5 w-[22px] bg-current transition-opacity duration-200 ease-out ${
+              open ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`absolute left-0 top-[14px] h-0.5 w-[22px] bg-current transition-transform duration-300 ease-out ${
+              open ? "-translate-y-[7px] -rotate-45" : ""
+            }`}
+          />
+        </span>
       </button>
 
-      {open && (
-        <div className="absolute right-0 top-full z-30 mt-3 w-56 border border-glow/20 bg-void shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block border-b border-glow/10 px-5 py-3.5 text-sm font-medium text-paper/80 transition last:border-b-0 hover:bg-glow/10 hover:text-gold"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-      )}
+      <div
+        className={`absolute right-0 top-full z-30 mt-3 w-56 origin-top-right border border-glow/20 bg-void shadow-[0_20px_60px_rgba(0,0,0,0.5)] transition duration-200 ease-out ${
+          open ? "scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"
+        }`}
+      >
+        {links.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={() => setOpen(false)}
+            className="block border-b border-glow/10 px-5 py-3.5 text-sm font-medium text-paper/80 transition last:border-b-0 hover:bg-glow/10 hover:text-gold"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
