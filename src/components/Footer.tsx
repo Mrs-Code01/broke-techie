@@ -2,19 +2,20 @@ const LINKS = [
   {
     heading: "Explore",
     items: [
-      { label: "About us", href: "#about" },
-      { label: "The line up", href: "#lineup" },
-      { label: "The come up", href: "#journey" },
-      { label: "Straight answers", href: "#answers" },
+      { label: "About us", href: "/#about" },
+      { label: "Latest articles", href: "/blog" },
+      { label: "The line up", href: "/#lineup" },
+      { label: "The come up", href: "/#journey" },
+      { label: "Straight answers", href: "/#answers" },
     ],
   },
   {
     heading: "Get in",
     items: [
-      { label: "Round table", href: "#roundtable" },
-      { label: "Join the community", href: "#contact" },
-      { label: "Become a speaker", href: "#contact" },
-      { label: "Partner with us", href: "#contact" },
+      { label: "Round table", href: "/#roundtable" },
+      { label: "Join the community", href: "/#contact" },
+      { label: "Become a speaker", href: "/#contact" },
+      { label: "Partner with us", href: "/#contact" },
     ],
   },
 ];

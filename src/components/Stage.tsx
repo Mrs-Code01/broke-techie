@@ -1,5 +1,25 @@
 import type { ReactNode } from "react";
 
+/** The circular gold mark plus wordmark, shared by the homepage nav, footer, and blog pages. */
+export function Logo() {
+  return (
+    <span className="flex items-center gap-2.5">
+      <span className="grid h-9 w-9 place-items-center rounded-full bg-gold">
+        <svg viewBox="0 0 24 24" className="h-5 w-5 text-ink" fill="currentColor">
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M3.5 5h17A1.5 1.5 0 0 1 22 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17.5v-11A1.5 1.5 0 0 1 3.5 5Zm8.5 3.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Z"
+          />
+        </svg>
+      </span>
+      <span className="font-display text-lg tracking-wide text-paper uppercase">
+        Broke<span className="text-gold">Techies</span>
+      </span>
+    </span>
+  );
+}
+
 /** Gold notched banner used as the eyebrow on every section, like "EVENTS" on the poster. */
 export function Ticket({ children }: { children: ReactNode }) {
   return (
