@@ -7,13 +7,11 @@ import { POSTS } from "@/data/posts";
 
 export const metadata: Metadata = {
   title: "Latest Articles — BrokeTechies",
-  description:
-    "Recent posts and trending reads on pricing, pitching, and getting paid as a freelancer.",
+  description: "Straight reads on pricing, pitching, AI, and getting paid as a freelancer.",
 };
 
 export default function BlogIndex() {
-  const trending = POSTS.filter((post) => post.trending);
-  const recent = [...POSTS].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const posts = [...POSTS].sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return (
     <main className="relative isolate overflow-hidden bg-ink">
@@ -29,33 +27,15 @@ export default function BlogIndex() {
           Reads for the <span className="text-gold">broke techie</span>
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-paper/70 sm:text-lg">
-          Straight answers on pricing, pitching, and getting paid. No hype, no countdown
+          Straight answers on pricing, pitching, AI, and getting paid. No hype, no countdown
           timers — just what is working right now.
         </p>
       </section>
 
-      {trending.length > 0 && (
-        <section className="border-b border-glow/15 px-5 py-16 sm:py-20">
-          <div className="mx-auto max-w-6xl">
-            <h2 className="text-xs font-bold tracking-[0.28em] text-gold uppercase">
-              Trending Posts
-            </h2>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2">
-              {trending.map((post, i) => (
-                <PostCard key={post.slug} post={post} featured={i === 0} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       <section className="px-5 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-xs font-bold tracking-[0.28em] text-gold uppercase">
-            Recent Posts
-          </h2>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {recent.map((post) => (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}
           </div>
