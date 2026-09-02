@@ -1,10 +1,17 @@
 import { NextResponse } from "next/server";
 import { promises as fs } from "node:fs";
+import os from "node:os";
 import path from "node:path";
 
 export const runtime = "nodejs";
 
-const STORE = path.join(process.cwd(), "data", "leads.json");
+// os.tmpdir() because the deployed bundle itself is read-only on serverless
+// hosts like Vercel — process.cwd() would throw. /tmp is writable there, but
+// it is NOT durable: it can reset between invocations, is per-instance (not
+// shared across concurrent requests), and never survives a redeploy. Treat
+// this as a functional stopgap, not real storage — swap for an actual
+// database (Vercel Postgres, Supabase, etc.) before relying on this data.
+const STORE = path.join(os.tmpdir(), "broketechies-leads.json");
 const INTENTS = ["contact", "roundtable", "subscribe"] as const;
 type Intent = (typeof INTENTS)[number];
 

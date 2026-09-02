@@ -1,10 +1,15 @@
 import { NextResponse } from "next/server";
 import { promises as fs } from "node:fs";
+import os from "node:os";
 import path from "node:path";
 
 export const runtime = "nodejs";
 
-const STORE = path.join(process.cwd(), "data", "comments.json");
+// See the same-named constant in /api/leads/route.ts for why this is
+// os.tmpdir() and not process.cwd() — and why it's a stopgap, not real
+// storage: it can reset between invocations, isn't shared across concurrent
+// requests, and never survives a redeploy.
+const STORE = path.join(os.tmpdir(), "broketechies-comments.json");
 
 export type ArticleComment = {
   id: string;
