@@ -19,8 +19,9 @@ export default function ArticlesTeaser() {
         </h2>
 
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-paper/70 sm:text-lg">
-          Short, direct reads on pricing, pitching, and getting paid — pulled from what
-          is actually working for freelancers right now. No hype, no countdown timers.
+          Deeply researched reads that get freelancers and businesses up to speed on
+          where AI is actually heading — so you know where to position yourself and
+          what to look into next.
         </p>
 
         <Link

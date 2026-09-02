@@ -6,7 +6,8 @@ import { POSTS } from "@/data/posts";
 
 export const metadata: Metadata = {
   title: "Latest Articles — BrokeTechies",
-  description: "Straight reads on pricing, pitching, AI, and getting paid as a freelancer.",
+  description:
+    "Heavy-research reads on where AI is heading, built to help freelancers and businesses know what's up and what to look into next.",
 };
 
 export default function BlogIndex() {
@@ -16,17 +17,18 @@ export default function BlogIndex() {
     <main className="bg-ink">
       <BlogHeader />
 
-      <section className="bg-paper px-5 py-16 sm:py-20">
+      <section className="bg-void px-5 py-16 sm:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <p className="font-sans text-xs font-bold tracking-[0.22em] text-magenta uppercase">
             The Articles
           </p>
-          <h1 className="font-serif mt-4 text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+          <h1 className="font-serif mt-4 text-4xl font-bold leading-[1.1] tracking-tight text-paper sm:text-5xl">
             Reads for the broke techie
           </h1>
-          <p className="font-serif mt-4 text-lg leading-snug text-ink/60 italic">
-            Straight answers on pricing, pitching, AI, and getting paid. No hype, no
-            countdown timers.
+          <p className="font-serif mt-4 text-lg leading-snug text-paper/70 italic">
+            Heavy-research reads that get freelancers, businesses, and teams up to speed
+            on where AI is actually heading — so you know where to position yourself and
+            what to look into next.
           </p>
         </div>
 
