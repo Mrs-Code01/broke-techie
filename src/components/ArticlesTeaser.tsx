@@ -20,7 +20,7 @@ export default function ArticlesTeaser() {
 
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-paper/70 sm:text-lg">
           Deeply researched reads that get freelancers and businesses up to speed on
-          where AI is actually heading — so you know where to position yourself and
+          where AI is actually heading, so you know where to position yourself and
           what to look into next.
         </p>
 

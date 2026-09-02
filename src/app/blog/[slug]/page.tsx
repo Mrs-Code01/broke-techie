@@ -20,7 +20,7 @@ export async function generateMetadata({
   const post = getPost(slug);
   if (!post) return {};
   return {
-    title: `${post.title} — BrokeTechies`,
+    title: `${post.title} | BrokeTechies`,
     description: post.excerpt,
   };
 }
@@ -187,11 +187,12 @@ export default async function BlogPost({
               Take It Further
             </p>
             <h2 className="font-serif mt-3 text-2xl font-bold text-paper sm:text-3xl">
-              Want this actually built, or talked through live?
+              Have a workflow or automation in mind?
             </h2>
             <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-paper/70">
-              Talk to a professional AI consultant on Fiverr — get it built for you, or
-              book a one-on-one coaching session and work through it together.
+              If you have a task worth turning into a repeatable AI workflow, or you just
+              want one-on-one live coaching to think it through, talk to a professional
+              AI consultant on Fiverr.
             </p>
             <a
               href="https://www.fiverr.com/s/9d2rV8E"

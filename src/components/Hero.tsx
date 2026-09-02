@@ -83,7 +83,7 @@ export default function Hero() {
         </p>
 
         <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-paper/60">
-          The journey from broke techie to booked freelancer — mapped, taught, and
+          The journey from broke techie to booked freelancer, mapped, taught, and
           walked with someone who has already made the trip.
         </p>
 

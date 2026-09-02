@@ -5,7 +5,7 @@ import PostCard from "@/components/PostCard";
 import { POSTS } from "@/data/posts";
 
 export const metadata: Metadata = {
-  title: "Latest Articles — BrokeTechies",
+  title: "Latest Articles | BrokeTechies",
   description:
     "Heavy-research reads on where AI is heading, built to help freelancers and businesses know what's up and what to look into next.",
 };
@@ -27,7 +27,7 @@ export default function BlogIndex() {
           </h1>
           <p className="font-serif mt-4 text-lg leading-snug text-paper/70 italic">
             Heavy-research reads that get freelancers, businesses, and teams up to speed
-            on where AI is actually heading — so you know where to position yourself and
+            on where AI is actually heading, so you know where to position yourself and
             what to look into next.
           </p>
         </div>

@@ -18,12 +18,12 @@ export type Post = {
   date: string;
   readTime: string;
   // A real photo for the article hero and its card. Until one is supplied,
-  // the hero/card fall back to a built-in illustration — see ArticleArt.tsx.
+  // the hero/card fall back to a built-in illustration, see ArticleArt.tsx.
   image?: { src: string; alt: string };
   content: ContentBlock[];
 };
 
-// Paste new posts into this array — order does not matter, newest shows
+// Paste new posts into this array, order does not matter, newest shows
 // first on /blog automatically based on `date`. A `p` block's text can
 // contain "\n" to break short lines within one paragraph.
 export const POSTS: Post[] = [
@@ -246,12 +246,12 @@ export const POSTS: Post[] = [
       {
         type: "ol",
         items: [
-          "AI fluency — Understanding what models can and cannot do.",
-          "Workflow design — Understanding how work actually moves through an organization.",
-          "Technical integration — Connecting AI to the systems where the work happens.",
-          "Domain knowledge — Understanding the business problem.",
-          "Evaluation — Knowing whether the AI output is actually good enough.",
-          "Business judgment — Knowing whether the improvement is worth the cost and complexity.",
+          "AI fluency: Understanding what models can and cannot do.",
+          "Workflow design: Understanding how work actually moves through an organization.",
+          "Technical integration: Connecting AI to the systems where the work happens.",
+          "Domain knowledge: Understanding the business problem.",
+          "Evaluation: Knowing whether the AI output is actually good enough.",
+          "Business judgment: Knowing whether the improvement is worth the cost and complexity.",
         ],
       },
       { type: "p", text: 'That combination is much harder to commoditize than:\n"I know how to use ChatGPT."' },

@@ -23,7 +23,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "BrokeTechies — Broke Tech Bro & Broke Tech Sis",
+  title: "BrokeTechies | Broke Tech Bro & Broke Tech Sis",
   description:
     "We teach broke techies how to finally earn online. Eight in-demand skills, a stage-by-stage path, and a physical round table led by the founder.",
 };
