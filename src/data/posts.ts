@@ -35,7 +35,7 @@ export const POSTS: Post[] = [
       "AI adoption is exploding, but a lot of work still looks remarkably similar to how it looked before AI. Here is the difference between using AI and actually redesigning work around it.",
     category: "AI & Business",
     date: "2026-09-02",
-    readTime: "12 min read",
+    readTime: "6 min read",
     content: [
       { type: "p", text: "There's a strange contradiction in the AI market right now." },
       {
@@ -203,7 +203,18 @@ export const POSTS: Post[] = [
       { type: "p", text: "That's the distinction that matters." },
 
       { type: "art", variant: "compare" },
-
+    ],
+  },
+  {
+    slug: "buying-an-ai-tool-wont-transform-your-business",
+    title: "Buying An AI Tool Won't Transform Your Business. Here's What Will.",
+    deck: "The skills, the workflow redesign, and the questions that actually separate AI adoption from AI transformation",
+    excerpt:
+      "Buying an AI tool doesn't redesign your workflow. Here's what does, from the skills that matter now to exactly what businesses and freelancers should do next.",
+    category: "AI & Business",
+    date: "2026-09-02",
+    readTime: "6 min read",
+    content: [
       { type: "h2", text: "And this is where AI agents become interesting" },
       { type: "p", text: "The conversation around AI agents can easily become too technical.\nPeople start talking about:" },
       { type: "ul", items: ["models", "tools", "memory", "function calling", "MCP", "orchestration", "multi-agent systems"] },
