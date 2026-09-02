@@ -16,6 +16,42 @@ const NAV_LINKS = [
   { label: "Round Table", href: "#roundtable" },
 ];
 
+/** Nav content, rendered twice: once fixed and visible, once invisible in
+ * normal flow so it reserves the exact same height at every breakpoint. */
+function NavContent() {
+  return (
+    <>
+      <a href="#top" className="flex items-center gap-2.5">
+        <span className="grid h-9 w-9 place-items-center rounded-full bg-gold">
+          <svg viewBox="0 0 24 24" className="h-5 w-5 text-ink" fill="currentColor">
+            <path fillRule="evenodd" clipRule="evenodd" d="M3.5 5h17A1.5 1.5 0 0 1 22 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17.5v-11A1.5 1.5 0 0 1 3.5 5Zm8.5 3.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Z" />
+          </svg>
+        </span>
+        <span className="font-display text-lg tracking-wide text-paper uppercase">
+          Broke<span className="text-gold">Techies</span>
+        </span>
+      </a>
+      <div className="hidden items-center gap-8 text-sm font-medium text-paper/60 min-[960px]:flex">
+        <a href="#about" className="transition hover:text-gold">About</a>
+        <a href="#articles" className="transition hover:text-gold">Latest Articles</a>
+        <a href="#lineup" className="transition hover:text-gold">Line Up</a>
+        <a href="#journey" className="transition hover:text-gold">Journey</a>
+        <a href="#answers" className="transition hover:text-gold">Answers</a>
+        <a href="#roundtable" className="transition hover:text-gold">Round Table</a>
+      </div>
+      <div className="flex items-center gap-2">
+        <a
+          href="#contact"
+          className="bg-gold px-5 py-2 text-sm font-bold tracking-[0.12em] text-ink uppercase transition hover:bg-paper"
+        >
+          Join
+        </a>
+        <MobileMenu links={NAV_LINKS} />
+      </div>
+    </>
+  );
+}
+
 export default function Hero() {
   return (
     <header className="relative isolate overflow-hidden">
@@ -27,35 +63,16 @@ export default function Hero() {
         aria-hidden
       />
 
-      <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-5 py-6">
-        <a href="#top" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-gold">
-            <svg viewBox="0 0 24 24" className="h-5 w-5 text-ink" fill="currentColor">
-              <path fillRule="evenodd" clipRule="evenodd" d="M3.5 5h17A1.5 1.5 0 0 1 22 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17.5v-11A1.5 1.5 0 0 1 3.5 5Zm8.5 3.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Z" />
-            </svg>
-          </span>
-          <span className="font-display text-lg tracking-wide text-paper uppercase">
-            Broke<span className="text-gold">Techies</span>
-          </span>
-        </a>
-        <div className="hidden items-center gap-8 text-sm font-medium text-paper/60 min-[960px]:flex">
-          <a href="#about" className="transition hover:text-gold">About</a>
-          <a href="#articles" className="transition hover:text-gold">Latest Articles</a>
-          <a href="#lineup" className="transition hover:text-gold">Line Up</a>
-          <a href="#journey" className="transition hover:text-gold">Journey</a>
-          <a href="#answers" className="transition hover:text-gold">Answers</a>
-          <a href="#roundtable" className="transition hover:text-gold">Round Table</a>
-        </div>
-        <div className="flex items-center gap-2">
-          <a
-            href="#contact"
-            className="bg-gold px-5 py-2 text-sm font-bold tracking-[0.12em] text-ink uppercase transition hover:bg-paper"
-          >
-            Join
-          </a>
-          <MobileMenu links={NAV_LINKS} />
+      <nav className="fixed inset-x-0 top-0 z-50 border-b border-glow/10 bg-ink/90 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-6">
+          <NavContent />
         </div>
       </nav>
+      <div className="invisible" aria-hidden>
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-6">
+          <NavContent />
+        </div>
+      </div>
 
       <div className="relative mx-auto max-w-6xl px-5 pb-28 pt-10 text-center sm:pt-16">
         <p className="text-xs font-bold tracking-[0.3em] text-gold uppercase sm:text-sm">
