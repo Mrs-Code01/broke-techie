@@ -37,14 +37,14 @@ export default function ScrollToBottomButton() {
       type="button"
       onClick={handleClick}
       aria-label="Jump to the summary at the end of this article"
-      className="fixed bottom-24 right-5 z-40 grid h-12 w-12 animate-bounce place-items-center rounded-full bg-gold text-ink shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition hover:bg-paper sm:right-8"
+      className="fixed bottom-20 right-4 z-40 grid h-9 w-9 animate-bounce place-items-center rounded-full bg-gold text-ink shadow-[0_8px_20px_rgba(0,0,0,0.3)] transition hover:bg-paper sm:right-6"
     >
       <svg
         viewBox="0 0 24 24"
-        className="h-6 w-6"
+        className="h-4 w-4"
         fill="none"
         stroke="currentColor"
-        strokeWidth="2.2"
+        strokeWidth="2.4"
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden
