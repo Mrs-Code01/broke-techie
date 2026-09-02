@@ -54,15 +54,10 @@ function NavContent() {
 
 export default function Hero() {
   return (
-    <header className="relative isolate overflow-hidden">
-      <StageBackdrop />
-
-      {/* Spotlight beam washing down over the type */}
-      <div
-        className="pointer-events-none absolute left-1/2 top-0 -z-0 h-[70vh] w-[120vw] -translate-x-1/2 bg-[conic-gradient(from_180deg_at_50%_0%,transparent_0deg,rgba(255,196,46,0.10)_18deg,transparent_40deg)] blur-2xl"
-        aria-hidden
-      />
-
+    <>
+      {/* Kept outside the isolated header below, so its z-index competes at
+       * the page level instead of being trapped inside Hero's own stacking
+       * context (which would let later sections paint over it on scroll). */}
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-glow/10 bg-ink/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-6">
           <NavContent />
@@ -74,7 +69,16 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-5 pb-28 pt-10 text-center sm:pt-16">
+      <header className="relative isolate overflow-hidden">
+        <StageBackdrop />
+
+        {/* Spotlight beam washing down over the type */}
+        <div
+          className="pointer-events-none absolute left-1/2 top-0 -z-0 h-[70vh] w-[120vw] -translate-x-1/2 bg-[conic-gradient(from_180deg_at_50%_0%,transparent_0deg,rgba(255,196,46,0.10)_18deg,transparent_40deg)] blur-2xl"
+          aria-hidden
+        />
+
+        <div className="relative mx-auto max-w-6xl px-5 pb-28 pt-10 text-center sm:pt-16 animate-fade-up motion-reduce:animate-none">
         <p className="text-xs font-bold tracking-[0.3em] text-gold uppercase sm:text-sm">
           The Freelancer Journey
         </p>
@@ -142,6 +146,7 @@ export default function Hero() {
         <path d="M0 118C220 60 380 96 600 62s420-52 600-14" stroke="currentColor" strokeWidth="1.5" />
         <path d="M0 100C240 44 420 80 640 46s400-40 560-4" stroke="currentColor" strokeWidth="1" opacity=".6" />
       </svg>
-    </header>
+      </header>
+    </>
   );
 }

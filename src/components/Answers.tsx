@@ -49,7 +49,7 @@ export default function Answers() {
           >
             <dt className="flex gap-3 text-lg font-bold tracking-tight text-paper">
               <span className="text-gold" aria-hidden>
-                &mdash;
+                &bull;
               </span>
               {item.q}
             </dt>

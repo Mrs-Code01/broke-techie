@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BlogHeader from "@/components/BlogHeader";
 import Footer from "@/components/Footer";
 import PostCard from "@/components/PostCard";
+import Reveal from "@/components/Reveal";
 import { POSTS } from "@/data/posts";
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function BlogIndex() {
       <BlogHeader />
 
       <section className="bg-void px-5 py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl text-center animate-fade-up motion-reduce:animate-none">
           <p className="font-sans text-xs font-bold tracking-[0.22em] text-magenta uppercase">
             The Articles
           </p>
@@ -33,8 +34,10 @@ export default function BlogIndex() {
         </div>
 
         <div className="mx-auto mt-14 grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
-            <PostCard key={post.slug} post={post} />
+          {posts.map((post, i) => (
+            <Reveal key={post.slug} delay={i * 80}>
+              <PostCard post={post} />
+            </Reveal>
           ))}
         </div>
       </section>

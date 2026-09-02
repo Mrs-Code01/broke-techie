@@ -150,7 +150,7 @@ export default function RoundTable() {
               </h3>
               <p className="mt-3 max-w-xs text-sm text-paper/60">
                 We will email you the venue and directions ahead of the date. Bring one
-                specific question &mdash; the table works best when you do.
+                specific question. The table works best when you do.
               </p>
             </div>
           ) : (

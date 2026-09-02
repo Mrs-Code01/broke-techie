@@ -88,7 +88,7 @@ export default function LineUp() {
 
       <p className="mx-auto mt-10 max-w-xl text-center text-sm leading-relaxed text-paper/60">
         We deliberately do not publish rate charts. What you can charge depends on
-        your work, your clients and how you pitch &mdash; not on a number we put on a
+        your work, your clients and how you pitch, not on a number we put on a
         website.
       </p>
     </Section>
