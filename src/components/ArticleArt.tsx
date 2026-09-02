@@ -1,5 +1,5 @@
 /** Decorative editorial graphics used in place of stock photography. Purely
- * illustrative — the surrounding headings and copy carry the actual meaning. */
+ * illustrative, the surrounding headings and copy carry the actual meaning. */
 
 const NODES = [
   { x: 40, y: 145, r: 9 },

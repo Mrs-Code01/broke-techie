@@ -17,7 +17,7 @@ export default function ShareButton({ path }: { path: string }) {
       setCopied(true);
       window.setTimeout(() => setCopied(false), 2000);
     } catch {
-      // Clipboard access denied — nothing useful to do beyond leaving the button unchanged.
+      // Clipboard access denied, nothing useful to do beyond leaving the button unchanged.
     }
   }
 
