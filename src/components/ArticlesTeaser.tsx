@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Reveal from "./Reveal";
 import { StageBackdrop, Ticket } from "./Stage";
 
 export default function ArticlesTeaser() {
@@ -9,7 +10,7 @@ export default function ArticlesTeaser() {
     >
       <StageBackdrop />
 
-      <div className="relative mx-auto flex max-w-4xl flex-col items-center px-5 text-center">
+      <Reveal className="relative mx-auto flex max-w-4xl flex-col items-center px-5 text-center">
         <Ticket>Latest Articles</Ticket>
 
         <h2 className="font-display mt-8 text-[13vw] leading-[0.92] tracking-tight text-paper uppercase sm:text-7xl">
@@ -30,7 +31,7 @@ export default function ArticlesTeaser() {
         >
           Come In
         </Link>
-      </div>
+      </Reveal>
     </section>
   );
 }

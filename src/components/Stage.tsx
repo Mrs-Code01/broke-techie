@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Reveal from "./Reveal";
 
 /** The circular gold mark plus wordmark, shared by the homepage nav, footer, and blog pages. */
 export function Logo() {
@@ -74,7 +75,7 @@ export function Section({
       className={`relative border-t border-glow/15 px-5 ${tight ? "py-20" : "py-24 sm:py-32"}`}
     >
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-col items-center text-center">
+        <Reveal className="flex flex-col items-center text-center">
           <Ticket>{eyebrow}</Ticket>
           <h2 className="font-display mt-7 text-4xl leading-[0.92] tracking-tight text-paper uppercase sm:text-6xl">
             {title}
@@ -84,8 +85,10 @@ export function Section({
               {lede}
             </p>
           )}
-        </div>
-        <div className="mt-14">{children}</div>
+        </Reveal>
+        <Reveal delay={120} className="mt-14">
+          {children}
+        </Reveal>
       </div>
     </section>
   );
