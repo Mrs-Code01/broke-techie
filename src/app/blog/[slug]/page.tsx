@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import BlogHeader from "@/components/BlogHeader";
 import CommentSection from "@/components/CommentSection";
 import Footer from "@/components/Footer";
+import LikeButton from "@/components/LikeButton";
 import NewsletterSubscribe from "@/components/NewsletterSubscribe";
 import ScrollToBottomButton from "@/components/ScrollToBottomButton";
 import ShareButton from "@/components/ShareButton";
@@ -174,7 +175,10 @@ export default async function BlogPost({
             <p className="font-sans text-sm text-ink/50">
               {formatDate(post.date)} &middot; {post.readTime}
             </p>
-            <ShareButton path={`/blog/${post.slug}`} />
+            <div className="flex items-center gap-2">
+              <LikeButton slug={post.slug} />
+              <ShareButton path={`/blog/${post.slug}`} />
+            </div>
           </div>
 
           <NewsletterSubscribe />
