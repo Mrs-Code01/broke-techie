@@ -175,10 +175,7 @@ export default async function BlogPost({
             <p className="font-sans text-sm text-ink/50">
               {formatDate(post.date)} &middot; {post.readTime}
             </p>
-            <div className="flex items-center gap-2">
-              <LikeButton slug={post.slug} />
-              <ShareButton path={`/blog/${post.slug}`} />
-            </div>
+            <ShareButton path={`/blog/${post.slug}`} />
           </div>
 
           <NewsletterSubscribe />
@@ -202,6 +199,13 @@ export default async function BlogPost({
                 <Block block={block} />
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 flex flex-col items-center gap-3 border-t border-ink/10 pt-8 text-center">
+            <p className="font-sans text-xs font-bold tracking-[0.2em] text-ink/50 uppercase">
+              Liked this article?
+            </p>
+            <LikeButton slug={post.slug} />
           </div>
 
           <div className="mt-14 border border-gold/40 bg-ink px-6 py-10 text-center sm:px-10">
