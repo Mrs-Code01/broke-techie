@@ -231,6 +231,10 @@ export const POSTS: Post[] = [
     category: "AI & Business",
     date: "2026-09-02",
     readTime: "6 min read",
+    image: {
+      src: "https://images.pexels.com/photos/34639577/pexels-photo-34639577.jpeg",
+      alt: "A person analyzing data on a laptop screen",
+    },
     content: [
       { type: "h2", text: "And this is where AI agents become interesting" },
       { type: "p", text: "The conversation around AI agents can easily become too technical.\nPeople start talking about:" },
@@ -244,6 +248,12 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "That doesn't mean every business needs an AI agent." },
       { type: "p", text: "It means the boundary between AI that advises and AI that executes is becoming more important." },
+
+      {
+        type: "photo",
+        src: "https://plus.unsplash.com/premium_photo-1661420059531-3f33271aac57?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "A professional working with AI-connected systems",
+      },
 
       { type: "h2", text: "The AI tool isn't the transformation" },
       { type: "p", text: "This is one of the biggest mistakes businesses can make." },
@@ -283,6 +293,12 @@ export const POSTS: Post[] = [
         ],
       },
       { type: "p", text: 'That combination is much harder to commoditize than:\n"I know how to use ChatGPT."' },
+
+      {
+        type: "photo",
+        src: "https://images.pexels.com/photos/5716016/pexels-photo-5716016.jpeg",
+        alt: "A person using a laptop with a chart on screen",
+      },
 
       { type: "h2", text: "There's also a warning here" },
       { type: "p", text: "Deeper AI integration creates new problems." },
