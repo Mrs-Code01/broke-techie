@@ -1,17 +1,8 @@
 import { NextResponse } from "next/server";
-import { promises as fs } from "node:fs";
-import os from "node:os";
-import path from "node:path";
+import { supabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
-// os.tmpdir() because the deployed bundle itself is read-only on serverless
-// hosts like Vercel — process.cwd() would throw. /tmp is writable there, but
-// it is NOT durable: it can reset between invocations, is per-instance (not
-// shared across concurrent requests), and never survives a redeploy. Treat
-// this as a functional stopgap, not real storage — swap for an actual
-// database (Vercel Postgres, Supabase, etc.) before relying on this data.
-const STORE = path.join(os.tmpdir(), "broketechies-leads.json");
 const INTENTS = ["contact", "roundtable", "subscribe"] as const;
 type Intent = (typeof INTENTS)[number];
 
@@ -22,7 +13,6 @@ export type Lead = {
   track?: string;
   session?: string;
   message?: string;
-  receivedAt: string;
 };
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -53,27 +43,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ errors }, { status: 422 });
   }
 
-  const lead: Lead = {
-    intent: intent as Intent,
-    name,
+  const { error } = await supabaseAdmin.from("leads").insert({
+    intent,
+    name: name || null,
     email,
-    track: clean(raw.track, 80) || undefined,
-    session: clean(raw.session, 120) || undefined,
-    message: clean(raw.message, 2000) || undefined,
-    receivedAt: new Date().toISOString(),
-  };
+    track: clean(raw.track, 80) || null,
+    session: clean(raw.session, 120) || null,
+    message: clean(raw.message, 2000) || null,
+  });
 
-  // Local file store so the forms genuinely capture data out of the box.
-  // Swap this for your CRM, mailing list, or database when you go live.
-  try {
-    await fs.mkdir(path.dirname(STORE), { recursive: true });
-    const existing = await fs
-      .readFile(STORE, "utf8")
-      .then((text) => JSON.parse(text) as Lead[])
-      .catch(() => [] as Lead[]);
-    existing.push(lead);
-    await fs.writeFile(STORE, JSON.stringify(existing, null, 2), "utf8");
-  } catch (error) {
+  if (error) {
     console.error("Failed to persist lead", error);
     return NextResponse.json(
       { error: "We could not save that. Please try again." },
