@@ -1,15 +1,7 @@
 import { NextResponse } from "next/server";
-import { promises as fs } from "node:fs";
-import os from "node:os";
-import path from "node:path";
+import { supabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
-
-// See the same-named constant in /api/leads/route.ts for why this is
-// os.tmpdir() and not process.cwd() — and why it's a stopgap, not real
-// storage: it can reset between invocations, isn't shared across concurrent
-// requests, and never survives a redeploy.
-const STORE = path.join(os.tmpdir(), "broketechies-comments.json");
 
 export type ArticleComment = {
   id: string;
@@ -23,13 +15,6 @@ function clean(value: unknown, max: number): string {
   return typeof value === "string" ? value.trim().slice(0, max) : "";
 }
 
-async function readAll(): Promise<ArticleComment[]> {
-  return fs
-    .readFile(STORE, "utf8")
-    .then((text) => JSON.parse(text) as ArticleComment[])
-    .catch(() => []);
-}
-
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const slug = clean(searchParams.get("slug"), 200);
@@ -37,10 +22,24 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "A slug is required." }, { status: 400 });
   }
 
-  const all = await readAll();
-  const comments = all
-    .filter((c) => c.slug === slug)
-    .sort((a, b) => (a.createdAt < b.createdAt ? -1 : 1));
+  const { data, error } = await supabaseAdmin
+    .from("comments")
+    .select("id, slug, name, comment, created_at")
+    .eq("slug", slug)
+    .order("created_at", { ascending: true });
+
+  if (error) {
+    console.error("Failed to load comments", error);
+    return NextResponse.json({ error: "Could not load comments." }, { status: 500 });
+  }
+
+  const comments: ArticleComment[] = (data ?? []).map((row) => ({
+    id: row.id,
+    slug: row.slug,
+    name: row.name,
+    comment: row.comment,
+    createdAt: row.created_at,
+  }));
 
   return NextResponse.json({ comments });
 }
@@ -74,22 +73,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ errors }, { status: 422 });
   }
 
-  const entry: ArticleComment = {
-    id: crypto.randomUUID(),
-    slug,
-    name,
-    comment,
-    createdAt: new Date().toISOString(),
-  };
+  const { data, error } = await supabaseAdmin
+    .from("comments")
+    .insert({ slug, name, comment })
+    .select("id, slug, name, comment, created_at")
+    .single();
 
-  // Local file store, same tradeoff as /api/leads: fine for now, swap for a
-  // real database before relying on comments surviving redeploys at scale.
-  try {
-    await fs.mkdir(path.dirname(STORE), { recursive: true });
-    const existing = await readAll();
-    existing.push(entry);
-    await fs.writeFile(STORE, JSON.stringify(existing, null, 2), "utf8");
-  } catch (error) {
+  if (error || !data) {
     console.error("Failed to persist comment", error);
     return NextResponse.json(
       { error: "We could not post that. Please try again." },
@@ -97,5 +87,13 @@ export async function POST(request: Request) {
     );
   }
 
-  return NextResponse.json({ comment: entry }, { status: 201 });
+  const created: ArticleComment = {
+    id: data.id,
+    slug: data.slug,
+    name: data.name,
+    comment: data.comment,
+    createdAt: data.created_at,
+  };
+
+  return NextResponse.json({ comment: created }, { status: 201 });
 }
