@@ -106,6 +106,13 @@ function Block({ block }: { block: ContentBlock }) {
         </div>
       );
     }
+    case "photo":
+      return (
+        <div className="overflow-hidden border border-ink/10">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={block.src} alt={block.alt} className="h-auto w-full object-cover" />
+        </div>
+      );
     case "callout":
       return (
         <div className="border-l-4 border-gold bg-gold/[0.08] px-6 py-6">

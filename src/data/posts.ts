@@ -7,7 +7,8 @@ export type ContentBlock =
   | { type: "flow"; steps: string[] }
   | { type: "quote"; text: string }
   | { type: "callout"; heading: string; text: string[] }
-  | { type: "art"; variant: "nodes" | "ladder" | "compare" };
+  | { type: "art"; variant: "nodes" | "ladder" | "compare" }
+  | { type: "photo"; src: string; alt: string };
 
 export type Post = {
   slug: string;
@@ -36,6 +37,10 @@ export const POSTS: Post[] = [
     category: "AI & Business",
     date: "2026-09-02",
     readTime: "6 min read",
+    image: {
+      src: "https://images.pexels.com/photos/29267512/pexels-photo-29267512.jpeg",
+      alt: "A team collaborating together in a modern workspace",
+    },
     content: [
       { type: "p", text: "There's a strange contradiction in the AI market right now." },
       {
@@ -53,6 +58,12 @@ export const POSTS: Post[] = [
       { type: "p", text: "So here's the question I think we should be asking in 2026:" },
       { type: "quote", text: "If almost everyone has access to AI, why hasn't work changed more dramatically?" },
       { type: "p", text: "The answer may be that we've been measuring the wrong thing." },
+
+      {
+        type: "photo",
+        src: "https://images.unsplash.com/photo-1752223638233-4c9545333f89?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "A modern workspace setup",
+      },
 
       { type: "h2", text: "AI adoption isn't the same as AI transformation" },
       {
@@ -184,6 +195,12 @@ export const POSTS: Post[] = [
         ],
       },
       { type: "p", text: "Those questions tell you much more about AI maturity." },
+
+      {
+        type: "photo",
+        src: "https://images.unsplash.com/photo-1677506048148-0c914dd8197b?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "A technology and business workspace",
+      },
 
       { type: "h2", text: "Consider two companies" },
       { type: "p", text: 'Both tell you:\n"We use AI."' },
