@@ -29,14 +29,14 @@ export type Post = {
 // contain "\n" to break short lines within one paragraph.
 export const POSTS: Post[] = [
   {
-    slug: "claude-mcp-sketchup-medeek-beginners-guide",
-    title: "Claude + SketchUp + Medeek: The Complete Beginner's Guide",
-    deck: "How an AI actually reaches inside a desktop program and builds something, explained from zero",
+    slug: "claude-mcp-sketchup-medeek-part-1",
+    title: "Claude + SketchUp + Medeek, Part 1: The Pieces",
+    deck: "How an AI actually reaches inside a desktop program, explained from zero",
     excerpt:
-      "You tell Claude \"create a 24-foot exterior wall\" and it appears in SketchUp. Here is every piece that has to exist for that to work — MCP, tools, servers, the Ruby API, the bridge, and the construction plugins — explained simply.",
+      "You tell Claude \"create a 24-foot exterior wall\" and it appears in SketchUp. Part 1 explains every piece that has to exist for that to work: MCP, tools, servers, the Ruby API, the bridge, and the construction plugins.",
     category: "AI Engineering",
     date: "2026-09-07",
-    readTime: "18 min read",
+    readTime: "10 min read",
     content: [
       { type: "h2", text: "What are we actually trying to build?" },
       { type: "p", text: "Imagine you have SketchUp Pro open on your computer." },
@@ -411,8 +411,46 @@ export const POSTS: Post[] = [
         type: "flow",
         steps: ["Natural language", "Claude", "Ruby code", "Copy", "Paste", "Run"],
       },
+      {
+        type: "p",
+        text: "That covers the pieces and how they connect. Part 2 is the harder half: designing the tools, getting the units right, verifying the work, keeping it safe, and proving the whole thing with a POC before promising anything.",
+      },
 
-      { type: "h2", text: "14. Why tool design matters" },
+      {
+        type: "callout",
+        heading: "BrokeTechie Takeaway",
+        text: [
+          "Claude cannot reach into a desktop program by itself. MCP is the standard connection that lets it call tools you build.",
+          "Five pieces, five jobs:\nClaude understands the request. MCP carries the tool call. Your server translates and validates. SketchUp's Ruby API controls the model. Medeek builds the construction assembly.",
+          "The bridge is the piece people forget — the MCP server and SketchUp are separate programs, and something has to carry messages between them.",
+          "You are not building Claude. You are building the controlled bridge that lets Claude use SketchUp and Medeek as tools.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "claude-mcp-sketchup-medeek-part-2",
+    title: "Claude + SketchUp + Medeek, Part 2: Building It Properly",
+    deck: "Tool design, units, verification, safety, and the proof of concept that comes before any promise",
+    excerpt:
+      "Knowing the pieces is not the same as making them reliable. Part 2 covers tool design, unit conversion, model context, verification, error handling, security, and the POC that tells you whether the project is even possible.",
+    category: "AI Engineering",
+    date: "2026-09-07",
+    readTime: "12 min read",
+    content: [
+      {
+        type: "p",
+        text: "Part 1 covered the pieces: Claude, MCP, the server you build, the bridge, SketchUp's Ruby API and the Medeek plugins, and how a sentence travels through all of them to become a wall.",
+      },
+      {
+        type: "p",
+        text: "This part is the harder half.",
+      },
+      {
+        type: "p",
+        text: "Knowing what the components are is not the same as making them reliable. Everything below is what separates a demo that impressed someone once from a system a business can actually depend on.",
+      },
+      { type: "h2", text: "1. Why tool design matters" },
       { type: "p", text: "Suppose we give Claude only one tool:\nrun_any_ruby_code" },
       { type: "p", text: "Claude could potentially do almost anything inside SketchUp." },
       { type: "p", text: "That sounds powerful." },
@@ -434,7 +472,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "you say:\n\"Here are the six tools you are allowed to use.\"" },
       { type: "p", text: "That makes the system easier to control." },
 
-      { type: "h2", text: "15. What is a tool schema?" },
+      { type: "h2", text: "2. What is a tool schema?" },
       { type: "p", text: "A schema tells Claude what information a tool expects." },
       { type: "p", text: "For example, create_wall might declare:" },
       {
@@ -455,7 +493,7 @@ export const POSTS: Post[] = [
         text: "This is extremely useful because Claude works with natural language while the software needs structured data.",
       },
 
-      { type: "h2", text: "16. Natural language vs structured data" },
+      { type: "h2", text: "3. Natural language vs structured data" },
       { type: "p", text: "Humans say:\n\"Make me a wall that's 24 feet long.\"" },
       { type: "p", text: "Computers prefer something like:\nlength = 288 inches" },
       { type: "p", text: "Humans say:\n\"Make it 8 feet high.\"" },
@@ -472,7 +510,7 @@ export const POSTS: Post[] = [
         ],
       },
 
-      { type: "h2", text: "17. Units are extremely important" },
+      { type: "h2", text: "4. Units are extremely important" },
       { type: "p", text: "Construction involves lots of measurements." },
       { type: "p", text: "For example:" },
       { type: "ul", items: ["24 feet", "8 feet", "16 inches", "2 feet", "3 feet 6 inches"] },
@@ -497,7 +535,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "Never rely on the AI to \"probably get it right.\"" },
 
-      { type: "h2", text: "18. Coordinates" },
+      { type: "h2", text: "5. Coordinates" },
       {
         type: "p",
         text: "There is another thing computers need to understand:\nWhere should the object go?",
@@ -532,7 +570,7 @@ export const POSTS: Post[] = [
         ],
       },
 
-      { type: "h2", text: "19. Why context matters" },
+      { type: "h2", text: "6. Why context matters" },
       { type: "p", text: "Suppose the user says:\n\"Make the second wall two feet longer.\"" },
       { type: "p", text: "Claude needs to know:\nWhich wall is the second wall?" },
       {
@@ -557,7 +595,7 @@ export const POSTS: Post[] = [
         text: "MCP has a second primitive for exactly this. Resources are data sources that provide contextual information. Unlike tools, which are model-controlled, resources are application-controlled — the host decides what context to attach.",
       },
 
-      { type: "h2", text: "20. Tools that read vs tools that do" },
+      { type: "h2", text: "7. Tools that read vs tools that do" },
       { type: "p", text: "This is a very useful way to think about MCP." },
       { type: "h3", text: "Read tools" },
       { type: "p", text: "These tell Claude something." },
@@ -589,7 +627,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "That is much closer to an agentic workflow." },
 
-      { type: "h2", text: "21. The system should verify its work" },
+      { type: "h2", text: "8. The system should verify its work" },
       { type: "p", text: "Another important concept:" },
       { type: "p", text: "Never blindly assume that an operation worked." },
       { type: "p", text: "Suppose Claude tells SketchUp:\n\"Create a 24-foot wall.\"" },
@@ -625,7 +663,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "That makes the system much more reliable." },
 
-      { type: "h2", text: "22. What happens when something goes wrong?" },
+      { type: "h2", text: "9. What happens when something goes wrong?" },
       { type: "p", text: "Lots of things can go wrong." },
       { type: "p", text: "SketchUp isn't open." },
       { type: "p", text: "The server might say:\n\"SketchUp is not currently connected.\"" },
@@ -660,7 +698,7 @@ export const POSTS: Post[] = [
 
       { type: "art", variant: "compare" },
 
-      { type: "h2", text: "23. Security matters" },
+      { type: "h2", text: "10. Security matters" },
       { type: "p", text: "Imagine Claude has a tool called delete_model." },
       { type: "p", text: "A user says:\n\"Delete everything.\"" },
       {
@@ -710,7 +748,7 @@ export const POSTS: Post[] = [
         ],
       },
 
-      { type: "h2", text: "24. The Medeek API limitation you need to know" },
+      { type: "h2", text: "11. The Medeek API limitation you need to know" },
       { type: "p", text: "This is probably the most important warning in the whole project." },
       { type: "p", text: "Medeek does provide APIs." },
       { type: "p", text: "That's very good." },
@@ -730,7 +768,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Those are different things." },
       { type: "p", text: "That's why you need a POC." },
 
-      { type: "h2", text: "25. What is a POC?" },
+      { type: "h2", text: "12. What is a POC?" },
       { type: "p", text: "POC means Proof of Concept." },
       {
         type: "p",
@@ -740,7 +778,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "You build one wall." },
       { type: "p", text: "If the wall works, you move forward." },
 
-      { type: "h2", text: "26. What should the POC prove?" },
+      { type: "h2", text: "13. What should the POC prove?" },
       { type: "p", text: "The first POC should answer:" },
       {
         type: "quote",
@@ -764,7 +802,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Medeek Truss creates the truss." },
       { type: "p", text: "If those work reliably, you have proven the architecture." },
 
-      { type: "h2", text: "27. Don't start by building everything" },
+      { type: "h2", text: "14. Don't start by building everything" },
       { type: "p", text: "This is very important." },
       { type: "p", text: "Don't start with:\n\"Claude, build an entire house.\"" },
       { type: "p", text: "That's too complicated." },
@@ -786,7 +824,7 @@ export const POSTS: Post[] = [
       { type: "flow", steps: ["POC", "AI builds entire house", "Everything breaks"] },
       { type: "p", text: "The second approach creates enormous debugging complexity." },
 
-      { type: "h2", text: "28. The first tool you should build" },
+      { type: "h2", text: "15. The first tool you should build" },
       { type: "p", text: "I would actually start with something very simple:\nget_model_info" },
       { type: "p", text: "Claude could ask:\n\"What SketchUp model is currently open?\"" },
       { type: "p", text: "Your system could return information about the model." },
@@ -843,7 +881,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "That's a more advanced stage." },
 
-      { type: "h2", text: "29. Persistent object identity" },
+      { type: "h2", text: "16. Persistent object identity" },
       { type: "p", text: "This is another advanced concept." },
       {
         type: "p",
@@ -858,7 +896,7 @@ export const POSTS: Post[] = [
         text: "This is much better than asking Claude to guess based on visual appearance.",
       },
 
-      { type: "h2", text: "30. Eventually Claude can become an agent" },
+      { type: "h2", text: "17. Eventually Claude can become an agent" },
       {
         type: "p",
         text: "An agent is basically an AI that can reason through several steps and use tools to accomplish a goal.",
@@ -888,7 +926,7 @@ export const POSTS: Post[] = [
       { type: "ul", items: ["delete_everything", "execute_arbitrary_code"] },
       { type: "p", text: "The more powerful the tool, the more important security becomes." },
 
-      { type: "h2", text: "31. Tool naming and descriptions" },
+      { type: "h2", text: "18. Tool naming and descriptions" },
       { type: "p", text: "Use names that clearly describe actions." },
       { type: "p", text: "Good:" },
       { type: "ul", items: ["create_wall", "create_floor", "create_truss", "get_model_info"] },
@@ -906,7 +944,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "Claude can then make much better decisions." },
 
-      { type: "h2", text: "32. Don't expose raw Medeek complexity to Claude" },
+      { type: "h2", text: "19. Don't expose raw Medeek complexity to Claude" },
       { type: "p", text: "This is another important architectural decision." },
       { type: "p", text: "Suppose Medeek has 40 parameters." },
       { type: "p", text: "Don't necessarily expose all 40 directly to Claude." },
@@ -934,7 +972,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "This is much better UX." },
 
-      { type: "h2", text: "33. Where things can break" },
+      { type: "h2", text: "20. Where things can break" },
       { type: "p", text: "There are several failure points along the chain:" },
       {
         type: "flow",
@@ -965,7 +1003,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "That's why the POC is valuable." },
 
-      { type: "h2", text: "34. The difference between all the pieces" },
+      { type: "h2", text: "21. The difference between all the pieces" },
       { type: "p", text: "This is something you should be able to explain to a client." },
       { type: "p", text: "Claude understands language." },
       { type: "p", text: "The MCP server provides controlled tools." },
@@ -1000,7 +1038,7 @@ export const POSTS: Post[] = [
         text: "MCP gives Claude a standardized way to discover and call tools. Your integration code is what makes SketchUp controllable.",
       },
 
-      { type: "h2", text: "35. What you should not build yourself" },
+      { type: "h2", text: "22. What you should not build yourself" },
       { type: "p", text: "If Medeek already provides functionality, don't unnecessarily recreate:" },
       {
         type: "ul",
@@ -1015,7 +1053,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "Your job should be to orchestrate." },
 
-      { type: "h2", text: "36. Why your background is relevant" },
+      { type: "h2", text: "23. Why your background is relevant" },
       { type: "p", text: "You don't need to claim:\n\"I've built this exact product.\"" },
       { type: "p", text: "Your experience with:" },
       {
@@ -1031,7 +1069,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "You're not pretending the unknown part doesn't exist." },
       { type: "p", text: "You're testing it." },
 
-      { type: "h2", text: "37. What you should ask the client" },
+      { type: "h2", text: "24. What you should ask the client" },
       { type: "p", text: "Before building, ask for:" },
       { type: "h3", text: "SketchUp version" },
       { type: "p", text: "For example, SketchUp Pro 2026." },
@@ -1059,7 +1097,7 @@ export const POSTS: Post[] = [
         text: "You want to understand how the user currently interacts with the plugin.",
       },
 
-      { type: "h2", text: "38. Ask what they mean by \"working demo\"" },
+      { type: "h2", text: "25. Ask what they mean by \"working demo\"" },
       { type: "p", text: "This is also important." },
       { type: "p", text: "A \"working demo\" could mean six very different things." },
       {
@@ -1076,7 +1114,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Those are very different levels of work." },
       { type: "p", text: "You want the client to tell you which one he expects from the POC." },
 
-      { type: "h2", text: "39. A realistic roadmap" },
+      { type: "h2", text: "26. A realistic roadmap" },
       {
         type: "flow",
         steps: [
@@ -1094,7 +1132,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "You should not skip straight to Phase 10." },
 
-      { type: "h2", text: "40. What the finished product could look like" },
+      { type: "h2", text: "27. What the finished product could look like" },
       { type: "p", text: "Imagine the client has SketchUp open." },
       { type: "p", text: "He opens Claude." },
       { type: "p", text: "He says:\n\"Create a 24 by 36 foot rectangular building.\"" },
@@ -1114,7 +1152,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "That would be a very impressive workflow." },
 
-      { type: "h2", text: "41. AI is not the same as automation" },
+      { type: "h2", text: "28. AI is not the same as automation" },
       { type: "p", text: "This is worth understanding." },
       { type: "p", text: "Claude provides the intelligence." },
       { type: "p", text: "Your MCP server provides automation." },
@@ -1126,7 +1164,7 @@ export const POSTS: Post[] = [
         text: "AI plus automation plus construction software equals an AI-powered SketchUp workflow.",
       },
 
-      { type: "h2", text: "42. The biggest technical challenge" },
+      { type: "h2", text: "29. The biggest technical challenge" },
       { type: "p", text: "The hardest part probably isn't Claude." },
       {
         type: "p",
@@ -1156,7 +1194,7 @@ export const POSTS: Post[] = [
       },
       { type: "p", text: "That's professional engineering language." },
 
-      { type: "h2", text: "43. The project in plain English" },
+      { type: "h2", text: "30. The project in plain English" },
       { type: "p", text: "If someone asked you:\n\"What are you building?\"" },
       { type: "p", text: "You could explain it like this:" },
       {
@@ -1167,7 +1205,7 @@ export const POSTS: Post[] = [
 
       { type: "art", variant: "ladder" },
 
-      { type: "h2", text: "44. The five things to remember" },
+      { type: "h2", text: "31. The five things to remember" },
       { type: "p", text: "If you forget everything else, remember these five." },
       {
         type: "ol",
@@ -1193,7 +1231,7 @@ export const POSTS: Post[] = [
         ],
       },
 
-      { type: "h2", text: "45. The final mental picture" },
+      { type: "h2", text: "32. The final mental picture" },
       { type: "p", text: "Imagine a construction worker talking to a very smart assistant." },
       { type: "p", text: "The worker says:\n\"Put a 24-foot exterior wall here.\"" },
       { type: "p", text: "The assistant understands." },
@@ -1210,7 +1248,7 @@ export const POSTS: Post[] = [
         text: "And MCP is the standardized system that allows Claude to use the tools you've created to make that interaction possible.",
       },
 
-      { type: "h2", text: "46. The most important lesson" },
+      { type: "h2", text: "33. The most important lesson" },
       { type: "p", text: "You don't need to pretend you've already built the entire system." },
       { type: "p", text: "The professional approach is:" },
       {
