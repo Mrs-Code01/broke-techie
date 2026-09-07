@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import BlogHeader from "@/components/BlogHeader";
 import Footer from "@/components/Footer";
-import PostCard from "@/components/PostCard";
-import Reveal from "@/components/Reveal";
+import PostGrid from "@/components/PostGrid";
 import { POSTS } from "@/data/posts";
 
 export const metadata: Metadata = {
@@ -33,13 +32,7 @@ export default function BlogIndex() {
           </p>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post, i) => (
-            <Reveal key={post.slug} delay={i * 80}>
-              <PostCard post={post} />
-            </Reveal>
-          ))}
-        </div>
+        <PostGrid posts={posts} />
       </section>
 
       <Footer />
