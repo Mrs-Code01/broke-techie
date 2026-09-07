@@ -11,7 +11,9 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndex() {
-  const posts = [...POSTS].sort((a, b) => (a.date < b.date ? 1 : -1));
+  // Newest first. Returns 0 on equal dates so same-day posts keep their order
+  // in POSTS, rather than the arbitrary order an inconsistent comparator gives.
+  const posts = [...POSTS].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 
   return (
     <main className="bg-ink">
