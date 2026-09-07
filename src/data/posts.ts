@@ -4012,7 +4012,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "So capability exists.\nImplementation lags." },
       {
         type: "p",
-        text: "McKinsey's 2026 research puts a number on what closing that gap is worth: organizations that redesigned workflows were 5.3 times more likely to report enterprise value capture than organizations that left workflows unchanged, 32% versus 6%.",
+        text: "McKinsey's 2026 research puts a number on what closing that gap is worth: at the enablement stage, leaders were 5.3 times more likely to report enterprise value capture when workflows were redesigned than where workflows remained unchanged.",
       },
       {
         type: "p",
