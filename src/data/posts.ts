@@ -29,6 +29,1072 @@ export type Post = {
 // contain "\n" to break short lines within one paragraph.
 export const POSTS: Post[] = [
   {
+    slug: "fiverr-strategy-part-1",
+    title: "Fiverr From Zero, Part 1: What The Algorithm Can Actually See",
+    deck: "The ranking factors Fiverr publishes, the funnel you should be watching, and how to build signals before you have a single review",
+    excerpt:
+      "New sellers try to hack impressions. The better move is to deliberately create the signals Fiverr can measure before you have reviews. Here is what Fiverr's own documentation says, and what to do about it.",
+    category: "Freelancing",
+    date: "2026-09-07",
+    readTime: "12 min read",
+    content: [
+      {
+        type: "p",
+        text: "There is one idea underneath everything in this series, and most new sellers get it backwards.",
+      },
+      {
+        type: "quote",
+        text: "You shouldn't try to hack impressions. You should deliberately create the signals Fiverr can measure before you have reviews.",
+      },
+      {
+        type: "p",
+        text: "Fiverr publishes how its search and recommendation system works, and it is worth reading the actual documentation rather than a guru's summary of it.",
+      },
+      {
+        type: "p",
+        text: "Fiverr states that relevance is the most important ranking factor — how well a listing matches the search query. Alongside it, the system considers historical appeal (how attractive the listing has been to clients with similar needs), client satisfaction from completed orders, review scores, pricing, availability, freelancer responsiveness, and machine-learning models.",
+      },
+      { type: "p", text: "So the levers you have on day one are narrower than people pretend, but they are real." },
+
+      { type: "h2", text: "1. Don't target the biggest keyword just because it has volume" },
+      { type: "p", text: "This is probably the single most common beginner mistake." },
+      { type: "p", text: "Suppose you sell logo design." },
+      { type: "p", text: "Going after \"logo design\" exposes you to enormous competition." },
+      { type: "p", text: "Something like \"minimalist luxury real estate logo\" is far more targeted." },
+      { type: "p", text: "The goal is the sweet spot between demand and competition." },
+      {
+        type: "p",
+        text: "Fiverr's own Keyword Research tool exists for exactly this, surfacing search volume and competition levels for terms clients actually use across the marketplace. Worth knowing: it lives in Advanced Analytics, which is a Seller Plus feature — so a brand-new free account may need to do this research manually at first.",
+      },
+      { type: "p", text: "What you're hunting for:" },
+      { type: "quote", text: "Good demand, relatively low competition, strong buyer intent." },
+
+      { type: "h2", text: "2. Your title matters more than you think" },
+      {
+        type: "p",
+        text: "Fiverr's guidance puts your strongest keywords in three places, in order of weight: the Gig title, the positive keywords field, then the description.",
+      },
+      { type: "p", text: "So don't make your title clever. Make it searchable." },
+      { type: "p", text: "Weak:\n\"I will bring your vision to life\"" },
+      { type: "p", text: "Strong:\n\"I will design a modern Shopify website for your business\"" },
+      { type: "p", text: "The second immediately tells Fiverr what the Gig is about." },
+
+      { type: "h2", text: "3. Don't stuff keywords" },
+      { type: "p", text: "You might think: if keywords help, I'll put twenty of them everywhere." },
+      { type: "p", text: "Bad idea." },
+      {
+        type: "p",
+        text: "Fiverr's guidance is that tags should be relevant and specific — each one ideally targeting a different search phrase your title doesn't already cover. Non-relevant keywords work against you.",
+      },
+      { type: "p", text: "Think precision, not quantity." },
+
+      { type: "h2", text: "4. Your thumbnail is your salesperson" },
+      {
+        type: "p",
+        text: "Remember what an impression actually is: your Gig appearing as a thumbnail in a list of other thumbnails.",
+      },
+      { type: "p", text: "You get one tiny opportunity to make someone stop scrolling." },
+      { type: "p", text: "Your thumbnail should answer one question in about a second:" },
+      { type: "p", text: "\"What exactly am I getting?\"" },
+      {
+        type: "p",
+        text: "Fiverr says strong gallery visuals improve click-through rate, recommends high-quality images, and notes that Gigs with video perform better.",
+      },
+      { type: "p", text: "So if two new sellers have equally relevant Gigs:" },
+      {
+        type: "ul",
+        items: [
+          "Seller A — generic Canva-looking thumbnail",
+          "Seller B — professional, instantly understandable thumbnail",
+        ],
+      },
+      { type: "p", text: "Seller B converts far more of the same impressions." },
+
+      { type: "h2", text: "5. Your first 30 to 50 clicks are information" },
+      { type: "p", text: "Don't just stare at total impressions. Watch the funnel." },
+      { type: "flow", steps: ["Impressions", "Clicks", "Views", "Orders"] },
+      {
+        type: "p",
+        text: "Fiverr's analytics tracks these explicitly and calculates conversion from impressions through to orders.",
+      },
+      { type: "p", text: "For example:" },
+      { type: "p", text: "10,000 impressions producing 100 clicks is a 1% click-through rate." },
+      {
+        type: "p",
+        text: "If you later reach 10,000 impressions producing 500 clicks, something about your presentation is clearly working better.",
+      },
+      {
+        type: "p",
+        text: "Which is why you shouldn't change your Gig every few hours. Give each change enough time to produce meaningful data — Fiverr's own analytics guidance says to allow new or updated keywords time to show their impact.",
+      },
+
+      { type: "art", variant: "ladder" },
+
+      { type: "h2", text: "6. Availability actually matters" },
+      { type: "p", text: "This one is easy to overlook." },
+      {
+        type: "p",
+        text: "Fiverr states that both search results and category pages show only listings from freelancers who are currently available to take orders. Availability is also among the ranking considerations.",
+      },
+      {
+        type: "p",
+        text: "So make sure you aren't accidentally unavailable during the exact period you're trying to build visibility.",
+      },
+
+      { type: "h2", text: "7. Responsiveness matters before you have orders" },
+      {
+        type: "p",
+        text: "Fiverr says responsiveness influences the traffic freelancers receive, and it measures this concretely.",
+      },
+      {
+        type: "p",
+        text: "Your response rate is the percentage of first responses to new client messages sent within 24 hours, measured over the last 90 days. If you received 10 new inbox requests in that window and replied to 9 within 24 hours each, your rate is 90%.",
+      },
+      {
+        type: "p",
+        text: "It also gates progression: Level 1 requires a minimum of 80%, while Level 2 and Top Rated require 90%.",
+      },
+      { type: "p", text: "So when a potential buyer messages you, don't leave it until tomorrow." },
+      {
+        type: "p",
+        text: "And don't spam buyers to manufacture activity. Fiverr explicitly advises against contacting members about unrelated matters.",
+      },
+
+      { type: "h2", text: "8. Your price affects where you appear" },
+      {
+        type: "p",
+        text: "Pricing is one of the ranking considerations, and Fiverr aims to give clients a range of price points.",
+      },
+      { type: "p", text: "Which means I wouldn't automatically recommend:" },
+      { type: "p", text: "\"Put your price at $5 because you're new.\"" },
+      { type: "p", text: "Look at what your specific niche actually charges. You want your offer to be:" },
+      { type: "p", text: "competitive, believable, and profitable enough that you can deliver excellent work." },
+
+      { type: "h2", text: "9. Your profile removes hesitation" },
+      {
+        type: "p",
+        text: "Fiverr recommends completing your freelancer profile — intro video, certifications, education, portfolio.",
+      },
+      { type: "p", text: "This doesn't mean \"complete profile equals massive impressions.\" That's not what Fiverr says." },
+      {
+        type: "p",
+        text: "What it does is remove reasons for a buyer to hesitate once they've found you. And that matters, because the system is ultimately trying to connect buyers with people likely to satisfy them.",
+      },
+
+      { type: "h2", text: "10. Don't obsess over being online 24/7" },
+      { type: "p", text: "Fiverr does say being active and responding quickly helps visibility." },
+      {
+        type: "p",
+        text: "But I wouldn't read that as \"if I leave Fiverr open for 18 hours I'll get thousands of impressions.\"",
+      },
+      { type: "p", text: "The order of priority I'd actually work in:" },
+      {
+        type: "flow",
+        steps: [
+          "Relevance",
+          "An attractive Gig",
+          "Availability",
+          "Responsiveness",
+          "Clicks",
+          "Orders",
+          "Satisfaction",
+        ],
+      },
+
+      { type: "h2", text: "The three stages to engineer" },
+      {
+        type: "p",
+        text: "For a brand-new account, build the Gig around three measurable stages.",
+      },
+      { type: "h3", text: "Stage 1 — get Fiverr to understand you" },
+      { type: "p", text: "Your title, category and subcategory, tags, description, metadata and pricing should all tell the same story:" },
+      { type: "p", text: "\"This Gig is specifically for THIS type of buyer looking for THIS service.\"" },
+      { type: "p", text: "That's relevance." },
+      { type: "h3", text: "Stage 2 — make the buyer choose you" },
+      { type: "p", text: "Once you have an impression, three things generate the click:" },
+      { type: "ul", items: ["thumbnail", "title", "price"] },
+      { type: "h3", text: "Stage 3 — turn the click into evidence" },
+      { type: "p", text: "Then your description, portfolio, video, FAQs, packages, requirements and communication have to convert." },
+      {
+        type: "p",
+        text: "That's what creates the historical performance Fiverr can use later.",
+      },
+
+      { type: "h2", text: "Don't destroy a good Gig too quickly" },
+      { type: "p", text: "This is worth real discipline." },
+      { type: "p", text: "If you get 100 impressions and 0 clicks, don't conclude the Gig is dead." },
+      { type: "p", text: "100 impressions is a very small sample." },
+      {
+        type: "p",
+        text: "But 10,000 impressions producing 30 clicks is strong evidence that something about the Gig card isn't compelling.",
+      },
+      {
+        type: "p",
+        text: "And 1,000 impressions producing 100 clicks and 0 orders points at a completely different problem — people like what they see enough to click, but something on the Gig page or in the offer isn't closing.",
+      },
+      { type: "p", text: "Diagnose the funnel. Don't blindly change everything." },
+
+      { type: "art", variant: "compare" },
+
+      { type: "h2", text: "If I were launching from zero" },
+      {
+        type: "flow",
+        steps: [
+          "Niche selection",
+          "Find a high-intent keyword with manageable competition",
+          "Build one extremely relevant Gig",
+          "Create a thumbnail designed for clicks",
+          "Use a compelling but realistic offer",
+          "Complete profile and portfolio",
+          "Stay available",
+          "Respond quickly",
+          "Monitor impressions, clicks, orders",
+          "Improve based on actual data",
+          "Get first legitimate orders",
+          "Deliver exceptionally well",
+          "Build historical appeal and satisfaction",
+        ],
+      },
+      { type: "p", text: "That last step is where the compounding begins." },
+      {
+        type: "p",
+        text: "Fiverr's documentation confirms historical appeal is based on how attractive a listing has been to clients with similar needs, while satisfaction comes from completed orders.",
+      },
+      {
+        type: "p",
+        text: "So yes, there are things you can do before your first review. But there is no single secret signal as powerful as feedback. The closest strategy is to make Fiverr see your Gig as highly relevant, then make real buyers repeatedly demonstrate interest in it.",
+      },
+      {
+        type: "p",
+        text: "Part 2 covers the things most freelancers never think to investigate at all.",
+      },
+
+      {
+        type: "callout",
+        heading: "BrokeTechie Takeaway",
+        text: [
+          "Relevance is the most important ranking factor Fiverr publishes. Everything in your Gig — title, tags, category, description, price — should tell one consistent story about one buyer.",
+          "Your title carries the most keyword weight, your thumbnail carries the click, and your Gig page carries the order. Three different jobs, three different things to fix.",
+          "Availability and responsiveness are levers you control on day one, before any review exists. Fiverr only shows available freelancers, and measures your first replies within 24 hours over a 90-day window.",
+          "And stop staring at impressions.\nWatch impressions to clicks to orders — the ratio tells you which part is actually broken.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "fiverr-strategy-part-2",
+    title: "Fiverr From Zero, Part 2: What Most Freelancers Never Investigate",
+    deck: "Qualified impressions, niche angles, competitor reviews as market research, and the traps that waste beginners' first six months",
+    excerpt:
+      "Most sellers research competitors by noticing they have 10,000 reviews, then copying their title. Here is what to look at instead — including the places where your competitors' complaints become your product strategy.",
+    category: "Freelancing",
+    date: "2026-09-07",
+    readTime: "13 min read",
+    content: [
+      {
+        type: "p",
+        text: "Part 1 covered what Fiverr's system can actually see and how to feed it. This part is about the strategic thinking underneath it — the things most beginners never think to investigate, and so spend months learning slowly and expensively.",
+      },
+
+      { type: "h2", text: "1. Impressions aren't the goal. Qualified impressions are" },
+      { type: "p", text: "This is probably the most important idea in the whole series." },
+      { type: "p", text: "50,000 impressions sounds amazing. But imagine:" },
+      { type: "p", text: "50,000 impressions, 200 clicks, 0 orders." },
+      { type: "p", text: "That's not a successful Gig." },
+      { type: "p", text: "Compare it with:" },
+      { type: "p", text: "5,000 impressions, 300 clicks, 8 orders." },
+      { type: "p", text: "The second is far healthier." },
+      {
+        type: "p",
+        text: "So don't chase impressions in isolation. You want Fiverr showing your Gig to people who are actually likely to buy it.",
+      },
+
+      { type: "h2", text: "2. Your niche is almost as important as your skill" },
+      { type: "p", text: "A very skilled seller can struggle if their positioning is:" },
+      { type: "p", text: "\"I do everything.\"" },
+      { type: "p", text: "A moderately skilled seller with sharp positioning can outperform them:" },
+      { type: "p", text: "\"I create short-form video ads for Shopify beauty brands.\"" },
+      { type: "p", text: "Why? Because the second seller is easier for both Fiverr and the buyer to understand." },
+      { type: "p", text: "You want to become associated with a particular type of search." },
+
+      { type: "h2", text: "3. One Gig, one clear promise" },
+      { type: "p", text: "Don't put five services in one Gig." },
+      { type: "p", text: "Bad:\nlogo design plus flyers plus business cards plus websites plus social media plus banners." },
+      { type: "p", text: "Better:\n\"I will design a minimalist luxury logo for your brand.\"" },
+      {
+        type: "p",
+        text: "Then create separate Gigs for genuinely different services. Each one gets a clearer relevance signal that way.",
+      },
+
+      { type: "h2", text: "4. Competition isn't automatically bad" },
+      { type: "p", text: "A common mistake:" },
+      { type: "p", text: "\"This keyword has lots of competition, so I can't use it.\"" },
+      { type: "p", text: "Not necessarily." },
+      { type: "p", text: "Competition tells you there are other sellers. Demand matters too." },
+      {
+        type: "p",
+        text: "A keyword with 10 competitors and almost no buyers isn't obviously better than one with 1,000 competitors and enormous demand.",
+      },
+      { type: "p", text: "What you're really looking for is:" },
+      { type: "quote", text: "Demand times buyer intent, divided by competition." },
+      { type: "p", text: "That's not a literal Fiverr formula. It's a way to think about your niche." },
+
+      { type: "h2", text: "5. Buyer intent is everything" },
+      { type: "p", text: "Compare \"Photoshop\" with \"remove background from product photos.\"" },
+      { type: "p", text: "The second has far stronger commercial intent." },
+      {
+        type: "p",
+        text: "Someone searching \"Photoshop\" might be learning. Someone searching \"remove background from product photos\" may have 100 product images sitting on their desktop right now.",
+      },
+      { type: "p", text: "That's the kind of search a new seller should be investigating." },
+
+      { type: "h2", text: "6. Don't copy successful sellers blindly" },
+      { type: "p", text: "You'll find a seller with 10,000 reviews, excellent ranking, hundreds of orders and a beautiful Gig, and think:" },
+      { type: "p", text: "\"I'll copy their title and description.\"" },
+      { type: "p", text: "I wouldn't." },
+      {
+        type: "p",
+        text: "Their success comes partly from history, reviews, repeat buyers and accumulated performance data — none of which transfers with the wording.",
+      },
+      { type: "p", text: "Study them to answer a different question:" },
+      { type: "p", text: "What are buyers actually purchasing?" },
+      { type: "p", text: "Then find a specific underserved angle you can own." },
+
+      { type: "h2", text: "7. Your first objective is learning Fiverr's response" },
+      { type: "p", text: "When you launch, don't expect perfection. Treat the first period as an experiment." },
+      {
+        type: "ul",
+        items: [
+          "Lots of impressions, few clicks — investigate thumbnail, title, positioning.",
+          "Good clicks, no orders — investigate offer, portfolio, pricing, description, trust.",
+          "Few impressions — investigate keyword relevance, niche, category, competition.",
+        ],
+      },
+      { type: "p", text: "This is far more useful than concluding \"Fiverr isn't promoting me.\"" },
+
+      { type: "h2", text: "8. Don't keep changing everything" },
+      { type: "p", text: "Another trap. You launch today. Tomorrow:" },
+      {
+        type: "ol",
+        items: [
+          "\"No orders. Let me change the title.\"",
+          "\"Still nothing. New thumbnail.\"",
+          "\"I'll change the price.\"",
+          "\"I'll change the category.\"",
+        ],
+      },
+      { type: "p", text: "Now you don't know which change caused what." },
+      { type: "p", text: "Make deliberate changes, then observe the resulting data." },
+
+      { type: "h2", text: "9. Delivery quality becomes a visibility strategy" },
+      { type: "p", text: "This is where the flywheel gets powerful." },
+      { type: "p", text: "Imagine your first ten buyers. If you:" },
+      {
+        type: "ul",
+        items: [
+          "communicate well",
+          "deliver on time",
+          "follow instructions",
+          "produce excellent work",
+          "avoid cancellations",
+          "solve problems professionally",
+        ],
+      },
+      { type: "p", text: "you're not just earning money. You're building the performance history that helps the Gig later." },
+      {
+        type: "p",
+        text: "Fiverr's search system considers client satisfaction and historical appeal, and the Success Score incorporates factors tied to completed orders and client satisfaction.",
+      },
+      { type: "p", text: "So treat your first orders as strategic assets, not small jobs." },
+
+      { type: "h2", text: "10. Don't compete only on price" },
+      { type: "p", text: "You might think: established sellers charge $100, so I'll charge $5." },
+      {
+        type: "p",
+        text: "That attracts buyers. It also attracts buyers who expect a great deal for very little.",
+      },
+      { type: "p", text: "Compare:" },
+      { type: "p", text: "\"$15 — one professional product image edited within 24 hours\"" },
+      { type: "p", text: "against:" },
+      { type: "p", text: "\"$5 — I will do any Photoshop work\"" },
+      { type: "p", text: "Specificity creates confidence." },
+
+      { type: "h2", text: "11. Your Gig should answer objections before they're asked" },
+      { type: "p", text: "Before ordering, a buyer is subconsciously asking:" },
+      {
+        type: "ul",
+        items: [
+          "Can this person actually do it?",
+          "Have they done something like this before?",
+          "What exactly will I receive?",
+          "How long will it take?",
+          "What if I need changes?",
+          "Is this person reliable?",
+          "Is the price reasonable?",
+          "Do I need to provide anything?",
+        ],
+      },
+      { type: "p", text: "A high-converting Gig answers those before the buyer has to ask." },
+
+      { type: "h2", text: "12. Don't underestimate personalization" },
+      { type: "p", text: "Fiverr doesn't necessarily show every buyer the same results." },
+      {
+        type: "p",
+        text: "Its documentation describes the search and recommendation system as using machine-learning models along with buyer and listing information to decide what to show.",
+      },
+      { type: "p", text: "So don't think:\n\"My Gig must permanently be #1 for this keyword.\"" },
+      { type: "p", text: "Think:" },
+      {
+        type: "quote",
+        text: "I want Fiverr to repeatedly identify my Gig as a strong candidate for the right type of buyer.",
+      },
+      { type: "p", text: "That's a much more realistic objective." },
+
+      { type: "art", variant: "nodes" },
+
+      { type: "h2", text: "The hierarchy I'd follow from zero" },
+      {
+        type: "flow",
+        steps: [
+          "Find a real buyer problem",
+          "Narrow the service",
+          "Find the search terms buyers use",
+          "Analyze demand and competition",
+          "Build the Gig around one clear search intent",
+          "Create a thumbnail that earns attention",
+          "Make the Gig page convert the click",
+          "Be available and highly responsive",
+          "Deliver exceptionally on the first orders",
+          "Use the resulting data to improve",
+          "Build reviews and historical performance",
+          "Scale what works",
+        ],
+      },
+
+      { type: "h2", text: "Now the things almost nobody investigates" },
+      {
+        type: "p",
+        text: "Everything above is strategy most serious sellers eventually reach. What follows is the layer beneath it.",
+      },
+
+      { type: "h3", text: "You're competing for relevance, not ranking" },
+      { type: "p", text: "A beginner asks: \"how do I get to #1?\"" },
+      { type: "p", text: "A better question:" },
+      { type: "p", text: "\"For which buyer and which search situation does Fiverr have a reason to show me?\"" },
+      {
+        type: "p",
+        text: "You can often win a small, highly specific search long before you can compete for a huge generic one. Micro-positioning beats being the cheapest or most experienced.",
+      },
+
+      { type: "h3", text: "Search demand and buyer demand are different things" },
+      { type: "p", text: "A keyword can have plenty of searches and poor purchasing intent." },
+      { type: "p", text: "\"Canva\" attracts people looking for tutorials, inspiration and templates." },
+      { type: "p", text: "\"Canva real estate flyer\" is much closer to someone with a commercial need." },
+      { type: "p", text: "You want commercial intent, not merely volume." },
+
+      { type: "h3", text: "Your competitors' reviews are market research" },
+      { type: "p", text: "Don't just look at star ratings. Read the mediocre and negative reviews." },
+      { type: "p", text: "If buyers repeatedly complain:" },
+      {
+        type: "ul",
+        items: [
+          "\"Seller delivered late.\"",
+          "\"Seller didn't understand my instructions.\"",
+          "\"Seller didn't provide the source files.\"",
+          "\"Too many revisions.\"",
+          "\"The design looked generic.\"",
+        ],
+      },
+      { type: "p", text: "you've just found your differentiation." },
+      { type: "quote", text: "Your competitors' complaints can literally become your product strategy." },
+
+      { type: "h3", text: "The best Gig isn't the one with the most features" },
+      { type: "p", text: "Beginners build packages like this: basic 5 things, standard 12 things, premium 25 things." },
+      { type: "p", text: "That's backwards. A strong offer is usually one important outcome, delivered clearly." },
+      {
+        type: "p",
+        text: "\"I will create a professional restaurant menu design ready for print and Instagram\" is an outcome.",
+      },
+      { type: "p", text: "\"I will use Photoshop, Illustrator, Canva\" is a list of software. The buyer cares about the result." },
+
+      { type: "h3", text: "Your first buyers are your research team" },
+      { type: "p", text: "When someone orders, pay attention to what they actually asked for." },
+      {
+        type: "p",
+        text: "Maybe you advertised \"YouTube thumbnail design\" but seven of your first ten buyers specifically want thumbnails for gaming channels.",
+      },
+      {
+        type: "p",
+        text: "That's information. The market you're actually winning may differ from the one you imagined — so reposition toward it.",
+      },
+
+      { type: "h3", text: "Repeat buyers beat new buyers" },
+      { type: "p", text: "A freelancer can become obsessed with getting more impressions." },
+      { type: "p", text: "But one client who needs your service every week can be worth dozens of one-off buyers." },
+      { type: "p", text: "So when designing your service, ask whether it can naturally become recurring:" },
+      {
+        type: "ul",
+        items: [
+          "social media content",
+          "video editing",
+          "thumbnails",
+          "product images",
+          "SEO work",
+          "virtual assistance",
+          "monthly design",
+          "lead generation",
+        ],
+      },
+
+      { type: "h3", text: "Your Gig can be a funnel into something larger" },
+      { type: "p", text: "Suppose you offer $20 product-image editing. A client orders 10." },
+      { type: "p", text: "Then you discover they have 500 products." },
+      {
+        type: "p",
+        text: "Your inexpensive initial service doesn't have to be your final revenue source. It can be the entry point.",
+      },
+
+      { type: "h3", text: "Don't optimize for the highest order price initially" },
+      { type: "p", text: "There's a difference between revenue per order and probability of getting an order." },
+      {
+        type: "p",
+        text: "A $200 offer almost nobody buys isn't better than a $30 offer that gets consistent buyers. Establish demand first, then raise prices and repackage.",
+      },
+
+      { type: "h3", text: "The hidden metric: buyer clarity" },
+      { type: "p", text: "This isn't an official Fiverr metric. It's a strategic one." },
+      { type: "p", text: "Ask yourself:" },
+      { type: "quote", text: "If someone sees my Gig for three seconds, can they tell exactly what I do?" },
+      { type: "p", text: "If the answer is no, you haven't positioned it tightly enough." },
+
+      { type: "h3", text: "The problem usually isn't the algorithm" },
+      { type: "p", text: "This is a huge psychological trap." },
+      {
+        type: "p",
+        text: "Impressions but no clicks? The algorithm is doing its job — it's showing you to people. Your packaging is the problem.",
+      },
+      { type: "p", text: "Clicks but no orders? Your offer, trust or conversion is the problem." },
+      {
+        type: "p",
+        text: "Almost no impressions? Now relevance, category, competition, demand and positioning deserve investigation.",
+      },
+      { type: "p", text: "This distinction saves enormous amounts of time." },
+
+      { type: "h3", text: "Fiverr's own search box is market intelligence" },
+      { type: "p", text: "Don't only search Google for Fiverr advice. Go into Fiverr and study:" },
+      {
+        type: "ul",
+        items: [
+          "autocomplete suggestions",
+          "categories and subcategories",
+          "competitor Gigs",
+          "buyer language",
+          "packages",
+          "FAQs",
+          "reviews",
+          "recurring requests",
+        ],
+      },
+      { type: "p", text: "You're learning how actual buyers describe the problem." },
+      { type: "p", text: "The words buyers use are more valuable than the words freelancers use." },
+
+      { type: "h3", text: "There are multiple markets inside one service" },
+      { type: "p", text: "Take logo design. You could target:" },
+      {
+        type: "ul",
+        items: [
+          "restaurants",
+          "real estate",
+          "beauty brands",
+          "churches",
+          "clothing brands",
+          "gaming",
+          "SaaS companies",
+          "podcasts",
+          "personal brands",
+          "construction companies",
+        ],
+      },
+      { type: "p", text: "Same underlying skill. Completely different buyer markets." },
+      {
+        type: "p",
+        text: "A new freelancer doesn't need a revolutionary skill. Sometimes they just need a better market angle.",
+      },
+
+      { type: "h3", text: "Check the economics before choosing the niche" },
+      { type: "p", text: "Before committing, find out:" },
+      {
+        type: "ol",
+        items: [
+          "How much are buyers paying?",
+          "How long does delivery take?",
+          "How difficult is the work?",
+          "How many revisions are normal?",
+          "Are buyers likely to return?",
+          "Can you realistically produce excellent work at that price?",
+        ],
+      },
+      {
+        type: "p",
+        text: "There's no point discovering a high-demand service where the average buyer expects $10 and the work takes four hours. That's not a business.",
+      },
+
+      { type: "h3", text: "The most dangerous strategy is chasing whatever is hot" },
+      { type: "p", text: "Trends are useful. But seeing \"AI video editing is exploding!\" and jumping in without understanding the market puts you against thousands of people who had the identical idea on the identical day." },
+      { type: "p", text: "Better:" },
+      { type: "flow", steps: ["Trend", "Investigate", "Find the underserved application", "Specialize"] },
+
+      { type: "h2", text: "The big lesson" },
+      { type: "p", text: "Most beginners think Fiverr success looks like:" },
+      { type: "flow", steps: ["Skill", "Gig", "Impressions", "Orders"] },
+      { type: "p", text: "It actually looks like:" },
+      {
+        type: "flow",
+        steps: [
+          "Market",
+          "Buyer",
+          "Problem",
+          "Search language",
+          "Positioning",
+          "Gig",
+          "Click",
+          "Conversion",
+          "Delivery",
+          "Satisfaction",
+          "Repeat business",
+        ],
+      },
+      { type: "p", text: "Your skill is only one part of that equation." },
+      {
+        type: "p",
+        text: "Part 3 takes the seven concepts underneath all of this and teaches them properly.",
+      },
+
+      {
+        type: "callout",
+        heading: "BrokeTechie Takeaway",
+        text: [
+          "Chase qualified impressions, not impressions. 5,000 impressions with 8 orders beats 50,000 with none.",
+          "Read your competitors' bad reviews. Late delivery, missing source files, generic work — every repeated complaint is a differentiator someone is failing to offer.",
+          "When something isn't working, the algorithm is usually not the problem. Impressions without clicks means your packaging; clicks without orders means your offer.",
+          "And ask the three-second question:\nif someone glances at your Gig, do they know exactly what you do?",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "fiverr-strategy-part-3",
+    title: "Fiverr From Zero, Part 3: The Seven Concepts That Run The Marketplace",
+    deck: "Search intent, keyword competition, buyer psychology, offer design, conversion rate, competitive research and customer lifetime value",
+    excerpt:
+      "A mini-course, not seven definitions. These concepts connect into a chain, and once you can follow it, Fiverr stops feeling like a mysterious algorithm and starts looking like a marketplace you can study.",
+    category: "Freelancing",
+    date: "2026-09-07",
+    readTime: "14 min read",
+    content: [
+      {
+        type: "p",
+        text: "Treat this as a mini-course in marketplace strategy rather than a glossary.",
+      },
+      { type: "p", text: "The key is that these seven concepts connect to each other:" },
+      {
+        type: "flow",
+        steps: [
+          "Search intent",
+          "Competition",
+          "Buyer psychology",
+          "Offer",
+          "Conversion",
+          "Competitive research",
+          "Customer lifetime value",
+        ],
+      },
+      {
+        type: "p",
+        text: "Understand that chain and you'll build Gigs far more intelligently than someone copying titles and tags.",
+      },
+
+      { type: "h2", text: "1. Search intent" },
+      {
+        type: "p",
+        text: "Search intent is what the buyer actually wants when they type something in. It runs deeper than the keyword itself.",
+      },
+      { type: "p", text: "Someone searches \"logo.\"" },
+      { type: "p", text: "What do they want? We don't know. They could want:" },
+      {
+        type: "ul",
+        items: [
+          "a logo designed",
+          "a logo maker",
+          "logo inspiration",
+          "a logo template",
+          "a logo animation",
+          "a logo redesigned",
+        ],
+      },
+      { type: "p", text: "Now compare \"minimalist restaurant logo design.\"" },
+      {
+        type: "p",
+        text: "The intent is obvious. That person wants someone to design a minimalist logo for a restaurant. That's high-intent search.",
+      },
+
+      { type: "h3", text: "The four types of intent" },
+      { type: "p", text: "Informational — \"how to make a logo\"" },
+      { type: "p", text: "They want information. Poor buying opportunity." },
+      { type: "p", text: "Navigational — \"Canva logo\"" },
+      { type: "p", text: "They may be looking for a specific tool. Still not ready to hire." },
+      { type: "p", text: "Commercial investigation — \"best logo designer\"" },
+      { type: "p", text: "They're considering buying. Better." },
+      { type: "p", text: "Transactional — \"I need a minimalist restaurant logo designer\"" },
+      { type: "p", text: "Specific need, close to purchasing. Excellent." },
+
+      { type: "h3", text: "Your goal" },
+      { type: "p", text: "Build your Gig around transactional intent." },
+      { type: "p", text: "Instead of \"I will design graphics,\" understand the specific transaction:" },
+      { type: "p", text: "\"I will design a modern menu for your restaurant.\"" },
+      { type: "p", text: "So don't ask:\n\"What keyword should I use?\"" },
+      { type: "p", text: "Ask:\n\"What is the buyer trying to accomplish?\"" },
+      { type: "p", text: "Then find the words they use to describe that goal." },
+
+      { type: "h2", text: "2. Keyword competition" },
+      { type: "p", text: "Suppose you've found \"restaurant logo design.\" Excellent." },
+      { type: "p", text: "Then you discover 50,000 competing Gigs. Now you have another problem." },
+      { type: "p", text: "Think of Fiverr as a marketplace." },
+      { type: "p", text: "100 buyers and 100 sellers is relatively easy." },
+      { type: "p", text: "100 buyers and 100,000 sellers is much harder." },
+      { type: "p", text: "But here's the crucial detail:" },
+      { type: "quote", text: "Not every seller is actually competing for the same buyer." },
+      { type: "p", text: "Which is where specialization becomes powerful." },
+      { type: "p", text: "Instead of competing for \"logo design,\" narrow it:" },
+      {
+        type: "flow",
+        steps: [
+          "logo design",
+          "restaurant logo design",
+          "luxury restaurant logo design",
+          "luxury restaurant logo and menu branding",
+        ],
+      },
+
+      { type: "h3", text: "But don't go too narrow" },
+      { type: "p", text: "This is the opposite mistake." },
+      {
+        type: "p",
+        text: "Target \"logo design for left-handed vegan restaurant owners in Enugu who use purple\" and you'll have almost zero competition.",
+      },
+      { type: "p", text: "You'll also have almost zero buyers." },
+      { type: "p", text: "So you want the sweet spot:" },
+      { type: "quote", text: "Enough demand, manageable competition, strong buying intent." },
+      { type: "p", text: "That's the first major strategic skill." },
+
+      { type: "h2", text: "3. Buyer psychology" },
+      { type: "p", text: "Now something deeper." },
+      {
+        type: "p",
+        text: "A buyer doesn't purchase because your Gig contains the right keywords. They purchase because they believe you can solve their problem.",
+      },
+      { type: "p", text: "Buyers are constantly asking themselves five questions:" },
+      {
+        type: "ul",
+        items: [
+          "\"Can you do it?\" — competence",
+          "\"Will you understand what I want?\" — communication and trust",
+          "\"Will I get what I'm expecting?\" — certainty",
+          "\"Will I regret spending this money?\" — risk",
+          "\"Is this worth the price?\" — value",
+        ],
+      },
+      { type: "p", text: "Your Gig needs to answer those." },
+
+      { type: "h3", text: "An example" },
+      { type: "p", text: "Imagine you sell YouTube thumbnails." },
+      { type: "p", text: "Weak:" },
+      {
+        type: "p",
+        text: "\"I am a professional graphic designer with 5 years of experience. I use Photoshop and Illustrator and provide high-quality service.\"",
+      },
+      { type: "p", text: "Nothing terrible there. But notice: it's about you." },
+      { type: "p", text: "Stronger:" },
+      {
+        type: "p",
+        text: "\"I create high-click YouTube thumbnails designed to make your videos stand out in a crowded feed.\"",
+      },
+      { type: "p", text: "Now you're talking about the buyer's desired outcome. That's psychology." },
+
+      { type: "h3", text: "The strongest principle: reduce uncertainty" },
+      { type: "p", text: "Suppose I tell you:\n\"I'll make you a website.\"" },
+      { type: "p", text: "You have questions." },
+      { type: "p", text: "But if I tell you:" },
+      {
+        type: "p",
+        text: "\"You'll receive a 5-page responsive WordPress website, mobile optimized, with contact form, basic SEO setup, delivered within 5 days.\"",
+      },
+      { type: "p", text: "Much clearer. The second offer feels safer." },
+      { type: "quote", text: "Clarity creates confidence." },
+
+      { type: "art", variant: "compare" },
+
+      { type: "h2", text: "4. Offer design" },
+      { type: "p", text: "One of the most important concepts here." },
+      {
+        type: "p",
+        text: "Your service is what you do. Your offer is how you package what you do so that someone wants to buy it. Those aren't the same thing.",
+      },
+      { type: "p", text: "Service:\n\"I edit videos.\"" },
+      { type: "p", text: "Offer:" },
+      {
+        type: "p",
+        text: "\"I will turn your 10-minute talking-head video into 3 engaging short-form clips with captions, jump cuts and platform-ready formatting.\"",
+      },
+      { type: "p", text: "Same underlying skill. Completely different perceived value." },
+
+      { type: "h3", text: "A strong offer answers five things" },
+      {
+        type: "ol",
+        items: [
+          "What am I getting? — the specific deliverable",
+          "What problem does it solve? — connect it to the buyer's goal",
+          "Why should I trust you? — portfolio, samples, expertise, process",
+          "How much does it cost? — a clear package",
+          "What happens after I order? — a clear process and requirements",
+        ],
+      },
+
+      { type: "h3", text: "The important secret" },
+      { type: "quote", text: "Don't sell the process. Sell the outcome." },
+      { type: "p", text: "Weak:\n\"I will use Adobe Premiere Pro to edit your video.\"" },
+      { type: "p", text: "The buyer doesn't care about Premiere." },
+      { type: "p", text: "Better:\n\"I will turn your raw footage into polished social-media videos ready to publish.\"" },
+      { type: "p", text: "You're selling the result." },
+
+      { type: "h2", text: "5. Conversion rate" },
+      { type: "p", text: "Now the numbers." },
+      { type: "p", text: "Fiverr shows your Gig 10,000 times. 500 people click." },
+      { type: "p", text: "Your click-through rate is 500 divided by 10,000, so 5%." },
+      { type: "p", text: "Then 20 people order." },
+      { type: "p", text: "Your conversion from clicks to orders is 20 divided by 500, so 4%." },
+      { type: "p", text: "That's your funnel." },
+
+      { type: "h3", text: "Why it matters" },
+      { type: "p", text: "Because impressions alone don't tell you what's wrong." },
+      { type: "p", text: "Gig A: 10,000 impressions, 50 clicks, 0 orders." },
+      { type: "p", text: "Gig B: 10,000 impressions, 500 clicks, 20 orders." },
+      { type: "p", text: "Both got 10,000 impressions. Only one is healthy." },
+
+      { type: "h3", text: "How to diagnose" },
+      { type: "p", text: "Low impressions — potential issues:" },
+      {
+        type: "ul",
+        items: [
+          "weak relevance",
+          "poor niche selection",
+          "high competition",
+          "insufficient demand",
+          "incorrect positioning",
+        ],
+      },
+      { type: "p", text: "Lots of impressions, few clicks:" },
+      {
+        type: "ul",
+        items: ["weak thumbnail", "weak title", "poor positioning", "unappealing price", "wrong audience"],
+      },
+      { type: "p", text: "Lots of clicks, few orders:" },
+      {
+        type: "ul",
+        items: [
+          "weak offer",
+          "poor portfolio",
+          "unclear description",
+          "pricing",
+          "lack of trust",
+          "poor differentiation",
+        ],
+      },
+      { type: "p", text: "Orders but poor repeat business or satisfaction:" },
+      {
+        type: "ul",
+        items: [
+          "delivery quality",
+          "communication",
+          "unrealistic promises",
+          "wrong buyer expectations",
+        ],
+      },
+      { type: "p", text: "This is why data beats guessing." },
+
+      { type: "h2", text: "6. Competitive research" },
+      { type: "p", text: "Most beginners research competitors like this:" },
+      { type: "p", text: "\"Wow, this guy has 10,000 reviews.\"" },
+      { type: "p", text: "Then they copy him. That's not competitive research." },
+
+      { type: "h3", text: "What are buyers actually buying?" },
+      { type: "p", text: "Look at successful Gigs. Which services repeatedly appear?" },
+      { type: "p", text: "Then study the language: titles, tags, descriptions, package names, FAQs." },
+      { type: "p", text: "You're learning the vocabulary of the market." },
+
+      { type: "h3", text: "What are buyers complaining about?" },
+      { type: "p", text: "This is the gold." },
+      { type: "p", text: "Read the mediocre and negative reviews, and turn each complaint into a feature:" },
+      {
+        type: "ul",
+        items: [
+          "\"Seller delivered late\" becomes reliable 48-hour delivery — if you can genuinely provide it",
+          "\"Seller didn't provide the source files\" becomes editable source files included",
+          "\"The design looked generic\" becomes custom design based on your brand identity",
+        ],
+      },
+      { type: "p", text: "You're turning competitor weaknesses into your strengths." },
+
+      { type: "h3", text: "The advanced technique" },
+      { type: "p", text: "Don't just study the top seller. Study three groups:" },
+      {
+        type: "ol",
+        items: [
+          "Top performers — learn what works.",
+          "Middle performers — learn what is common.",
+          "Poor performers — learn what doesn't work.",
+        ],
+      },
+      { type: "p", text: "Then ask:\n\"What pattern separates them?\"" },
+      { type: "p", text: "That's real competitive analysis." },
+
+      { type: "h2", text: "7. Customer lifetime value" },
+      { type: "p", text: "The concept most Fiverr beginners completely ignore." },
+      { type: "p", text: "Customer A orders once at $30 and never returns. Value: $30." },
+      { type: "p", text: "Customer B orders $30, $30, $50, $50, $75. Total: $235." },
+      { type: "p", text: "Customer B is far more valuable. That's customer lifetime value." },
+
+      { type: "h3", text: "Why a Fiverr seller should care" },
+      { type: "p", text: "Because some services naturally create repeat business." },
+      { type: "p", text: "One-off services:" },
+      {
+        type: "ul",
+        items: ["wedding invitation", "logo", "resume", "one-time illustration"],
+      },
+      { type: "p", text: "Recurring services:" },
+      {
+        type: "ul",
+        items: [
+          "social media management",
+          "video editing",
+          "thumbnail design",
+          "SEO",
+          "virtual assistance",
+          "content creation",
+          "monthly graphic design",
+        ],
+      },
+      { type: "p", text: "This changes how you choose a niche." },
+      { type: "p", text: "Gig A: $100 per order, average customer buys once. Total: $100." },
+      { type: "p", text: "Gig B: $40 per order, average customer buys ten times. Total: $400." },
+      { type: "p", text: "So the question isn't simply \"how much can I charge?\"" },
+      { type: "p", text: "It's:\n\"How valuable is a satisfied customer over time?\"" },
+
+      { type: "art", variant: "ladder" },
+
+      { type: "h2", text: "Now connect all seven" },
+      { type: "p", text: "This is the part that matters. Imagine you're a video editor." },
+      { type: "h3", text: "1. Search intent" },
+      { type: "p", text: "You discover buyers want short-form clips from podcasts — not just \"video editing.\"" },
+      { type: "h3", text: "2. Competition" },
+      { type: "p", text: "You investigate and find \"podcast video editing\" is competitive." },
+      { type: "p", text: "But \"podcast-to-YouTube Shorts editing\" looks like a better opportunity. You dig further." },
+      { type: "h3", text: "3. Buyer psychology" },
+      { type: "p", text: "You realize podcast owners don't really want video editing." },
+      { type: "p", text: "They want more content from footage they've already recorded. That's the outcome." },
+      { type: "h3", text: "4. Offer design" },
+      { type: "p", text: "So you create:" },
+      {
+        type: "p",
+        text: "\"I will turn your podcast episodes into engaging YouTube Shorts with captions, hooks and dynamic editing.\"",
+      },
+      { type: "p", text: "Now you're selling an outcome." },
+      { type: "h3", text: "5. Conversion" },
+      { type: "p", text: "The Gig starts getting impressions. You monitor impressions to clicks to orders." },
+      { type: "p", text: "Good impressions but poor clicks? Improve the thumbnail and title." },
+      { type: "p", text: "Good clicks but poor orders? Improve the offer, portfolio, pricing and trust." },
+      { type: "h3", text: "6. Competitive research" },
+      { type: "p", text: "You read competitors' reviews and find buyers complaining:" },
+      { type: "p", text: "\"The editor doesn't understand my brand.\"" },
+      { type: "p", text: "So you introduce a brand style guide and reference-video matching. Now you're differentiated." },
+      { type: "h3", text: "7. Customer lifetime value" },
+      { type: "p", text: "You realize one podcast creator doesn't need one Short." },
+      { type: "p", text: "They might need 10 to 30 every month." },
+      { type: "p", text: "Now you've found something much bigger." },
+      {
+        type: "p",
+        text: "You aren't really selling one video edit. You're selling an ongoing content production service.",
+      },
+      { type: "p", text: "That's a business." },
+
+      { type: "h2", text: "The seven questions to answer before you build" },
+      {
+        type: "ol",
+        items: [
+          "Search intent — what exactly is this buyer trying to accomplish?",
+          "Keyword competition — how many sellers am I competing against for that buyer?",
+          "Buyer psychology — what does this buyer fear, want, value and expect?",
+          "Offer design — how can I package my service around their desired outcome?",
+          "Conversion rate — once Fiverr sends me traffic, why should the buyer click and order?",
+          "Competitive research — what are competitors doing well, and where are buyers dissatisfied?",
+          "Customer lifetime value — can one satisfied buyer become a long-term customer?",
+        ],
+      },
+      {
+        type: "p",
+        text: "Answer all seven before creating your Gig and you're already thinking differently from the average beginner.",
+      },
+
+      { type: "h2", text: "The deeper level: the opportunity gap" },
+      {
+        type: "p",
+        text: "These seven concepts combine into something more useful than a low-competition keyword.",
+      },
+      { type: "p", text: "You're hunting for an opportunity gap:" },
+      {
+        type: "flow",
+        steps: [
+          "A group of buyers with a specific problem",
+          "Meaningful search demand",
+          "Competitors who aren't serving them well",
+          "An offer you can deliver exceptionally",
+        ],
+      },
+      { type: "p", text: "That's what to look for. Not simply a keyword nobody has taken." },
+
+      { type: "h2", text: "One last warning" },
+      {
+        type: "p",
+        text: "Don't trust every Fiverr guru who claims to know a secret algorithm hack. The ranking system is proprietary and changes over time.",
+      },
+      {
+        type: "p",
+        text: "Your real advantage is understanding the principles Fiverr itself publicly confirms, then testing your own market with real data.",
+      },
+      {
+        type: "p",
+        text: "And don't launch with the mindset of \"how do I trick the algorithm into giving me impressions?\"",
+      },
+      { type: "p", text: "Launch with:" },
+      {
+        type: "quote",
+        text: "How can I make Fiverr's system extremely confident about who should see my Gig, and then make those people want to click and buy?",
+      },
+      { type: "p", text: "That mindset will take you much further." },
+
+      {
+        type: "callout",
+        heading: "BrokeTechie Takeaway",
+        text: [
+          "The seven concepts are a chain, not a list. Intent decides the keyword, competition decides how narrow to go, psychology decides the wording, and the offer decides whether any of it converts.",
+          "Sell the outcome, not the process. Nobody is buying Adobe Premiere. They're buying finished videos they can publish.",
+          "Your funnel tells you which of the seven is broken. Low impressions is a positioning problem, low clicks is a packaging problem, low orders is an offer problem.",
+          "And the thing worth hunting is not a low-competition keyword.\nIt is a group of buyers whose problem nobody is currently solving well.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "reliable-automations-part-1",
     title: "How To Build Automations You Can Actually Trust, Part 1",
     deck: "Triggers, side effects, blast radius, dry runs, idempotency and the safety gates that stop an automation doing damage",
