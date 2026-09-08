@@ -29,6 +29,772 @@ export type Post = {
 // contain "\n" to break short lines within one paragraph.
 export const POSTS: Post[] = [
   {
+    slug: "every-ai-term-explained-simply",
+    title: "Every AI Term You Need, Explained Simply",
+    deck: "LLMs, tokens, embeddings, RAG, agents, MCP, guardrails and the rest — what each one is, when it matters, and what to say to a client",
+    excerpt:
+      "The knowledge-gap article listed the vocabulary. This one explains it. Thirty terms, each with a plain definition, when to use it, when not to, what goes wrong, and the sentence you'd say to a nontechnical client.",
+    category: "AI Curriculum",
+    date: "2026-09-07",
+    readTime: "16 min read",
+    content: [
+      {
+        type: "p",
+        text: "The knowledge-gap article listed the vocabulary you need and said something important about it:",
+      },
+      {
+        type: "quote",
+        text: "Knowing definitions isn't enough. For every one, know what problem it solves, when to use it, when NOT to use it, what can go wrong, and how to explain it to a nontechnical client.",
+      },
+      { type: "p", text: "So that's how this article is built." },
+      {
+        type: "p",
+        text: "Every term below gets the same treatment. Not a dictionary entry — a working understanding.",
+      },
+      { type: "p", text: "They're grouped into six families:" },
+      {
+        type: "ol",
+        items: [
+          "The model itself — what you're actually buying when you buy AI.",
+          "Giving the model knowledge — how AI learns about your company.",
+          "Giving the model the ability to act — how AI stops talking and starts doing.",
+          "The plumbing — how software talks to other software.",
+          "Keeping it trustworthy — how you know it works and stop it doing damage.",
+          "The business words — how anyone decides it was worth the money.",
+        ],
+      },
+      {
+        type: "p",
+        text: "One warning before we start. Almost every mistake in this field comes from using a term you half-understand in front of someone who fully understands it, or worse, in front of someone who doesn't and trusts you.",
+      },
+
+      { type: "h2", text: "Family 1: The model itself" },
+
+      { type: "h3", text: "LLM" },
+      {
+        type: "p",
+        text: "A large language model is a model trained on enormous amounts of text that predicts and generates language based on patterns it learned.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nit read an enormous amount, and it is very good at continuing a piece of text sensibly.",
+      },
+      {
+        type: "p",
+        text: "That sounds reductive, but it explains both its strengths and its failures. It's excellent at language-shaped work: summarizing, classifying, rewriting, extracting, explaining, drafting. It's unreliable at things it was never given, like your company's private data or today's date.",
+      },
+      { type: "p", text: "What goes wrong:\npeople treat it as a database. It isn't one." },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It's a general-purpose AI model that can interpret and generate information, which we can connect to your business processes.\"",
+      },
+
+      { type: "h3", text: "Tokens" },
+      {
+        type: "p",
+        text: "Tokens are the pieces text gets broken into before a model processes it. Roughly a word or a fragment of one.",
+      },
+      { type: "p", text: "In plain language:\nthey're the unit the meter runs on." },
+      { type: "p", text: "Tokens matter because they drive three things at once:" },
+      { type: "ul", items: ["how much fits in one interaction", "how much it costs", "how long it takes"] },
+      {
+        type: "p",
+        text: "What goes wrong:\nsomeone designs a system that stuffs a 500,000-word manual into every single request. It works in testing, then the bill arrives.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"Tokens are how AI usage is measured and billed, a bit like data on a phone plan.\"",
+      },
+
+      { type: "h3", text: "Context window" },
+      {
+        type: "p",
+        text: "The context window is the total amount of information a model can work with in a single interaction — your instructions, the conversation so far, any documents you attach, and the answer it's writing.",
+      },
+      { type: "p", text: "In plain language:\nit's the model's desk. Everything it can see at once has to fit on it." },
+      {
+        type: "p",
+        text: "Windows have grown enormously. Current frontier models handle around a million tokens; smaller and cheaper models are often nearer two hundred thousand.",
+      },
+      { type: "p", text: "But here's the part people get wrong:" },
+      { type: "quote", text: "A large context window is not the same as good architecture." },
+      {
+        type: "p",
+        text: "You don't dump everything in simply because it fits. A bigger desk doesn't make a messy desk useful. You retrieve what matters — which is what the whole next family is about.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It's how much the AI can hold in mind at one time.\"",
+      },
+
+      { type: "h3", text: "Inference" },
+      { type: "p", text: "Inference is running the model to produce an answer." },
+      {
+        type: "p",
+        text: "In plain language:\ntraining is teaching the model. Inference is asking it something. You pay for training once, or never, because someone else did it. You pay for inference every single time.",
+      },
+      {
+        type: "p",
+        text: "Why it matters commercially:\ninference is the recurring line on the bill. Every message, every retry, every step an agent takes is inference.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"Inference is the AI actually doing the work — it's the ongoing running cost.\"",
+      },
+
+      { type: "h3", text: "Latency" },
+      { type: "p", text: "Latency is how long the system takes to respond." },
+      {
+        type: "p",
+        text: "In plain language:\nthe pause between asking and getting an answer.",
+      },
+      {
+        type: "p",
+        text: "This is not a minor technical detail. It decides whether a design is viable at all. A customer on the phone will not wait eleven seconds. An overnight report can take twenty minutes and nobody cares.",
+      },
+      { type: "p", text: "Latency stacks. An agent that takes six steps pays the wait six times." },
+      {
+        type: "p",
+        text: "What goes wrong:\na beautiful multi-step agent that is simply too slow for the place it was installed.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"How long users are willing to wait shapes what we can build here.\"",
+      },
+
+      { type: "h3", text: "Token economics" },
+      {
+        type: "p",
+        text: "Token economics is the study of what your system actually costs to run, driven by how many tokens go in and come out.",
+      },
+      {
+        type: "p",
+        text: "Input and output are usually priced differently, and output is typically several times more expensive. A frontier model might be a few dollars per million tokens in and several times that out; smaller models are a fraction of it.",
+      },
+      { type: "p", text: "Three things blow budgets:" },
+      {
+        type: "ol",
+        items: [
+          "Sending too much context on every request instead of retrieving what's needed.",
+          "Agent loops that take far more steps than anyone estimated.",
+          "Using the most powerful model for work a cheap one handles fine.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"The running cost scales with how much information we send and how much the AI writes back, so we design to keep both tight.\"",
+      },
+
+      { type: "h3", text: "Multimodal AI" },
+      {
+        type: "p",
+        text: "Multimodal means the model handles more than text — images, audio, documents, sometimes video.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nit can look and listen, not just read.",
+      },
+      {
+        type: "p",
+        text: "This quietly unlocks a lot of real business work: reading a scanned invoice, checking a photo of a damaged delivery, pulling numbers off a screenshot, processing a PDF that was never machine-readable.",
+      },
+      {
+        type: "p",
+        text: "What goes wrong:\npeople assume it reads images perfectly. It doesn't. Bad scans, handwriting and dense tables still cause errors — which is why extraction work needs validation.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It can work from photos and documents, not just typed text.\"",
+      },
+
+      { type: "h3", text: "Reasoning" },
+      {
+        type: "p",
+        text: "Reasoning describes models working through a problem in steps before answering, rather than responding immediately.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nthinking before speaking.",
+      },
+      {
+        type: "p",
+        text: "It measurably helps on hard, multi-step problems: analysis, planning, tricky code, anything with several constraints at once. It costs more and takes longer, because the thinking is generated work too.",
+      },
+      {
+        type: "p",
+        text: "When not to use it:\nclassification, routing, short extraction. Making a simple task think harder mostly buys you a bigger bill.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"For harder problems we let it work through the reasoning, which is slower but more accurate.\"",
+      },
+
+      { type: "h3", text: "Model selection" },
+      {
+        type: "p",
+        text: "Model selection is choosing which model runs which job.",
+      },
+      {
+        type: "p",
+        text: "This is one of the easiest places to look competent. Amateurs pick the most powerful model for everything. The professional move is to match the model to the task:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Classify an email, tag a lead, route a ticket — a small fast model is fine.",
+          "Draft a customer response, summarize a call — a mid-tier model.",
+          "Multi-step reasoning, code, analysis, anything where a mistake is expensive — the strongest model you have.",
+        ],
+      },
+      {
+        type: "p",
+        text: "One system can and usually should use several. The cheap model does the volume; the expensive one handles the hard cases.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"We use a cheaper model for the routine steps and the strongest one only where it changes the outcome.\"",
+      },
+
+      { type: "h3", text: "Fine-tuning" },
+      {
+        type: "p",
+        text: "Fine-tuning is further training a model on your own examples so its behavior adapts to a specific task.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nteaching it your house style by showing it hundreds of worked examples.",
+      },
+      { type: "p", text: "Here's the part that saves people a lot of money:" },
+      {
+        type: "quote",
+        text: "Fine-tuning is almost never the first answer, and clients ask for it far more often than they need it.",
+      },
+      {
+        type: "p",
+        text: "If the problem is \"the AI doesn't know our information,\" fine-tuning is the wrong tool — you want retrieval. If the problem is \"it doesn't follow our format,\" try better instructions and examples in the prompt first. Fine-tuning earns its place when you need consistent behavior on a narrow, high-volume, well-defined task, and you have good training data.",
+      },
+      {
+        type: "p",
+        text: "What goes wrong:\nteams fine-tune to fix a knowledge problem, get a model that's confidently wrong in a new house style, and have to maintain it forever.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"Fine-tuning adapts the model's behavior to a specific task. It doesn't teach it your company's facts — that's a different mechanism.\"",
+      },
+
+      { type: "art", variant: "nodes" },
+
+      { type: "h2", text: "Family 2: Giving the model knowledge" },
+      {
+        type: "p",
+        text: "A model knows nothing about your business. This family is how you fix that.",
+      },
+
+      { type: "h3", text: "Embeddings" },
+      {
+        type: "p",
+        text: "An embedding turns a piece of text into a list of numbers that captures its meaning, so that things meaning similar things end up numerically close together.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nit lets a computer find things by meaning instead of by exact words.",
+      },
+      {
+        type: "p",
+        text: "This is why a search for \"how do I get my money back\" can find a document titled \"Refund Policy\" that contains none of those words.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It lets us search your documents by meaning rather than keyword.\"",
+      },
+
+      { type: "h3", text: "Vector database" },
+      {
+        type: "p",
+        text: "A vector database stores those embeddings and finds the closest matches quickly.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nthe filing cabinet built for meaning-based search.",
+      },
+      {
+        type: "p",
+        text: "When you don't need one:\nmore often than the industry admits. If your information lives in structured database rows, query the database. A vector database is for unstructured text — documents, tickets, policies, transcripts.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It makes large amounts of information searchable by meaning.\"",
+      },
+
+      { type: "h3", text: "RAG" },
+      {
+        type: "p",
+        text: "RAG stands for Retrieval-Augmented Generation. Instead of hoping the model knows something, you go and fetch the relevant information first, then hand it to the model along with the question.",
+      },
+      {
+        type: "flow",
+        steps: [
+          "Question",
+          "Search the company's knowledge",
+          "Retrieve the relevant pieces",
+          "Give them to the model",
+          "Generate an answer",
+        ],
+      },
+      {
+        type: "p",
+        text: "In plain language:\nopen the book to the right page before asking the question.",
+      },
+      {
+        type: "p",
+        text: "The mistake everyone makes:\nthinking RAG means uploading PDFs. It's a system — ingestion, chunking, embedding, retrieval, ranking, permissions, freshness, citations, evaluation. Each of those can be the thing that breaks it.",
+      },
+      {
+        type: "p",
+        text: "What goes wrong:\nthe retrieval quietly returns the wrong passage and the model gives a confident answer based on it. It looks fine. It is not fine.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It gives employees reliable access to company knowledge, with the source shown so answers can be checked.\"",
+      },
+
+      { type: "h2", text: "Family 3: Giving the model the ability to act" },
+      {
+        type: "p",
+        text: "Everything above produces words. This family is what turns words into actions in real systems — and it's where the commercial value concentrates.",
+      },
+
+      { type: "h3", text: "Tool calling" },
+      {
+        type: "p",
+        text: "Tool calling lets the model invoke a function you defined, rather than only replying with text.",
+      },
+      { type: "p", text: "Without it, the AI says:\n\"Your meeting is at 3pm.\"" },
+      { type: "p", text: "With it, the AI actually checks the calendar and then tells you." },
+      { type: "p", text: "That is the difference between:" },
+      { type: "quote", text: "An information generator and a system participant." },
+      {
+        type: "p",
+        text: "This is the single most important concept in this family. Nearly everything businesses want from AI — updating a CRM, booking an appointment, sending a message, reading a record — happens through tool calling.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It means the AI can actually use your systems, not just talk about them.\"",
+      },
+
+      { type: "h3", text: "Structured outputs" },
+      {
+        type: "p",
+        text: "Structured outputs force the model's answer into a defined shape — specific fields, specific types — instead of free-form prose.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nmaking it fill in a form instead of writing an essay.",
+      },
+      {
+        type: "p",
+        text: "This is what makes AI safe to put in the middle of an automation. Your CRM can't accept \"the customer seems fairly interested, maybe a 7 or 8 out of 10.\" It needs a number in a field.",
+      },
+      {
+        type: "p",
+        text: "What goes wrong without it:\nyou write fragile code that tries to parse English, and it breaks the first time the model phrases something differently.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"We make the AI return clean data your systems can use directly.\"",
+      },
+
+      { type: "h3", text: "Agent" },
+      {
+        type: "p",
+        text: "An agent is given a goal and boundaries rather than a fixed sequence, and decides its own next steps — using tools, observing results, and continuing until it's done or escalates.",
+      },
+      {
+        type: "flow",
+        steps: ["Goal", "Reason", "Choose a tool", "Act", "Observe the result", "Decide the next step"],
+      },
+      {
+        type: "p",
+        text: "In plain language:\nautomation follows the recipe you wrote. An agent is told what dish to make.",
+      },
+      { type: "p", text: "When to use one:" },
+      {
+        type: "ul",
+        items: [
+          "the inputs vary a lot",
+          "the path changes case by case",
+          "several tools might be needed",
+          "the next step depends on what just happened",
+        ],
+      },
+      { type: "p", text: "When not to:" },
+      {
+        type: "ul",
+        items: [
+          "the steps are predictable — use ordinary automation",
+          "reliability requirements are strict",
+          "the extra autonomy adds risk without adding value",
+        ],
+      },
+      {
+        type: "p",
+        text: "The expert question is never \"can we make this autonomous?\" It's \"how much autonomy does this actually need?\"",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"Software that can take several steps toward a goal on its own, within limits we set.\"",
+      },
+
+      { type: "h3", text: "MCP" },
+      {
+        type: "p",
+        text: "MCP is the Model Context Protocol — an open standard for connecting AI applications to external tools and data.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\na standard plug. Instead of inventing a bespoke connection between every AI product and every business system, there's one shared way to do it.",
+      },
+      {
+        type: "p",
+        text: "It has three roles: a host (the AI application, which coordinates connections), a client (which maintains the session with one server), and a server (which exposes the capabilities). Servers offer tools, which the model decides when to call, and resources, which the application supplies as context.",
+      },
+      {
+        type: "p",
+        text: "How to sell it:\nnot as \"I build MCP servers.\" Sell it as \"I give your AI controlled access to the systems it needs in order to do work.\" Same technology, completely different conversation about price.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It's a standard way to give AI safe, controlled access to your tools and data.\"",
+      },
+
+      { type: "h3", text: "Orchestration" },
+      {
+        type: "p",
+        text: "Orchestration is coordinating multiple models, tools, steps and workflows into one coherent process — deciding what runs when, what happens on failure, and what waits for what.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nsomebody has to be the conductor.",
+      },
+      {
+        type: "p",
+        text: "Once a system has more than a couple of moving parts, this is most of the actual engineering. Retries, ordering, timeouts, partial failures, and what to do when step four succeeds but step five doesn't.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It's the layer that makes all the separate pieces work together as one reliable process.\"",
+      },
+
+      { type: "h3", text: "Workflow and workflow automation" },
+      {
+        type: "p",
+        text: "A workflow is simply the sequence work moves through: a trigger, some inputs, some steps, some decisions, an action, an output. Workflow automation is removing the repetitive manual parts of it.",
+      },
+      {
+        type: "p",
+        text: "This is the least glamorous word in the vocabulary and the most commercially valuable one. Most businesses do not have an AI problem. They have a work problem, and AI is one possible fix for one part of it.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"We remove the repetitive manual steps so your team stops moving information by hand.\"",
+      },
+
+      { type: "art", variant: "compare" },
+
+      { type: "h2", text: "Family 4: The plumbing" },
+
+      { type: "h3", text: "API" },
+      {
+        type: "p",
+        text: "An API is a defined way for one piece of software to ask another piece of software for something.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nthe waiter. You don't walk into the kitchen and cook — you make a request in an agreed format, and something comes back.",
+      },
+      {
+        type: "p",
+        text: "Why it decides projects:\nif a system a client depends on has no usable API, the elegant plan you sketched may be impossible. Ask early.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It's what lets your systems talk to each other.\"",
+      },
+
+      { type: "h3", text: "Webhook" },
+      {
+        type: "p",
+        text: "A webhook is a system announcing that something happened, and sending the details, without being asked.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nan API is you phoning the shop to ask if the order arrived. A webhook is the shop phoning you the moment it does.",
+      },
+      { type: "flow", steps: ["Customer submits a form", "Website fires a webhook", "Your workflow starts"] },
+      {
+        type: "p",
+        text: "What goes wrong:\nwebhooks get delivered twice. If your system charges a card or creates a record every time one arrives, duplicates cause real damage. Well-built systems recognise \"I already handled this.\"",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It means things happen the instant an event occurs, instead of on a schedule.\"",
+      },
+
+      { type: "h2", text: "Family 5: Keeping it trustworthy" },
+      {
+        type: "p",
+        text: "This family separates a demo from a production system. Beginners ask \"does it work?\" Experts ask how well, under what conditions, and what happens when it doesn't.",
+      },
+
+      { type: "h3", text: "Evaluation" },
+      {
+        type: "p",
+        text: "Evaluation is measuring whether the AI is actually performing correctly, using test cases with known good answers.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nmarking its homework against an answer key, instead of trusting your impression from the five examples you happened to try.",
+      },
+      {
+        type: "p",
+        text: "You build a set — normal cases, hard cases, ambiguous cases, deliberately awkward ones — and measure accuracy, task completion, how often it makes things up, how often it escalates, latency and cost.",
+      },
+      {
+        type: "p",
+        text: "Why it's a commercial opportunity:\nalmost everyone sells \"I'll build you an agent.\" Very few sell \"here's how you'll know it's working.\" The second is harder to buy elsewhere and it recurs monthly.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It's how we measure whether the AI is actually getting it right, rather than just assuming.\"",
+      },
+
+      { type: "h3", text: "Observability" },
+      {
+        type: "p",
+        text: "Observability is being able to see what your system did and why, through logs, traces, metrics and alerts.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nthe security camera. When something goes wrong at 2am, can you find out what happened?",
+      },
+      {
+        type: "p",
+        text: "Evaluation asks how good it is before you launch. Observability tells you how it's behaving now that real people are using it. They are not the same job and you need both.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It means we know when and why the system fails, instead of finding out from a customer.\"",
+      },
+
+      { type: "h3", text: "Guardrails" },
+      {
+        type: "p",
+        text: "Guardrails are the limits on what the AI is permitted to do — what it can access, what it can change, what values are valid, what it must refuse.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nthe fence, not the advice. You don't ask it nicely not to issue a $50,000 refund. You make it structurally unable to.",
+      },
+      {
+        type: "p",
+        text: "The key principle is minimum authority: what is the least power this needs to do its job?",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It limits what the AI is able to do, so a mistake stays small.\"",
+      },
+
+      { type: "h3", text: "Human-in-the-loop" },
+      {
+        type: "p",
+        text: "Human-in-the-loop means a person stays involved where judgment or risk demands it. It comes in levels:",
+      },
+      {
+        type: "ol",
+        items: [
+          "AI recommends, a human decides.",
+          "AI prepares the action, a human approves it.",
+          "AI acts automatically on low-risk cases only.",
+          "AI operates autonomously within defined boundaries.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The right level is a function of consequence, not ambition. Booking an appointment and approving a refund do not belong at the same level.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"We keep people involved wherever judgment or risk matters, and let the AI handle the routine cases.\"",
+      },
+
+      { type: "h3", text: "AI governance" },
+      {
+        type: "p",
+        text: "Governance is the set of rules answering: who can use this, what can it access, what can it do, who is accountable, what gets logged, when does a human step in, and what happens when it fails.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nyou wouldn't give someone your company card without deciding the limit, what it's for, and who checks the statement. Same questions.",
+      },
+      {
+        type: "p",
+        text: "This becomes urgent fast, because organizations are heading toward large numbers of agents without having answered any of it. That gap is a service market forming in plain sight.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"It's knowing exactly what your AI is allowed to do and being able to prove what it did.\"",
+      },
+
+      { type: "art", variant: "ladder" },
+
+      { type: "h2", text: "Family 6: The business words" },
+      {
+        type: "p",
+        text: "These are the terms that decide whether your work gets renewed. Learn them properly — most technical freelancers can't discuss them at all.",
+      },
+
+      { type: "h3", text: "ROI" },
+      {
+        type: "p",
+        text: "Return on investment: what the thing produced, measured against what it cost.",
+      },
+      {
+        type: "p",
+        text: "The trap:\n\"We saved 100 hours\" is not ROI. It's an input. The question is what happened to those hours. If the team did nothing with them, the business captured almost nothing. If they used them to handle more customers, the value could be large.",
+      },
+      { type: "p", text: "Also remember whose hours they were. Twenty hours off a $15/hour task and twenty hours off a $200/hour task are the same automation and completely different money." },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"The question isn't whether it costs $200 a month. It's whether the workflow creates more than $200 of value after running and supervising it.\"",
+      },
+
+      { type: "h3", text: "Total cost of ownership" },
+      {
+        type: "p",
+        text: "TCO is everything the system costs over its life, not just the build.",
+      },
+      {
+        type: "ul",
+        items: [
+          "implementation",
+          "inference and API usage",
+          "hosting and infrastructure",
+          "monitoring and maintenance",
+          "fixes when an integration changes underneath you",
+          "the human time spent supervising it",
+          "the cost of the failures it will occasionally cause",
+        ],
+      },
+      {
+        type: "p",
+        text: "Quoting a build price without mentioning any of this is how projects turn into arguments six months later.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"Here's what it costs to build, and here's what it costs to keep running properly.\"",
+      },
+
+      { type: "h3", text: "Workflow redesign" },
+      {
+        type: "p",
+        text: "Workflow redesign is changing how the work happens because AI now exists — as opposed to bolting AI onto a process built for humans doing every step by hand.",
+      },
+      { type: "p", text: "This is the single highest-leverage idea in the whole vocabulary." },
+      {
+        type: "p",
+        text: "Adding AI to an unchanged process gives you a faster version of a process someone designed under different constraints. The measured difference between organizations that redesign and organizations that don't is not small.",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"We're not adding AI to your current process. We're asking what the process should look like now that this is possible.\"",
+      },
+
+      { type: "h3", text: "AI adoption" },
+      {
+        type: "p",
+        text: "Adoption is whether people actually use the thing you built.",
+      },
+      {
+        type: "p",
+        text: "In plain language:\nthe best system in the world, ignored by everyone, is worth zero.",
+      },
+      { type: "p", text: "People don't adopt for reasons that are rarely technical:" },
+      {
+        type: "ul",
+        items: [
+          "they think it's there to replace them",
+          "nobody trained them",
+          "they don't trust the output",
+          "it makes their day harder, not easier",
+          "the old way still works and is familiar",
+        ],
+      },
+      {
+        type: "p",
+        text: "So the mature question is never \"can we automate this?\" It's \"what changes for the people currently doing this work?\"",
+      },
+      {
+        type: "p",
+        text: "Say this to a client:\n\"Getting your team using it is part of the project, not something that happens afterwards.\"",
+      },
+
+      { type: "h2", text: "The toolbox: what the product names actually are" },
+      {
+        type: "p",
+        text: "The knowledge-gap article ended with a list of tools and a warning that none of them are your identity. Here's what each one is for.",
+      },
+      {
+        type: "ul",
+        items: [
+          "Claude, GPT, Gemini — the frontier models themselves, reached through a chat interface or an API.",
+          "Claude Code — an agentic coding tool that works across a real codebase, rather than suggesting snippets.",
+          "n8n and Make — visual workflow automation platforms. They're where most small-business automation actually gets built, and they connect to AI models as one step among many.",
+          "Supabase, Postgres and friends — databases. Where the structured information lives.",
+          "Vector databases — the meaning-searchable store behind RAG.",
+          "Vapi, Retell, Twilio — the voice layer. Twilio moves the phone call; Vapi and Retell run conversational AI over it.",
+          "MCP servers — the standard connection between an AI application and your tools and data.",
+        ],
+      },
+      {
+        type: "p",
+        text: "None of those are your identity.\nThey're your implementation toolbox.",
+      },
+
+      { type: "h2", text: "The seven questions, one more time" },
+      {
+        type: "p",
+        text: "If you take one habit from this article, take this. For every term above, and every new one that arrives next year, be able to answer:",
+      },
+      {
+        type: "ol",
+        items: [
+          "What is it?",
+          "What problem does it solve?",
+          "When should I use it?",
+          "When should I NOT use it?",
+          "What can go wrong?",
+          "How does it affect the business?",
+          "How do I explain it to a nontechnical client?",
+        ],
+      },
+      {
+        type: "p",
+        text: "Most people learning AI can answer the first. Answering the fourth and the seventh is what makes someone worth hiring.",
+      },
+
+      {
+        type: "callout",
+        heading: "BrokeTechie Takeaway",
+        text: [
+          "The vocabulary splits into six families: the model, its knowledge, its ability to act, the plumbing, the trust layer, and the business case.",
+          "The terms that make money are not the glamorous ones. Tool calling, structured outputs, evaluation and workflow redesign do more commercial work than any model name.",
+          "Knowing when NOT to use something — not fine-tuning a knowledge problem, not building an agent for a predictable path, not reaching for RAG when a database query would do — is the part that marks you as experienced.",
+          "And the last question is the one that closes deals:\ncan you explain it to someone nontechnical in one sentence?",
+        ],
+      },
+    ],
+  },
+  {
     slug: "claude-mcp-sketchup-medeek-part-1",
     title: "Claude + SketchUp + Medeek, Part 1: The Pieces",
     deck: "How an AI actually reaches inside a desktop program, explained from zero",
