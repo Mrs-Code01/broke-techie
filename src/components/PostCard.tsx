@@ -1,34 +1,60 @@
 import Link from "next/link";
-import { NodesGraphic } from "./ArticleArt";
+import { CompareColumns, MaturityLadder, NodesGraphic } from "./ArticleArt";
 import { formatDate, type Post } from "@/data/posts";
 
+/** Pick a built-in illustration from the slug so a grid of imageless posts
+ * still varies card to card, and the same post always keeps the same one. */
+function FallbackArt({ slug, className }: { slug: string; className: string }) {
+  let sum = 0;
+  for (let i = 0; i < slug.length; i++) sum += slug.charCodeAt(i);
+  switch (sum % 3) {
+    case 0:
+      return <NodesGraphic className={className} />;
+    case 1:
+      return <MaturityLadder className={className} />;
+    default:
+      return <CompareColumns className={className} />;
+  }
+}
+
+/** A compact card: image, category, title, meta. No excerpt, so a dozen
+ * of them fit on one screen and the whole catalogue is scannable. */
 export default function PostCard({ post }: { post: Post }) {
   return (
-    <Link
-      href={`/blog/${post.slug}`}
-      className="group flex h-full flex-col overflow-hidden border border-ink/10 bg-white transition duration-300 hover:-translate-y-1 hover:border-gold/60 hover:shadow-[0_16px_40px_rgba(0,0,0,0.12)]"
-    >
-      <div className="relative flex h-40 items-center justify-center overflow-hidden bg-ink/[0.03]">
+    <Link href={`/blog/${post.slug}`} className="group flex h-full flex-col">
+      {/* Kept light so the fallback illustration, which is drawn in ink on
+       * paper, still reads against the dark page. */}
+      <div className="aspect-[16/10] overflow-hidden rounded-lg bg-paper">
         {post.image ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={post.image.src} alt={post.image.alt} className="h-full w-full object-cover" />
+          <img
+            src={post.image.src}
+            alt={post.image.alt}
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+          />
         ) : (
-          <NodesGraphic className="h-full w-full scale-125 opacity-90" />
+          <FallbackArt
+            slug={post.slug}
+            className="h-full w-full p-6 transition duration-500 group-hover:scale-[1.04]"
+          />
         )}
-        <span className="notch-both absolute left-4 top-4 bg-gold px-3 py-1 text-[0.65rem] font-bold tracking-[0.16em] text-ink uppercase">
-          {post.category}
-        </span>
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-serif text-xl font-bold leading-tight text-ink transition group-hover:text-magenta">
-          {post.title}
-        </h3>
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/65">{post.excerpt}</p>
-        <p className="mt-5 border-t border-ink/10 pt-4 text-xs text-ink/50">
-          {formatDate(post.date)} &middot; {post.readTime}
-        </p>
-      </div>
+      <p className="font-sans mt-4 text-[0.65rem] font-bold tracking-[0.18em] text-magenta uppercase">
+        {post.category}
+      </p>
+
+      <h3 className="font-serif mt-2 text-[1.05rem] font-bold leading-snug text-paper transition group-hover:text-gold">
+        {post.title}
+      </h3>
+
+      <p className="font-sans mt-auto pt-3 text-xs text-paper/45">
+        {formatDate(post.date)}
+        <span className="mx-1.5 text-magenta" aria-hidden>
+          &bull;
+        </span>
+        {post.readTime}
+      </p>
     </Link>
   );
 }

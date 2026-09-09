@@ -5,9 +5,9 @@ import PostCard from "./PostCard";
 import Reveal from "./Reveal";
 import type { Post } from "@/data/posts";
 
-const PER_PAGE = 6;
+const PER_PAGE = 12;
 
-/** Pages the article grid six at a time. Arrows only, no numbered links,
+/** Pages the article grid a dozen at a time. Arrows only, no numbered links,
  * and the whole control disappears while everything fits on one page. */
 export default function PostGrid({ posts }: { posts: Post[] }) {
   const [page, setPage] = useState(0);
@@ -26,7 +26,7 @@ export default function PostGrid({ posts }: { posts: Post[] }) {
 
   return (
     <div ref={topRef} className="scroll-mt-24">
-      <div className="mx-auto mt-14 grid max-w-6xl auto-rows-fr items-stretch gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto mt-14 grid max-w-7xl auto-rows-fr items-stretch gap-x-7 gap-y-11 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {visible.map((post, i) => (
           <Reveal key={post.slug} delay={i * 80} className="h-full">
             <PostCard post={post} />
@@ -37,7 +37,7 @@ export default function PostGrid({ posts }: { posts: Post[] }) {
       {pageCount > 1 && (
         <nav
           aria-label="Article pages"
-          className="mx-auto mt-12 flex max-w-6xl items-center justify-center gap-6"
+          className="mx-auto mt-14 flex max-w-7xl items-center justify-center gap-6"
         >
           <button
             type="button"
