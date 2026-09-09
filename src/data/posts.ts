@@ -59,9 +59,9 @@ export const POSTS: Post[] = [
       {
         type: "ol",
         items: [
-          "The task — what Claude is supposed to accomplish.",
-          "The reasoning — how Claude understands information and decides what should happen.",
-          "The tools — the capabilities Claude can use to actually perform actions.",
+          "The task: what Claude is supposed to accomplish.",
+          "The reasoning: how Claude understands information and decides what should happen.",
+          "The tools: the capabilities Claude can use to actually perform actions.",
         ],
       },
       {
@@ -539,9 +539,9 @@ export const POSTS: Post[] = [
       {
         type: "flow",
         steps: [
-          "🧠 CLAUDE — intelligence / reasoning",
+          "🧠 CLAUDE: intelligence / reasoning",
           "\"What should happen?\"",
-          "☁️ MAKE — action / automation",
+          "☁️ MAKE: action / automation",
           "\"Perform the operation.\"",
           "📊 Google Sheet  and  📱 SMS",
         ],
@@ -912,7 +912,7 @@ export const POSTS: Post[] = [
           "☁️ CLOUD",
           "Scheduled Claude task",
           "📧 Gmail",
-          "🧠 Claude — understand + reason",
+          "🧠 Claude: understand + reason",
           "☁️ Make",
           "📊 Update tracker  and  📱 Send SMS",
         ],
@@ -1043,7 +1043,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "Fiverr states that relevance is the most important ranking factor — how well a listing matches the search query. Alongside it, the system considers historical appeal (how attractive the listing has been to clients with similar needs), client satisfaction from completed orders, review scores, pricing, availability, freelancer responsiveness, and machine-learning models.",
+        text: "Fiverr states that relevance is the most important ranking factor: how well a listing matches the search query. Alongside it, the system considers historical appeal (how attractive the listing has been to clients with similar needs), client satisfaction from completed orders, review scores, pricing, availability, freelancer responsiveness, and machine-learning models.",
       },
       { type: "p", text: "So the levers you have on day one are narrower than people pretend, but they are real." },
 
@@ -1055,7 +1055,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "The goal is the sweet spot between demand and competition." },
       {
         type: "p",
-        text: "Fiverr's own Keyword Research tool exists for exactly this, surfacing search volume and competition levels for terms clients actually use across the marketplace. Worth knowing: it lives in Advanced Analytics, which is a Seller Plus feature — so a brand-new free account may need to do this research manually at first.",
+        text: "Fiverr's own Keyword Research tool exists for exactly this, surfacing search volume and competition levels for terms clients actually use across the marketplace. Worth knowing: it lives in Advanced Analytics, which is a Seller Plus feature, so a brand-new free account may need to do this research manually at first.",
       },
       { type: "p", text: "What you're hunting for:" },
       { type: "quote", text: "Good demand, relatively low competition, strong buyer intent." },
@@ -1075,7 +1075,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Bad idea." },
       {
         type: "p",
-        text: "Fiverr's guidance is that tags should be relevant and specific — each one ideally targeting a different search phrase your title doesn't already cover. Non-relevant keywords work against you.",
+        text: "Fiverr's guidance is that tags should be relevant and specific: each one ideally targeting a different search phrase your title doesn't already cover. Non-relevant keywords work against you.",
       },
       { type: "p", text: "Think precision, not quantity." },
 
@@ -1095,8 +1095,8 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Seller A — generic Canva-looking thumbnail",
-          "Seller B — professional, instantly understandable thumbnail",
+          "Seller A: generic Canva-looking thumbnail",
+          "Seller B: professional, instantly understandable thumbnail",
         ],
       },
       { type: "p", text: "Seller B converts far more of the same impressions." },
@@ -1116,7 +1116,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "Which is why you shouldn't change your Gig every few hours. Give each change enough time to produce meaningful data — Fiverr's own analytics guidance says to allow new or updated keywords time to show their impact.",
+        text: "Which is why you shouldn't change your Gig every few hours. Give each change enough time to produce meaningful data, Fiverr's own analytics guidance says to allow new or updated keywords time to show their impact.",
       },
 
       { type: "art", variant: "ladder" },
@@ -1164,7 +1164,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "9. Your profile removes hesitation" },
       {
         type: "p",
-        text: "Fiverr recommends completing your freelancer profile — intro video, certifications, education, portfolio.",
+        text: "Fiverr recommends completing your freelancer profile: intro video, certifications, education, portfolio.",
       },
       { type: "p", text: "This doesn't mean \"complete profile equals massive impressions.\" That's not what Fiverr says." },
       {
@@ -1197,14 +1197,14 @@ export const POSTS: Post[] = [
         type: "p",
         text: "For a brand-new account, build the Gig around three measurable stages.",
       },
-      { type: "h3", text: "Stage 1 — get Fiverr to understand you" },
+      { type: "h3", text: "Stage 1: get Fiverr to understand you" },
       { type: "p", text: "Your title, category and subcategory, tags, description, metadata and pricing should all tell the same story:" },
       { type: "p", text: "\"This Gig is specifically for THIS type of buyer looking for THIS service.\"" },
       { type: "p", text: "That's relevance." },
-      { type: "h3", text: "Stage 2 — make the buyer choose you" },
+      { type: "h3", text: "Stage 2: make the buyer choose you" },
       { type: "p", text: "Once you have an impression, three things generate the click:" },
       { type: "ul", items: ["thumbnail", "title", "price"] },
-      { type: "h3", text: "Stage 3 — turn the click into evidence" },
+      { type: "h3", text: "Stage 3: turn the click into evidence" },
       { type: "p", text: "Then your description, portfolio, video, FAQs, packages, requirements and communication have to convert." },
       {
         type: "p",
@@ -1221,7 +1221,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "And 1,000 impressions producing 100 clicks and 0 orders points at a completely different problem — people like what they see enough to click, but something on the Gig page or in the offer isn't closing.",
+        text: "And 1,000 impressions producing 100 clicks and 0 orders points at a completely different problem, people like what they see enough to click, but something on the Gig page or in the offer isn't closing.",
       },
       { type: "p", text: "Diagnose the funnel. Don't blindly change everything." },
 
@@ -1264,10 +1264,10 @@ export const POSTS: Post[] = [
         type: "callout",
         heading: "BrokeTechie Takeaway",
         text: [
-          "Relevance is the most important ranking factor Fiverr publishes. Everything in your Gig — title, tags, category, description, price — should tell one consistent story about one buyer.",
+          "Relevance is the most important ranking factor Fiverr publishes. Everything in your Gig (title, tags, category, description, price) should tell one consistent story about one buyer.",
           "Your title carries the most keyword weight, your thumbnail carries the click, and your Gig page carries the order. Three different jobs, three different things to fix.",
           "Availability and responsiveness are levers you control on day one, before any review exists. Fiverr only shows available freelancers, and measures your first replies within 24 hours over a 90-day window.",
-          "And stop staring at impressions.\nWatch impressions to clicks to orders — the ratio tells you which part is actually broken.",
+          "And stop staring at impressions.\nWatch impressions to clicks to orders: the ratio tells you which part is actually broken.",
         ],
       },
     ],
@@ -1277,14 +1277,14 @@ export const POSTS: Post[] = [
     title: "Fiverr From Zero, Part 2: What Most Freelancers Never Investigate",
     deck: "Qualified impressions, niche angles, competitor reviews as market research, and the traps that waste beginners' first six months",
     excerpt:
-      "Most sellers research competitors by noticing they have 10,000 reviews, then copying their title. Here is what to look at instead — including the places where your competitors' complaints become your product strategy.",
+      "Most sellers research competitors by noticing they have 10,000 reviews, then copying their title. Here is what to look at instead, including the places where your competitors' complaints become your product strategy.",
     category: "Freelancing",
     date: "2026-09-07",
     readTime: "13 min read",
     content: [
       {
         type: "p",
-        text: "Part 1 covered what Fiverr's system can actually see and how to feed it. This part is about the strategic thinking underneath it — the things most beginners never think to investigate, and so spend months learning slowly and expensively.",
+        text: "Part 1 covered what Fiverr's system can actually see and how to feed it. This part is about the strategic thinking underneath it, the things most beginners never think to investigate, and so spend months learning slowly and expensively.",
       },
 
       { type: "h2", text: "1. Impressions aren't the goal. Qualified impressions are" },
@@ -1345,7 +1345,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "I wouldn't." },
       {
         type: "p",
-        text: "Their success comes partly from history, reviews, repeat buyers and accumulated performance data — none of which transfers with the wording.",
+        text: "Their success comes partly from history, reviews, repeat buyers and accumulated performance data, none of which transfers with the wording.",
       },
       { type: "p", text: "Study them to answer a different question:" },
       { type: "p", text: "What are buyers actually purchasing?" },
@@ -1356,9 +1356,9 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Lots of impressions, few clicks — investigate thumbnail, title, positioning.",
-          "Good clicks, no orders — investigate offer, portfolio, pricing, description, trust.",
-          "Few impressions — investigate keyword relevance, niche, category, competition.",
+          "Lots of impressions, few clicks: investigate thumbnail, title, positioning.",
+          "Good clicks, no orders: investigate offer, portfolio, pricing, description, trust.",
+          "Few impressions: investigate keyword relevance, niche, category, competition.",
         ],
       },
       { type: "p", text: "This is far more useful than concluding \"Fiverr isn't promoting me.\"" },
@@ -1405,9 +1405,9 @@ export const POSTS: Post[] = [
         text: "That attracts buyers. It also attracts buyers who expect a great deal for very little.",
       },
       { type: "p", text: "Compare:" },
-      { type: "p", text: "\"$15 — one professional product image edited within 24 hours\"" },
+      { type: "p", text: "\"$15: one professional product image edited within 24 hours\"" },
       { type: "p", text: "against:" },
-      { type: "p", text: "\"$5 — I will do any Photoshop work\"" },
+      { type: "p", text: "\"$5: I will do any Photoshop work\"" },
       { type: "p", text: "Specificity creates confidence." },
 
       { type: "h2", text: "11. Your Gig should answer objections before they're asked" },
@@ -1516,7 +1516,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "That's information. The market you're actually winning may differ from the one you imagined — so reposition toward it.",
+        text: "That's information. The market you're actually winning may differ from the one you imagined, so reposition toward it.",
       },
 
       { type: "h3", text: "Repeat buyers beat new buyers" },
@@ -1562,7 +1562,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "This is a huge psychological trap." },
       {
         type: "p",
-        text: "Impressions but no clicks? The algorithm is doing its job — it's showing you to people. Your packaging is the problem.",
+        text: "Impressions but no clicks? The algorithm is doing its job: it's showing you to people. Your packaging is the problem.",
       },
       { type: "p", text: "Clicks but no orders? Your offer, trust or conversion is the problem." },
       {
@@ -1666,7 +1666,7 @@ export const POSTS: Post[] = [
         heading: "BrokeTechie Takeaway",
         text: [
           "Chase qualified impressions, not impressions. 5,000 impressions with 8 orders beats 50,000 with none.",
-          "Read your competitors' bad reviews. Late delivery, missing source files, generic work — every repeated complaint is a differentiator someone is failing to offer.",
+          "Read your competitors' bad reviews. Late delivery, missing source files, generic work, every repeated complaint is a differentiator someone is failing to offer.",
           "When something isn't working, the algorithm is usually not the problem. Impressions without clicks means your packaging; clicks without orders means your offer.",
           "And ask the three-second question:\nif someone glances at your Gig, do they know exactly what you do?",
         ],
@@ -1730,13 +1730,13 @@ export const POSTS: Post[] = [
       },
 
       { type: "h3", text: "The four types of intent" },
-      { type: "p", text: "Informational — \"how to make a logo\"" },
+      { type: "p", text: "Informational: \"how to make a logo\"" },
       { type: "p", text: "They want information. Poor buying opportunity." },
-      { type: "p", text: "Navigational — \"Canva logo\"" },
+      { type: "p", text: "Navigational: \"Canva logo\"" },
       { type: "p", text: "They may be looking for a specific tool. Still not ready to hire." },
-      { type: "p", text: "Commercial investigation — \"best logo designer\"" },
+      { type: "p", text: "Commercial investigation: \"best logo designer\"" },
       { type: "p", text: "They're considering buying. Better." },
-      { type: "p", text: "Transactional — \"I need a minimalist restaurant logo designer\"" },
+      { type: "p", text: "Transactional: \"I need a minimalist restaurant logo designer\"" },
       { type: "p", text: "Specific need, close to purchasing. Excellent." },
 
       { type: "h3", text: "Your goal" },
@@ -1788,11 +1788,11 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "\"Can you do it?\" — competence",
-          "\"Will you understand what I want?\" — communication and trust",
-          "\"Will I get what I'm expecting?\" — certainty",
-          "\"Will I regret spending this money?\" — risk",
-          "\"Is this worth the price?\" — value",
+          "\"Can you do it?\" Competence",
+          "\"Will you understand what I want?\" Communication and trust",
+          "\"Will I get what I'm expecting?\" Certainty",
+          "\"Will I regret spending this money?\" Risk",
+          "\"Is this worth the price?\" Value",
         ],
       },
       { type: "p", text: "Your Gig needs to answer those." },
@@ -1843,11 +1843,11 @@ export const POSTS: Post[] = [
       {
         type: "ol",
         items: [
-          "What am I getting? — the specific deliverable",
-          "What problem does it solve? — connect it to the buyer's goal",
-          "Why should I trust you? — portfolio, samples, expertise, process",
-          "How much does it cost? — a clear package",
-          "What happens after I order? — a clear process and requirements",
+          "What am I getting? The specific deliverable",
+          "What problem does it solve? Connect it to the buyer's goal",
+          "Why should I trust you? Portfolio, samples, expertise, process",
+          "How much does it cost? A clear package",
+          "What happens after I order? A clear process and requirements",
         ],
       },
 
@@ -1873,7 +1873,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Both got 10,000 impressions. Only one is healthy." },
 
       { type: "h3", text: "How to diagnose" },
-      { type: "p", text: "Low impressions — potential issues:" },
+      { type: "p", text: "Low impressions: potential issues:" },
       {
         type: "ul",
         items: [
@@ -1929,7 +1929,7 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "\"Seller delivered late\" becomes reliable 48-hour delivery — if you can genuinely provide it",
+          "\"Seller delivered late\" becomes reliable 48-hour delivery: if you can genuinely provide it",
           "\"Seller didn't provide the source files\" becomes editable source files included",
           "\"The design looked generic\" becomes custom design based on your brand identity",
         ],
@@ -1941,9 +1941,9 @@ export const POSTS: Post[] = [
       {
         type: "ol",
         items: [
-          "Top performers — learn what works.",
-          "Middle performers — learn what is common.",
-          "Poor performers — learn what doesn't work.",
+          "Top performers: learn what works.",
+          "Middle performers: learn what is common.",
+          "Poor performers: learn what doesn't work.",
         ],
       },
       { type: "p", text: "Then ask:\n\"What pattern separates them?\"" },
@@ -1986,7 +1986,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "Now connect all seven" },
       { type: "p", text: "This is the part that matters. Imagine you're a video editor." },
       { type: "h3", text: "1. Search intent" },
-      { type: "p", text: "You discover buyers want short-form clips from podcasts — not just \"video editing.\"" },
+      { type: "p", text: "You discover buyers want short-form clips from podcasts: not just \"video editing.\"" },
       { type: "h3", text: "2. Competition" },
       { type: "p", text: "You investigate and find \"podcast video editing\" is competitive." },
       { type: "p", text: "But \"podcast-to-YouTube Shorts editing\" looks like a better opportunity. You dig further." },
@@ -2022,13 +2022,13 @@ export const POSTS: Post[] = [
       {
         type: "ol",
         items: [
-          "Search intent — what exactly is this buyer trying to accomplish?",
-          "Keyword competition — how many sellers am I competing against for that buyer?",
-          "Buyer psychology — what does this buyer fear, want, value and expect?",
-          "Offer design — how can I package my service around their desired outcome?",
-          "Conversion rate — once Fiverr sends me traffic, why should the buyer click and order?",
-          "Competitive research — what are competitors doing well, and where are buyers dissatisfied?",
-          "Customer lifetime value — can one satisfied buyer become a long-term customer?",
+          "Search intent: what exactly is this buyer trying to accomplish?",
+          "Keyword competition: how many sellers am I competing against for that buyer?",
+          "Buyer psychology: what does this buyer fear, want, value and expect?",
+          "Offer design: how can I package my service around their desired outcome?",
+          "Conversion rate: once Fiverr sends me traffic, why should the buyer click and order?",
+          "Competitive research: what are competitors doing well, and where are buyers dissatisfied?",
+          "Customer lifetime value: can one satisfied buyer become a long-term customer?",
         ],
       },
       {
@@ -2107,7 +2107,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "It is a small job. It also touches scheduling, triggers, state, safeguards, dry runs, duplicate prevention, browser automation, external integrations and logging — which makes it a very good teacher.",
+        text: "It is a small job. It also touches scheduling, triggers, state, safeguards, dry runs, duplicate prevention, browser automation, external integrations and logging, which makes it a very good teacher.",
       },
       {
         type: "p",
@@ -2149,11 +2149,11 @@ export const POSTS: Post[] = [
       {
         type: "ol",
         items: [
-          "Trigger — \"run at 11:45 PM\"",
-          "Logic — \"is anything actually due?\"",
-          "Action — \"file the claim\"",
-          "Side effects — the claim site, the spreadsheet, the SMS, the email",
-          "Verification — \"did it really happen?\"",
+          "Trigger: \"run at 11:45 PM\"",
+          "Logic: \"is anything actually due?\"",
+          "Action: \"file the claim\"",
+          "Side effects: the claim site, the spreadsheet, the SMS, the email",
+          "Verification: \"did it really happen?\"",
         ],
       },
       { type: "p", text: "If you understand those five pieces, you can understand most automations." },
@@ -2161,7 +2161,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "2. Separate decision from action" },
       { type: "p", text: "This is one of the biggest lessons in the whole discipline." },
       { type: "p", text: "Suppose the automation reads a row:" },
-      { type: "p", text: "Chris Sidorc — $250 — date due: September 10." },
+      { type: "p", text: "Chris Sidorc, $250, date due: September 10." },
       { type: "p", text: "The automation should not immediately file something." },
       { type: "p", text: "It should first make a decision." },
       { type: "p", text: "Bad design:" },
@@ -2257,12 +2257,12 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Read tracker — low risk — no protection needed",
-          "Analyze due dates — low risk — validation",
-          "Write log — low risk — duplicate guard",
-          "Update tracker — medium risk — verification",
-          "Send SMS — medium risk — notification guard",
-          "File claim — high risk — duplicate check plus eligibility check",
+          "Read tracker: low risk, no protection needed",
+          "Analyze due dates: low risk, validation",
+          "Write log: low risk, duplicate guard",
+          "Update tracker: medium risk, verification",
+          "Send SMS: medium risk, notification guard",
+          "File claim: high risk, duplicate check plus eligibility check",
         ],
       },
       { type: "p", text: "This is how you start thinking like an automation engineer." },
@@ -2274,11 +2274,11 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Time trigger — every day at 11:45 PM",
-          "Event trigger — when a new email arrives",
-          "Data trigger — when a spreadsheet row changes",
-          "Manual trigger — run now",
-          "Conditional trigger — when condition X becomes true",
+          "Time trigger: every day at 11:45 PM",
+          "Event trigger: when a new email arrives",
+          "Data trigger: when a spreadsheet row changes",
+          "Manual trigger: run now",
+          "Conditional trigger: when condition X becomes true",
         ],
       },
       { type: "p", text: "These are not equivalent, and confusing them causes real incidents." },
@@ -2345,9 +2345,9 @@ export const POSTS: Post[] = [
       { type: "p", text: "Your automation operates on state:" },
       { type: "flow", steps: ["Current state", "Automation", "New state"] },
       { type: "p", text: "Before:" },
-      { type: "ul", items: ["Chris — date filed = blank", "Chris — status = waiting"] },
+      { type: "ul", items: ["Chris: date filed = blank", "Chris: status = waiting"] },
       { type: "p", text: "After:" },
-      { type: "ul", items: ["Chris — date filed = 9/10/2026", "Chris — status = filed"] },
+      { type: "ul", items: ["Chris: date filed = 9/10/2026", "Chris: status = filed"] },
       { type: "p", text: "This is why you should always inspect state before and after important runs." },
 
       { type: "h2", text: "9. \"Enabled\" is not \"running\"" },
@@ -2361,9 +2361,9 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Enabled yes, running no — normal",
-          "Enabled no, running no — dormant",
-          "Enabled yes, running yes — working",
+          "Enabled yes, running no: normal",
+          "Enabled no, running no: dormant",
+          "Enabled yes, running yes: working",
         ],
       },
       { type: "p", text: "The dangerous assumption is:\n\"Enabled means it just ran.\"" },
@@ -2420,7 +2420,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Not necessarily." },
       {
         type: "p",
-        text: "In the case study, the automation used Chrome to write a log row — because the spreadsheet connector could read but not write. That's still a side effect.",
+        text: "In the case study, the automation used Chrome to write a log row: because the spreadsheet connector could read but not write. That's still a side effect.",
       },
       { type: "p", text: "A dry run could potentially:" },
       {
@@ -2524,7 +2524,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Then your automation becomes a rule you can actually read:" },
       {
         type: "p",
-        text: "If status = DUE, and status is not FILED, and status is not ON_HOLD, and it is not a duplicate — then file.",
+        text: "If status = DUE, and status is not FILED, and status is not ON_HOLD, and it is not a duplicate, then file.",
       },
       { type: "p", text: "That is far more reliable than an instruction written in prose." },
 
@@ -2566,10 +2566,10 @@ export const POSTS: Post[] = [
       {
         type: "ol",
         items: [
-          "Success with work — status SUCCESS, claims processed 1",
-          "Success with no work — status SUCCESS, claims processed 0, reason: nothing due",
-          "Failure — status FAILED, reason: spreadsheet unavailable",
-          "Partial failure — claim filed yes, tracker update failed, notification not sent",
+          "Success with work: status SUCCESS, claims processed 1",
+          "Success with no work: status SUCCESS, claims processed 0, reason: nothing due",
+          "Failure: status FAILED, reason: spreadsheet unavailable",
+          "Partial failure: claim filed yes, tracker update failed, notification not sent",
         ],
       },
       { type: "p", text: "That last one is particularly important." },
@@ -2579,15 +2579,15 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Claim submitted — succeeded",
-          "Tracker update — failed",
-          "SMS — failed",
+          "Claim submitted: succeeded",
+          "Tracker update: failed",
+          "SMS: failed",
         ],
       },
       { type: "p", text: "What should happen?" },
       {
         type: "p",
-        text: "If your automation isn't designed for this, tomorrow it reads a tracker that says NOT FILED — and submits the claim again.",
+        text: "If your automation isn't designed for this, tomorrow it reads a tracker that says NOT FILED, and submits the claim again.",
       },
       { type: "p", text: "That is how duplicate actions happen." },
       { type: "p", text: "So reliable automation must consider:" },
@@ -2599,11 +2599,11 @@ export const POSTS: Post[] = [
       {
         type: "flow",
         steps: [
-          "Read tracker — done",
-          "Check duplicate — done",
-          "Open the site — done",
-          "Submit claim — done",
-          "Update tracker — CRASH",
+          "Read tracker: done",
+          "Check duplicate: done",
+          "Open the site: done",
+          "Submit claim: done",
+          "Update tracker: CRASH",
         ],
       },
       { type: "p", text: "When it restarts, it needs to determine:\nDid the claim actually get submitted?" },
@@ -2696,8 +2696,8 @@ export const POSTS: Post[] = [
         type: "ul",
         items: [
           "2026-09-10 23:45, run abc123, trigger scheduled",
-          "Chris Sidorc — eligibility yes, due yes, duplicate no",
-          "Action: submission — result SUCCESS",
+          "Chris Sidorc: eligibility yes, due yes, duplicate no",
+          "Action: submission, result SUCCESS",
           "Notification: sent",
         ],
       },
@@ -2708,7 +2708,7 @@ export const POSTS: Post[] = [
           "2026-09-08 23:45, run xyz789, trigger scheduled",
           "Claims examined: 4",
           "Due: 0, filed: 0, skipped: 4",
-          "Reason: none due — result SUCCESS",
+          "Reason: none due, result SUCCESS",
         ],
       },
       { type: "p", text: "A log is basically the automation's memory." },
@@ -2757,9 +2757,9 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "In the case study the drive connector could read the sheet but had no cell-write capability — so the system had to drive Chrome to write its log.",
+        text: "In the case study the drive connector could read the sheet but had no cell-write capability, so the system had to drive Chrome to write its log.",
       },
-      { type: "flow", steps: ["Connector: read — yes", "Connector: write — no", "So: use a browser", "To write the sheet"] },
+      { type: "flow", steps: ["Connector read: yes", "Connector write: no", "So: use a browser", "To write the sheet"] },
       { type: "p", text: "When you hit this, don't think \"the automation is weird.\"" },
       { type: "p", text: "Think:\n\"Which capability does my integration actually expose?\"" },
 
@@ -2772,7 +2772,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "A failure anywhere breaks part of the workflow." },
       {
         type: "p",
-        text: "Ask whether the automation has permission to do the thing you're asking — not merely whether the connector is connected. A connected connector doesn't necessarily hold every permission.",
+        text: "Ask whether the automation has permission to do the thing you're asking: not merely whether the connector is connected. A connected connector doesn't necessarily hold every permission.",
       },
       { type: "p", text: "And when browser automation fails, investigate the session first:" },
       {
@@ -2811,16 +2811,16 @@ export const POSTS: Post[] = [
       { type: "h2", text: "32. Version it, and don't mix production with testing" },
       {
         type: "p",
-        text: "Treat automation logic like software. \"Damage Claims — Airbnb Filer V2\" is a good habit, not a fussy one.",
+        text: "Treat automation logic like software. \"Damage Claims: Airbnb Filer V2\" is a good habit, not a fussy one.",
       },
       { type: "p", text: "Keep a change log:" },
       {
         type: "ul",
         items: [
-          "V2.1 — added duplicate resolution-centre check",
-          "V2.1 — added 30-day expiry rule and hold list",
-          "V2.1 — changed: no browser when zero claims are due",
-          "V2.1 — fixed: duplicate notification behavior",
+          "V2.1: added duplicate resolution-centre check",
+          "V2.1: added 30-day expiry rule and hold list",
+          "V2.1: changed: no browser when zero claims are due",
+          "V2.1: fixed: duplicate notification behavior",
         ],
       },
       { type: "p", text: "Future you needs to know why the system behaves differently." },
@@ -2923,7 +2923,7 @@ export const POSTS: Post[] = [
         type: "callout",
         heading: "BrokeTechie Takeaway",
         text: [
-          "An automation is not a schedule and a prompt. It is a trigger, logic, an action, side effects and verification — and the last one is the one people skip.",
+          "An automation is not a schedule and a prompt. It is a trigger, logic, an action, side effects and verification, and the last one is the one people skip.",
           "Design around the highest-risk action, not the average one. Ask what one accidental double-run would actually cost, then protect that.",
           "Separate the decision from the action, gate the dangerous step behind explicit checks, and make repeat runs safe by design rather than by luck.",
           "And define the quiet outcome:\nzero work done, nothing touched, run successful. That is the automation working, not failing.",
@@ -2966,13 +2966,13 @@ export const POSTS: Post[] = [
       {
         type: "ol",
         items: [
-          "When did it start? — started 8:52:39",
-          "What triggered it? — trigger: manual",
-          "What did it read? — tracker: 4 rows",
-          "What decision did it make? — due: 0",
-          "What did it actually do? — browser opened, log written, no claim submitted",
-          "What changed? — task state changed to enabled",
-          "What didn't change? — Chris: date filed still blank",
+          "When did it start? Started 8:52:39",
+          "What triggered it? Trigger: manual",
+          "What did it read? Tracker: 4 rows",
+          "What decision did it make? Due: 0",
+          "What did it actually do? Browser opened, log written, no claim submitted",
+          "What changed? Task state changed to enabled",
+          "What didn't change? Chris: date filed still blank",
         ],
       },
       { type: "p", text: "Now you can reconstruct the event instead of guessing at it." },
@@ -3028,9 +3028,9 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Claim status — the damage claims tracker",
-          "Whether a platform claim exists — the resolution centre",
-          "Whether a notification was sent — the message log",
+          "Claim status: the damage claims tracker",
+          "Whether a platform claim exists: the resolution centre",
+          "Whether a notification was sent: the message log",
         ],
       },
       { type: "p", text: "Don't allow your automation to invent its own unofficial reality." },
@@ -3071,15 +3071,15 @@ export const POSTS: Post[] = [
 
       { type: "h2", text: "7. A worked example: the claim gets filed twice" },
       { type: "p", text: "Don't panic. Walk the layers." },
-      { type: "h3", text: "Step 1 — trigger" },
+      { type: "h3", text: "Step 1: trigger" },
       { type: "p", text: "Did the automation run twice? Check run IDs, timestamps, trigger types." },
-      { type: "h3", text: "Step 2 — decision" },
+      { type: "h3", text: "Step 2: decision" },
       { type: "p", text: "Did both runs believe Chris was due?" },
-      { type: "h3", text: "Step 3 — duplicate guard" },
+      { type: "h3", text: "Step 3: duplicate guard" },
       { type: "p", text: "Did the first run record the claim before the second run checked?" },
-      { type: "h3", text: "Step 4 — state" },
+      { type: "h3", text: "Step 4: state" },
       { type: "p", text: "Was date filed updated after run 1?" },
-      { type: "h3", text: "Step 5 — external system" },
+      { type: "h3", text: "Step 5: external system" },
       { type: "p", text: "Did the platform already contain the claim?" },
       { type: "p", text: "Now you can find the actual failure." },
       { type: "p", text: "Maybe the problem wasn't the schedule at all.\nMaybe it was a race condition." },
@@ -3094,7 +3094,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Run A files. Run B files." },
       {
         type: "p",
-        text: "Both made their decision before either recorded a result. Now you have duplicates — and a duplicate guard that looked perfectly correct when you wrote it.",
+        text: "Both made their decision before either recorded a result. Now you have duplicates, and a duplicate guard that looked perfectly correct when you wrote it.",
       },
       { type: "p", text: "A stronger system uses an atomic state transition:" },
       {
@@ -3140,7 +3140,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Your logic now behaves differently depending on which clock it reads." },
       {
         type: "p",
-        text: "So define the business timezone explicitly — Eastern Time — and use it consistently everywhere.",
+        text: "So define the business timezone explicitly (Eastern Time) and use it consistently everywhere.",
       },
 
       { type: "h2", text: "12. Don't change several things at once" },
@@ -3181,16 +3181,16 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Name — Damage Claims, Airbnb Filer V2",
-          "Purpose — automatically process due damage claims",
-          "Schedule — 11:45 PM Eastern, daily",
-          "Inputs — the claims tracker, email, the platform",
-          "Outputs — a filed claim, a tracker update, an SMS",
-          "High-risk action — the claim submission",
-          "Safe test — dry run",
-          "Duplicate protection — tracker plus resolution centre",
-          "Fail-safe — uncertain means manual review",
-          "Rollback — disable the automation",
+          "Name: Damage Claims, Airbnb Filer V2",
+          "Purpose: automatically process due damage claims",
+          "Schedule: 11:45 PM Eastern, daily",
+          "Inputs: the claims tracker, email, the platform",
+          "Outputs: a filed claim, a tracker update, an SMS",
+          "High-risk action: the claim submission",
+          "Safe test: dry run",
+          "Duplicate protection: tracker plus resolution centre",
+          "Fail-safe: uncertain means manual review",
+          "Rollback: disable the automation",
         ],
       },
       { type: "p", text: "This becomes your operating manual, and it is worth an hour of your life." },
@@ -3236,28 +3236,28 @@ export const POSTS: Post[] = [
 
       { type: "h2", text: "17. The ten-step debugging framework" },
       { type: "p", text: "When something goes wrong, use this exact sequence." },
-      { type: "h3", text: "Step 1 — freeze" },
+      { type: "h3", text: "Step 1: freeze" },
       {
         type: "p",
         text: "Don't keep pressing buttons. Especially don't repeatedly press \"run now.\" Preserve the evidence first.",
       },
-      { type: "h3", text: "Step 2 — establish the facts" },
+      { type: "h3", text: "Step 2: establish the facts" },
       { type: "p", text: "Write down: expected, actual, time, task, run ID, trigger." },
-      { type: "h3", text: "Step 3 — check state" },
+      { type: "h3", text: "Step 3: check state" },
       { type: "p", text: "Enabled? Running? Last run? Next run?" },
-      { type: "h3", text: "Step 4 — check execution history" },
+      { type: "h3", text: "Step 4: check execution history" },
       { type: "p", text: "Run ID, trigger, start, end, status." },
-      { type: "h3", text: "Step 5 — check inputs" },
+      { type: "h3", text: "Step 5: check inputs" },
       { type: "p", text: "What data did it actually see?" },
-      { type: "h3", text: "Step 6 — check decisions" },
+      { type: "h3", text: "Step 6: check decisions" },
       { type: "p", text: "What did it conclude, and why?" },
-      { type: "h3", text: "Step 7 — check actions" },
+      { type: "h3", text: "Step 7: check actions" },
       { type: "p", text: "What did it actually do?" },
-      { type: "h3", text: "Step 8 — check external systems" },
+      { type: "h3", text: "Step 8: check external systems" },
       { type: "p", text: "Did the platform change? Did the sheet change? Did SMS change?" },
-      { type: "h3", text: "Step 9 — identify the failed layer" },
+      { type: "h3", text: "Step 9: identify the failed layer" },
       { type: "p", text: "Trigger, data, logic, action, state, notification or verification." },
-      { type: "h3", text: "Step 10 — change one thing" },
+      { type: "h3", text: "Step 10: change one thing" },
       { type: "p", text: "Then test again." },
 
       { type: "h2", text: "18. The case study, reconstructed" },
@@ -3268,19 +3268,19 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "A scheduled trigger — 11:45 PM Eastern",
-          "A manual trigger — 8:52 PM",
-          "Task state discovered — enabled = true",
-          "Decision logic — Chris not due until the 10th",
-          "Safety gates — duplicate, expired, hold, already filed",
-          "A dry run — would file: 0",
-          "Logging — 8:55 PM, 0 due",
-          "External verification — date filed blank, no SMS, no submission",
-          "An integration limitation — drive can read, drive can't write cells",
-          "A browser side effect — Chrome used for logging",
-          "Unexpected configuration behavior — manual approval affected the enabled state",
-          "State corrected — disabled",
-          "Then deliberately re-enabled — next scheduled run 11:45 PM",
+          "A scheduled trigger: 11:45 PM Eastern",
+          "A manual trigger: 8:52 PM",
+          "Task state discovered: enabled = true",
+          "Decision logic: Chris not due until the 10th",
+          "Safety gates: duplicate, expired, hold, already filed",
+          "A dry run: would file: 0",
+          "Logging: 8:55 PM, 0 due",
+          "External verification: date filed blank, no SMS, no submission",
+          "An integration limitation: drive can read, drive can't write cells",
+          "A browser side effect: Chrome used for logging",
+          "Unexpected configuration behavior: manual approval affected the enabled state",
+          "State corrected: disabled",
+          "Then deliberately re-enabled: next scheduled run 11:45 PM",
         ],
       },
       {
@@ -3289,7 +3289,7 @@ export const POSTS: Post[] = [
       },
 
       { type: "h2", text: "19. Your debugging cheat sheet" },
-      { type: "p", text: "Save this somewhere. When something breaks — stop, then work through:" },
+      { type: "p", text: "Save this somewhere. When something breaks: stop, then work through:" },
       {
         type: "ol",
         items: [
@@ -3323,17 +3323,17 @@ export const POSTS: Post[] = [
         type: "p",
         text: "If you want to get genuinely good at this, don't just learn one automation platform. Build knowledge in layers.",
       },
-      { type: "h3", text: "Level 1 — automation basics" },
+      { type: "h3", text: "Level 1: automation basics" },
       {
         type: "ul",
         items: ["triggers", "actions", "schedules", "conditions", "variables", "loops", "filters", "branching"],
       },
-      { type: "h3", text: "Level 2 — data" },
+      { type: "h3", text: "Level 2: data" },
       {
         type: "ul",
         items: ["spreadsheets", "JSON", "CSV", "databases", "IDs", "timestamps", "structured records"],
       },
-      { type: "h3", text: "Level 3 — APIs" },
+      { type: "h3", text: "Level 3: APIs" },
       {
         type: "ul",
         items: [
@@ -3345,7 +3345,7 @@ export const POSTS: Post[] = [
           "webhooks",
         ],
       },
-      { type: "h3", text: "Level 4 — programming" },
+      { type: "h3", text: "Level 4: programming" },
       {
         type: "p",
         text: "You don't need to become a professional software engineer immediately, but learn enough Python or JavaScript to be dangerous:",
@@ -3354,7 +3354,7 @@ export const POSTS: Post[] = [
         type: "ul",
         items: ["functions", "variables", "arrays", "objects", "conditionals", "loops", "exceptions", "logging"],
       },
-      { type: "h3", text: "Level 5 — systems thinking" },
+      { type: "h3", text: "Level 5: systems thinking" },
       {
         type: "ul",
         items: [
@@ -3378,14 +3378,14 @@ export const POSTS: Post[] = [
       {
         type: "ol",
         items: [
-          "Automation concepts — triggers, actions, conditions, schedules, variables.",
-          "Build simple automations — new email, extract information, add a spreadsheet row.",
-          "Add decision-making — is it urgent? Yes, notify. No, log.",
-          "Add safeguards — already processed? Yes, skip. No, continue.",
-          "Add APIs and integrations — how email, sheets, calendars and databases actually communicate.",
-          "Learn debugging — logs, run history, state, errors, reproduction.",
-          "Learn reliability — idempotency, retries, locks, failure recovery, verification.",
-          "Build production-grade systems — monitoring, alerts, versioning, documentation, rollback.",
+          "Automation concepts: triggers, actions, conditions, schedules, variables.",
+          "Build simple automations: new email, extract information, add a spreadsheet row.",
+          "Add decision-making: is it urgent? Yes, notify. No, log.",
+          "Add safeguards: already processed? Yes, skip. No, continue.",
+          "Add APIs and integrations: how email, sheets, calendars and databases actually communicate.",
+          "Learn debugging: logs, run history, state, errors, reproduction.",
+          "Learn reliability: idempotency, retries, locks, failure recovery, verification.",
+          "Build production-grade systems: monitoring, alerts, versioning, documentation, rollback.",
         ],
       },
       {
@@ -3442,7 +3442,7 @@ export const POSTS: Post[] = [
         heading: "BrokeTechie Takeaway",
         text: [
           "When it breaks, freeze. Every extra \"run now\" destroys evidence and can add side effects on top of the problem you're trying to understand.",
-          "Classify the failure before fixing it. Trigger, access, data, logic, action, state, notification or duplicate — naming the layer turns panic into a checklist.",
+          "Classify the failure before fixing it. Trigger, access, data, logic, action, state, notification or duplicate, naming the layer turns panic into a checklist.",
           "Change one thing at a time. If you change five and it works, you've fixed nothing and learned nothing.",
           "And never trust the automation's own account of what it did.\nGo and look at the system it claims to have changed.",
         ],
@@ -3452,7 +3452,7 @@ export const POSTS: Post[] = [
   {
     slug: "every-ai-term-explained-simply",
     title: "Every AI Term You Need, Explained Simply",
-    deck: "LLMs, tokens, embeddings, RAG, agents, MCP, guardrails and the rest — what each one is, when it matters, and what to say to a client",
+    deck: "LLMs, tokens, embeddings, RAG, agents, MCP, guardrails and the rest: what each one is, when it matters, and what to say to a client",
     excerpt:
       "The knowledge-gap article listed the vocabulary. This one explains it. Thirty terms, each with a plain definition, when to use it, when not to, what goes wrong, and the sentence you'd say to a nontechnical client.",
     category: "AI Curriculum",
@@ -3470,18 +3470,18 @@ export const POSTS: Post[] = [
       { type: "p", text: "So that's how this article is built." },
       {
         type: "p",
-        text: "Every term below gets the same treatment. Not a dictionary entry — a working understanding.",
+        text: "Every term below gets the same treatment. Not a dictionary entry: a working understanding.",
       },
       { type: "p", text: "They're grouped into six families:" },
       {
         type: "ol",
         items: [
-          "The model itself — what you're actually buying when you buy AI.",
-          "Giving the model knowledge — how AI learns about your company.",
-          "Giving the model the ability to act — how AI stops talking and starts doing.",
-          "The plumbing — how software talks to other software.",
-          "Keeping it trustworthy — how you know it works and stop it doing damage.",
-          "The business words — how anyone decides it was worth the money.",
+          "The model itself: what you're actually buying when you buy AI.",
+          "Giving the model knowledge: how AI learns about your company.",
+          "Giving the model the ability to act: how AI stops talking and starts doing.",
+          "The plumbing: how software talks to other software.",
+          "Keeping it trustworthy: how you know it works and stop it doing damage.",
+          "The business words: how anyone decides it was worth the money.",
         ],
       },
       {
@@ -3530,7 +3530,7 @@ export const POSTS: Post[] = [
       { type: "h3", text: "Context window" },
       {
         type: "p",
-        text: "The context window is the total amount of information a model can work with in a single interaction — your instructions, the conversation so far, any documents you attach, and the answer it's writing.",
+        text: "The context window is the total amount of information a model can work with in a single interaction, your instructions, the conversation so far, any documents you attach, and the answer it's writing.",
       },
       { type: "p", text: "In plain language:\nit's the model's desk. Everything it can see at once has to fit on it." },
       {
@@ -3541,7 +3541,7 @@ export const POSTS: Post[] = [
       { type: "quote", text: "A large context window is not the same as good architecture." },
       {
         type: "p",
-        text: "You don't dump everything in simply because it fits. A bigger desk doesn't make a messy desk useful. You retrieve what matters — which is what the whole next family is about.",
+        text: "You don't dump everything in simply because it fits. A bigger desk doesn't make a messy desk useful. You retrieve what matters, which is what the whole next family is about.",
       },
       {
         type: "p",
@@ -3560,7 +3560,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "Say this to a client:\n\"Inference is the AI actually doing the work — it's the ongoing running cost.\"",
+        text: "Say this to a client:\n\"Inference is the AI actually doing the work, it's the ongoing running cost.\"",
       },
 
       { type: "h3", text: "Latency" },
@@ -3609,7 +3609,7 @@ export const POSTS: Post[] = [
       { type: "h3", text: "Multimodal AI" },
       {
         type: "p",
-        text: "Multimodal means the model handles more than text — images, audio, documents, sometimes video.",
+        text: "Multimodal means the model handles more than text: images, audio, documents, sometimes video.",
       },
       {
         type: "p",
@@ -3621,7 +3621,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "What goes wrong:\npeople assume it reads images perfectly. It doesn't. Bad scans, handwriting and dense tables still cause errors — which is why extraction work needs validation.",
+        text: "What goes wrong:\npeople assume it reads images perfectly. It doesn't. Bad scans, handwriting and dense tables still cause errors, which is why extraction work needs validation.",
       },
       {
         type: "p",
@@ -3662,9 +3662,9 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Classify an email, tag a lead, route a ticket — a small fast model is fine.",
-          "Draft a customer response, summarize a call — a mid-tier model.",
-          "Multi-step reasoning, code, analysis, anything where a mistake is expensive — the strongest model you have.",
+          "Classify an email, tag a lead, route a ticket: a small fast model is fine.",
+          "Draft a customer response, summarize a call: a mid-tier model.",
+          "Multi-step reasoning, code, analysis, anything where a mistake is expensive: the strongest model you have.",
         ],
       },
       {
@@ -3692,7 +3692,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "If the problem is \"the AI doesn't know our information,\" fine-tuning is the wrong tool — you want retrieval. If the problem is \"it doesn't follow our format,\" try better instructions and examples in the prompt first. Fine-tuning earns its place when you need consistent behavior on a narrow, high-volume, well-defined task, and you have good training data.",
+        text: "If the problem is \"the AI doesn't know our information,\" fine-tuning is the wrong tool, you want retrieval. If the problem is \"it doesn't follow our format,\" try better instructions and examples in the prompt first. Fine-tuning earns its place when you need consistent behavior on a narrow, high-volume, well-defined task, and you have good training data.",
       },
       {
         type: "p",
@@ -3700,7 +3700,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "Say this to a client:\n\"Fine-tuning adapts the model's behavior to a specific task. It doesn't teach it your company's facts — that's a different mechanism.\"",
+        text: "Say this to a client:\n\"Fine-tuning adapts the model's behavior to a specific task. It doesn't teach it your company's facts, that's a different mechanism.\"",
       },
 
       { type: "art", variant: "nodes" },
@@ -3740,7 +3740,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "When you don't need one:\nmore often than the industry admits. If your information lives in structured database rows, query the database. A vector database is for unstructured text — documents, tickets, policies, transcripts.",
+        text: "When you don't need one:\nmore often than the industry admits. If your information lives in structured database rows, query the database. A vector database is for unstructured text, documents, tickets, policies, transcripts.",
       },
       {
         type: "p",
@@ -3768,7 +3768,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "The mistake everyone makes:\nthinking RAG means uploading PDFs. It's a system — ingestion, chunking, embedding, retrieval, ranking, permissions, freshness, citations, evaluation. Each of those can be the thing that breaks it.",
+        text: "The mistake everyone makes:\nthinking RAG means uploading PDFs. It's a system, ingestion, chunking, embedding, retrieval, ranking, permissions, freshness, citations, evaluation. Each of those can be the thing that breaks it.",
       },
       {
         type: "p",
@@ -3782,7 +3782,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "Family 3: Giving the model the ability to act" },
       {
         type: "p",
-        text: "Everything above produces words. This family is what turns words into actions in real systems — and it's where the commercial value concentrates.",
+        text: "Everything above produces words. This family is what turns words into actions in real systems, and it's where the commercial value concentrates.",
       },
 
       { type: "h3", text: "Tool calling" },
@@ -3796,7 +3796,7 @@ export const POSTS: Post[] = [
       { type: "quote", text: "An information generator and a system participant." },
       {
         type: "p",
-        text: "This is the single most important concept in this family. Nearly everything businesses want from AI — updating a CRM, booking an appointment, sending a message, reading a record — happens through tool calling.",
+        text: "This is the single most important concept in this family. Nearly everything businesses want from AI (updating a CRM, booking an appointment, sending a message, reading a record) happens through tool calling.",
       },
       {
         type: "p",
@@ -3806,7 +3806,7 @@ export const POSTS: Post[] = [
       { type: "h3", text: "Structured outputs" },
       {
         type: "p",
-        text: "Structured outputs force the model's answer into a defined shape — specific fields, specific types — instead of free-form prose.",
+        text: "Structured outputs force the model's answer into a defined shape (specific fields, specific types) instead of free-form prose.",
       },
       {
         type: "p",
@@ -3828,7 +3828,7 @@ export const POSTS: Post[] = [
       { type: "h3", text: "Agent" },
       {
         type: "p",
-        text: "An agent is given a goal and boundaries rather than a fixed sequence, and decides its own next steps — using tools, observing results, and continuing until it's done or escalates.",
+        text: "An agent is given a goal and boundaries rather than a fixed sequence, and decides its own next steps, using tools, observing results, and continuing until it's done or escalates.",
       },
       {
         type: "flow",
@@ -3852,7 +3852,7 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "the steps are predictable — use ordinary automation",
+          "the steps are predictable: use ordinary automation",
           "reliability requirements are strict",
           "the extra autonomy adds risk without adding value",
         ],
@@ -3869,7 +3869,7 @@ export const POSTS: Post[] = [
       { type: "h3", text: "MCP" },
       {
         type: "p",
-        text: "MCP is the Model Context Protocol — an open standard for connecting AI applications to external tools and data.",
+        text: "MCP is the Model Context Protocol: an open standard for connecting AI applications to external tools and data.",
       },
       {
         type: "p",
@@ -3891,7 +3891,7 @@ export const POSTS: Post[] = [
       { type: "h3", text: "Orchestration" },
       {
         type: "p",
-        text: "Orchestration is coordinating multiple models, tools, steps and workflows into one coherent process — deciding what runs when, what happens on failure, and what waits for what.",
+        text: "Orchestration is coordinating multiple models, tools, steps and workflows into one coherent process, deciding what runs when, what happens on failure, and what waits for what.",
       },
       {
         type: "p",
@@ -3931,7 +3931,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "In plain language:\nthe waiter. You don't walk into the kitchen and cook — you make a request in an agreed format, and something comes back.",
+        text: "In plain language:\nthe waiter. You don't walk into the kitchen and cook, you make a request in an agreed format, and something comes back.",
       },
       {
         type: "p",
@@ -3978,7 +3978,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
-        text: "You build a set — normal cases, hard cases, ambiguous cases, deliberately awkward ones — and measure accuracy, task completion, how often it makes things up, how often it escalates, latency and cost.",
+        text: "You build a set (normal cases, hard cases, ambiguous cases, deliberately awkward ones) and measure accuracy, task completion, how often it makes things up, how often it escalates, latency and cost.",
       },
       {
         type: "p",
@@ -4010,7 +4010,7 @@ export const POSTS: Post[] = [
       { type: "h3", text: "Guardrails" },
       {
         type: "p",
-        text: "Guardrails are the limits on what the AI is permitted to do — what it can access, what it can change, what values are valid, what it must refuse.",
+        text: "Guardrails are the limits on what the AI is permitted to do: what it can access, what it can change, what values are valid, what it must refuse.",
       },
       {
         type: "p",
@@ -4071,7 +4071,7 @@ export const POSTS: Post[] = [
       { type: "h2", text: "Family 6: The business words" },
       {
         type: "p",
-        text: "These are the terms that decide whether your work gets renewed. Learn them properly — most technical freelancers can't discuss them at all.",
+        text: "These are the terms that decide whether your work gets renewed. Learn them properly, most technical freelancers can't discuss them at all.",
       },
 
       { type: "h3", text: "ROI" },
@@ -4118,7 +4118,7 @@ export const POSTS: Post[] = [
       { type: "h3", text: "Workflow redesign" },
       {
         type: "p",
-        text: "Workflow redesign is changing how the work happens because AI now exists — as opposed to bolting AI onto a process built for humans doing every step by hand.",
+        text: "Workflow redesign is changing how the work happens because AI now exists: as opposed to bolting AI onto a process built for humans doing every step by hand.",
       },
       { type: "p", text: "This is the single highest-leverage idea in the whole vocabulary." },
       {
@@ -4167,13 +4167,13 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Claude, GPT, Gemini — the frontier models themselves, reached through a chat interface or an API.",
-          "Claude Code — an agentic coding tool that works across a real codebase, rather than suggesting snippets.",
-          "n8n and Make — visual workflow automation platforms. They're where most small-business automation actually gets built, and they connect to AI models as one step among many.",
-          "Supabase, Postgres and friends — databases. Where the structured information lives.",
-          "Vector databases — the meaning-searchable store behind RAG.",
-          "Vapi, Retell, Twilio — the voice layer. Twilio moves the phone call; Vapi and Retell run conversational AI over it.",
-          "MCP servers — the standard connection between an AI application and your tools and data.",
+          "Claude, GPT, Gemini: the frontier models themselves, reached through a chat interface or an API.",
+          "Claude Code: an agentic coding tool that works across a real codebase, rather than suggesting snippets.",
+          "n8n and Make: visual workflow automation platforms. They're where most small-business automation actually gets built, and they connect to AI models as one step among many.",
+          "Supabase, Postgres and friends: databases. Where the structured information lives.",
+          "Vector databases: the meaning-searchable store behind RAG.",
+          "Vapi, Retell, Twilio: the voice layer. Twilio moves the phone call; Vapi and Retell run conversational AI over it.",
+          "MCP servers: the standard connection between an AI application and your tools and data.",
         ],
       },
       {
@@ -4209,7 +4209,7 @@ export const POSTS: Post[] = [
         text: [
           "The vocabulary splits into six families: the model, its knowledge, its ability to act, the plumbing, the trust layer, and the business case.",
           "The terms that make money are not the glamorous ones. Tool calling, structured outputs, evaluation and workflow redesign do more commercial work than any model name.",
-          "Knowing when NOT to use something — not fine-tuning a knowledge problem, not building an agent for a predictable path, not reaching for RAG when a database query would do — is the part that marks you as experienced.",
+          "Knowing when NOT to use something (not fine-tuning a knowledge problem, not building an agent for a predictable path, not reaching for RAG when a database query would do) is the part that marks you as experienced.",
           "And the last question is the one that closes deals:\ncan you explain it to someone nontechnical in one sentence?",
         ],
       },
@@ -4609,7 +4609,7 @@ export const POSTS: Post[] = [
         text: [
           "Claude cannot reach into a desktop program by itself. MCP is the standard connection that lets it call tools you build.",
           "Five pieces, five jobs:\nClaude understands the request. MCP carries the tool call. Your server translates and validates. SketchUp's Ruby API controls the model. Medeek builds the construction assembly.",
-          "The bridge is the piece people forget — the MCP server and SketchUp are separate programs, and something has to carry messages between them.",
+          "The bridge is the piece people forget: the MCP server and SketchUp are separate programs, and something has to carry messages between them.",
           "You are not building Claude. You are building the controlled bridge that lets Claude use SketchUp and Medeek as tools.",
         ],
       },
@@ -4779,7 +4779,7 @@ export const POSTS: Post[] = [
       { type: "p", text: "Then Claude can inspect the model before making changes." },
       {
         type: "p",
-        text: "MCP has a second primitive for exactly this. Resources are data sources that provide contextual information. Unlike tools, which are model-controlled, resources are application-controlled — the host decides what context to attach.",
+        text: "MCP has a second primitive for exactly this. Resources are data sources that provide contextual information. Unlike tools, which are model-controlled, resources are application-controlled, the host decides what context to attach.",
       },
 
       { type: "h2", text: "7. Tools that read vs tools that do" },
@@ -5178,14 +5178,14 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Claude problem — misinterprets dimensions",
-          "MCP problem — wrong schema",
-          "Server problem — bad validation",
-          "Bridge problem — SketchUp isn't reachable",
-          "Ruby problem — exception",
-          "Medeek problem — method unavailable",
-          "Plugin problem — not installed or licensed",
-          "Geometry problem — invalid coordinates",
+          "Claude problem: misinterprets dimensions",
+          "MCP problem: wrong schema",
+          "Server problem: bad validation",
+          "Bridge problem: SketchUp isn't reachable",
+          "Ruby problem: exception",
+          "Medeek problem: method unavailable",
+          "Plugin problem: not installed or licensed",
+          "Geometry problem: invalid coordinates",
         ],
       },
       { type: "p", text: "That's why the POC is valuable." },
@@ -5305,16 +5305,16 @@ export const POSTS: Post[] = [
       {
         type: "flow",
         steps: [
-          "Phase 1 — Understand the client's environment",
-          "Phase 2 — Connect MCP to SketchUp",
-          "Phase 3 — Test basic SketchUp operation",
-          "Phase 4 — Connect Medeek Wall",
-          "Phase 5 — Connect Medeek Floor",
-          "Phase 6 — Connect Medeek Truss",
-          "Phase 7 — Add model reading",
-          "Phase 8 — Add modification",
-          "Phase 9 — Add validation",
-          "Phase 10 — Add complex AI workflows",
+          "Phase 1: Understand the client's environment",
+          "Phase 2: Connect MCP to SketchUp",
+          "Phase 3: Test basic SketchUp operation",
+          "Phase 4: Connect Medeek Wall",
+          "Phase 5: Connect Medeek Floor",
+          "Phase 6: Connect Medeek Truss",
+          "Phase 7: Add model reading",
+          "Phase 8: Add modification",
+          "Phase 9: Add validation",
+          "Phase 10: Add complex AI workflows",
         ],
       },
       { type: "p", text: "You should not skip straight to Phase 10." },
@@ -5397,11 +5397,11 @@ export const POSTS: Post[] = [
       {
         type: "ol",
         items: [
-          "Claude — understands what the user wants.",
-          "MCP — gives Claude a standard way to use external tools.",
-          "MCP server — the software you build that exposes those tools.",
-          "SketchUp Ruby API — allows software to communicate with SketchUp.",
-          "Medeek — provides specialized construction functionality inside SketchUp.",
+          "Claude: understands what the user wants.",
+          "MCP: gives Claude a standard way to use external tools.",
+          "MCP server: the software you build that exposes those tools.",
+          "SketchUp Ruby API: allows software to communicate with SketchUp.",
+          "Medeek: provides specialized construction functionality inside SketchUp.",
         ],
       },
       { type: "p", text: "Put them together:" },
@@ -5456,7 +5456,7 @@ export const POSTS: Post[] = [
         text: [
           "Claude cannot reach into a desktop program by itself. MCP gives it a standard way to call tools you build; your server, a local bridge, SketchUp's Ruby API and the Medeek plugins do the actual work.",
           "You are not building Claude. You are building the controlled bridge that lets Claude use SketchUp and Medeek as tools.",
-          "Give the AI a small set of named, validated tools — not one tool that runs arbitrary code. Normalize the units, verify the result, and return errors a human can read.",
+          "Give the AI a small set of named, validated tools: not one tool that runs arbitrary code. Normalize the units, verify the result, and return errors a human can read.",
           "And the honest position beats the impressive one:\nunderstand the architecture, name the unknowns, and prove the riskiest connection first.",
         ],
       },
@@ -5800,20 +5800,20 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "RAG — give employees reliable access to company knowledge",
-          "API integration — make your systems talk to each other",
-          "Agent — software that can take multiple steps toward a goal",
-          "Workflow automation — remove repetitive manual steps",
-          "Evaluation — measure whether the AI is actually performing correctly",
-          "Observability — know when and why the system fails",
-          "Human-in-the-loop — keep people involved where judgment or risk matters",
-          "MCP — give AI standardized access to tools and data",
-          "Vector database — make large amounts of information searchable by meaning",
-          "Guardrails — limit what AI can do and prevent dangerous actions",
-          "Orchestration — coordinate multiple AI systems, tools and workflows",
-          "Fine-tuning — adapt a model's behavior to a specific task",
-          "Inference — running the model to produce an answer",
-          "Token cost — part of the ongoing cost of operating AI",
+          "RAG: give employees reliable access to company knowledge",
+          "API integration: make your systems talk to each other",
+          "Agent: software that can take multiple steps toward a goal",
+          "Workflow automation: remove repetitive manual steps",
+          "Evaluation: measure whether the AI is actually performing correctly",
+          "Observability: know when and why the system fails",
+          "Human-in-the-loop: keep people involved where judgment or risk matters",
+          "MCP: give AI standardized access to tools and data",
+          "Vector database: make large amounts of information searchable by meaning",
+          "Guardrails: limit what AI can do and prevent dangerous actions",
+          "Orchestration: coordinate multiple AI systems, tools and workflows",
+          "Fine-tuning: adapt a model's behavior to a specific task",
+          "Inference: running the model to produce an answer",
+          "Token cost: part of the ongoing cost of operating AI",
         ],
       },
       { type: "p", text: "You shouldn't just know the definition." },
@@ -6057,7 +6057,7 @@ export const POSTS: Post[] = [
         heading: "BrokeTechie Takeaway",
         text: [
           "Most AI freelancers climb two rungs of the ladder and stop: tool knowledge, then technical knowledge.",
-          "The rungs above them — workflow, business, economics, organization, strategy — are where the client conversations, the budgets and the defensibility actually live.",
+          "The rungs above them (workflow, business, economics, organization, strategy) are where the client conversations, the budgets and the defensibility actually live.",
           "You don't need to know everything. You need to know how the pieces connect, and how to explain the connection in language a CEO understands.",
           "The best AI consultant isn't the person who finds the most things to automate.\nIt's the person who knows what should and shouldn't be automated.",
         ],
@@ -6069,7 +6069,7 @@ export const POSTS: Post[] = [
     title: "What AI Actually Is, And What Has To Exist Around It",
     deck: "Subjects 1 and 2 of the implementation curriculum: AI technology, and the architecture that turns a model into a working system",
     excerpt:
-      "Rules, automation, machine learning, generative AI, agents — five different things people call \"AI.\" Here is how to tell them apart, when to avoid AI entirely, and why a model can work perfectly while the system around it fails.",
+      "Rules, automation, machine learning, generative AI, agents: five different things people call \"AI.\" Here is how to tell them apart, when to avoid AI entirely, and why a model can work perfectly while the system around it fails.",
     category: "AI Curriculum",
     date: "2026-09-07",
     readTime: "16 min read",
@@ -6622,7 +6622,7 @@ export const POSTS: Post[] = [
           "AI is not one technology. Rules, automation, machine learning, generative AI and agents solve different classes of problem, and picking the wrong one is the most common and most expensive mistake.",
           "The test that matters: is the work deterministic or probabilistic? Deterministic work belongs to rules and automation. Probabilistic work is where AI earns its place.",
           "Capability is not usefulness. A model being able to do something is not a reason for a business to pay for it.",
-          "And the model is maybe 10% of the engineering. The other 90% — auth, APIs, data, retries, logging, escalation — is the architecture, and it is where projects actually fail.",
+          "And the model is maybe 10% of the engineering. The other 90% (auth, APIs, data, retries, logging, escalation) is the architecture, and it is where projects actually fail.",
         ],
       },
     ],
@@ -6701,13 +6701,13 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Receive lead — event",
-          "Read lead — information processing",
-          "Research — information gathering",
-          "Decide priority — judgment",
-          "Update CRM — deterministic",
-          "Email — communication",
-          "Schedule — transaction",
+          "Receive lead: event",
+          "Read lead: information processing",
+          "Research: information gathering",
+          "Decide priority: judgment",
+          "Update CRM: deterministic",
+          "Email: communication",
+          "Schedule: transaction",
         ],
       },
       { type: "p", text: "Now you can ask:\nWhere should AI be used?" },
@@ -7000,20 +7000,20 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Revenue — money coming in",
-          "Cost — money spent to operate",
-          "Gross margin — revenue minus direct costs",
-          "Profit — what remains after relevant costs",
-          "Conversion rate — conversions divided by opportunities",
-          "Customer acquisition cost — how much it costs to acquire a customer",
-          "Customer lifetime value — expected economic value of a customer over the relationship",
-          "Capacity — how much work the business can handle",
-          "Throughput — how much work gets completed in a period",
-          "Cycle time — how long a process takes",
-          "Retention and churn — whether customers stay or leave",
-          "Error rate — how often something goes wrong",
-          "Utilization — how much available capacity is actually being used",
-          "Response time — how quickly the business reacts",
+          "Revenue: money coming in",
+          "Cost: money spent to operate",
+          "Gross margin: revenue minus direct costs",
+          "Profit: what remains after relevant costs",
+          "Conversion rate: conversions divided by opportunities",
+          "Customer acquisition cost: how much it costs to acquire a customer",
+          "Customer lifetime value: expected economic value of a customer over the relationship",
+          "Capacity: how much work the business can handle",
+          "Throughput: how much work gets completed in a period",
+          "Cycle time: how long a process takes",
+          "Retention and churn: whether customers stay or leave",
+          "Error rate: how often something goes wrong",
+          "Utilization: how much available capacity is actually being used",
+          "Response time: how quickly the business reacts",
         ],
       },
       { type: "p", text: "You don't need to become an accountant." },
@@ -7527,10 +7527,10 @@ export const POSTS: Post[] = [
         type: "callout",
         heading: "BrokeTechie Takeaway",
         text: [
-          "Automation follows a path you defined. An agent pursues a goal you defined. Neither is better — they fit different shapes of work.",
+          "Automation follows a path you defined. An agent pursues a goal you defined. Neither is better, they fit different shapes of work.",
           "The expert agent question is never \"can we make this autonomous?\" It is \"how much autonomy does the business actually need, and is the extra risk worth it?\"",
           "RAG is not uploading PDFs. It is a system, and it moves your problem from what the model knows to how well you manage and retrieve information.",
-          "And the unglamorous layer — retries, logs, queues, authorization, idempotency — is exactly what separates a demo that impressed someone from a system a business can depend on.",
+          "And the unglamorous layer (retries, logs, queues, authorization, idempotency) is exactly what separates a demo that impressed someone from a system a business can depend on.",
         ],
       },
     ],
@@ -7656,14 +7656,14 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Accuracy — how often is the answer correct?",
-          "Task completion — how often does the system actually accomplish the task?",
-          "Error rate — how often does it fail?",
-          "Escalation rate — how often does it require human help?",
-          "Hallucination rate — how often does it invent unsupported information?",
-          "Latency — how long does it take?",
-          "Cost per task — how expensive is each interaction?",
-          "Human intervention — how much human labor remains?",
+          "Accuracy: how often is the answer correct?",
+          "Task completion: how often does the system actually accomplish the task?",
+          "Error rate: how often does it fail?",
+          "Escalation rate: how often does it require human help?",
+          "Hallucination rate: how often does it invent unsupported information?",
+          "Latency: how long does it take?",
+          "Cost per task: how expensive is each interaction?",
+          "Human intervention: how much human labor remains?",
         ],
       },
 
@@ -8079,12 +8079,12 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Technology — what's becoming possible?",
-          "Adoption — who's actually using it?",
-          "Business demand — what problems are companies trying to solve?",
-          "Labor — which skills are growing?",
-          "Pricing — what are buyers willing to pay?",
-          "Business models — how are providers charging?",
+          "Technology: what's becoming possible?",
+          "Adoption: who's actually using it?",
+          "Business demand: what problems are companies trying to solve?",
+          "Labor: which skills are growing?",
+          "Pricing: what are buyers willing to pay?",
+          "Business models: how are providers charging?",
         ],
       },
 
@@ -8231,18 +8231,18 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Business value — how much could this matter?",
-          "Frequency — how often does it happen?",
-          "Cost — how expensive is it today?",
-          "Automation potential — can the steps be mechanized?",
-          "AI suitability — is AI actually useful here?",
-          "Technical feasibility — can we build it?",
-          "Data availability — do we have what we need?",
-          "Integration difficulty — how hard is the plumbing?",
-          "Risk — what happens if it fails?",
-          "Adoption difficulty — will people use it?",
-          "ROI clarity — does the economics make sense?",
-          "Repeatability — can the solution be reused?",
+          "Business value: how much could this matter?",
+          "Frequency: how often does it happen?",
+          "Cost: how expensive is it today?",
+          "Automation potential: can the steps be mechanized?",
+          "AI suitability: is AI actually useful here?",
+          "Technical feasibility: can we build it?",
+          "Data availability: do we have what we need?",
+          "Integration difficulty: how hard is the plumbing?",
+          "Risk: what happens if it fails?",
+          "Adoption difficulty: will people use it?",
+          "ROI clarity: does the economics make sense?",
+          "Repeatability: can the solution be reused?",
         ],
       },
       { type: "p", text: "Then prioritize." },
@@ -8256,12 +8256,12 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "Email classification — medium value, low difficulty, low risk, high priority",
-          "Lead qualification — high value, medium difficulty, medium risk, very high priority",
-          "AI receptionist — high value, medium difficulty, medium risk, high priority",
-          "Autonomous financial decisions — very high value, high difficulty, very high risk, low priority initially",
-          "Internal knowledge assistant — medium to high value, medium difficulty, medium risk, high priority",
-          "Fully autonomous sales agent — very high value, high difficulty, high risk, later",
+          "Email classification: medium value, low difficulty, low risk, high priority",
+          "Lead qualification: high value, medium difficulty, medium risk, very high priority",
+          "AI receptionist: high value, medium difficulty, medium risk, high priority",
+          "Autonomous financial decisions: very high value, high difficulty, very high risk, low priority initially",
+          "Internal knowledge assistant: medium to high value, medium difficulty, medium risk, high priority",
+          "Fully autonomous sales agent: very high value, high difficulty, high risk, later",
         ],
       },
       { type: "p", text: "The point isn't the exact numbers." },
@@ -8506,12 +8506,12 @@ export const POSTS: Post[] = [
       {
         type: "ul",
         items: [
-          "High volume — it happens often.",
-          "High friction — people hate doing it.",
-          "High cost — it consumes expensive labor.",
-          "High predictability — the workflow is understandable.",
-          "Low consequence — mistakes aren't catastrophic.",
-          "Measurable outcome — you can prove improvement.",
+          "High volume: it happens often.",
+          "High friction: people hate doing it.",
+          "High cost: it consumes expensive labor.",
+          "High predictability: the workflow is understandable.",
+          "Low consequence: mistakes aren't catastrophic.",
+          "Measurable outcome: you can prove improvement.",
         ],
       },
       { type: "p", text: "That's an excellent automation candidate." },
