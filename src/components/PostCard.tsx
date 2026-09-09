@@ -21,7 +21,10 @@ function FallbackArt({ slug, className }: { slug: string; className: string }) {
  * of them fit on one screen and the whole catalogue is scannable. */
 export default function PostCard({ post }: { post: Post }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="group flex h-full flex-col">
+    <Link
+      href={`/blog/${post.slug}`}
+      className="group flex h-full flex-col rounded-xl border border-paper/10 bg-paper/[0.04] p-3.5 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-paper/[0.07]"
+    >
       {/* Kept light so the fallback illustration, which is drawn in ink on
        * paper, still reads against the dark page. */}
       <div className="aspect-[16/10] overflow-hidden rounded-lg bg-paper">
@@ -40,7 +43,7 @@ export default function PostCard({ post }: { post: Post }) {
         )}
       </div>
 
-      <p className="font-sans mt-4 text-[0.65rem] font-bold tracking-[0.18em] text-magenta uppercase">
+      <p className="font-sans mt-3.5 text-[0.65rem] font-bold tracking-[0.18em] text-magenta uppercase">
         {post.category}
       </p>
 
@@ -48,7 +51,7 @@ export default function PostCard({ post }: { post: Post }) {
         {post.title}
       </h3>
 
-      <p className="font-sans mt-auto pt-3 text-xs text-paper/45">
+      <p className="font-sans mt-auto pt-3.5 text-xs text-paper/45">
         {formatDate(post.date)}
         <span className="mx-1.5 text-magenta" aria-hidden>
           &bull;
