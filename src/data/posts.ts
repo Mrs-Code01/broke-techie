@@ -30,7 +30,7 @@ export type Post = {
 export const POSTS: Post[] = [
   {
     slug: "cloud-tasks-vs-chrome-mcp-part-1",
-    title: "Cloud Tasks vs Chrome MCP: Where AI Actually Runs (Part 1)",
+    title: "Cloud Tasks vs Chrome MCP, Part 1",
     deck: "What a cloud task is, what Chrome MCP is, and why browser automation can fail",
     excerpt:
       "\"If Claude is running in the cloud, why does my computer need to be turned on?\" The answer becomes much easier once you separate an AI automation into three things: the task, the reasoning, and the tools.",
@@ -483,7 +483,7 @@ export const POSTS: Post[] = [
   },
   {
     slug: "cloud-tasks-vs-chrome-mcp-part-2",
-    title: "Why Browser Automation Fails, And What To Use Instead (Part 2)",
+    title: "Cloud Tasks vs Chrome MCP, Part 2",
     deck: "Capability gaps, the right tool for the right job, and the mental model for designing reliable AI automation",
     excerpt:
       "We are not adding Make because Claude cannot think. We are adding it because Claude's available tools may not have the specific capability required. Part 2 covers the fix, why browser automation is fragile, and the principle underneath it all.",
