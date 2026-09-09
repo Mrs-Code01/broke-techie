@@ -23,7 +23,7 @@ export default function PostCard({ post }: { post: Post }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex h-full flex-col rounded-xl border border-paper/10 bg-paper/[0.04] p-3.5 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-paper/[0.07]"
+      className="group flex h-full flex-col rounded-xl border border-paper/15 bg-grape p-3.5 transition duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-orchid/60"
     >
       {/* Kept light so the fallback illustration, which is drawn in ink on
        * paper, still reads against the dark page. */}
